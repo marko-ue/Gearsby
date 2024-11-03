@@ -1,15 +1,25 @@
+using System.Collections;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class EnemyAi : MonoBehaviour
 {
+    [Header("Enemy Stats")]
+    [SerializeField] float health = 100;
+    [SerializeField] float attackCooldown = 1f;
+    [SerializeField] float speed = 10f;
+    [SerializeField] float attackRange = 5f;
+    [SerializeField] float damageToDeal = 10f;
+    bool onCooldown = false;
+
     public enum State { Idle, Patrol, Active, Attack}
     public State currentState = State.Patrol;
 
     [SerializeField] float detectionRange = 20f;
     [SerializeField] Transform player;
     [SerializeField] Transform[] patrolPoints;
-    [SerializeField] float speed = 10f;
-    [SerializeField] float attackRange = 5f;
+
+    PlayerHealth phScript;
     
 
     private Transform currentPatrolPoint;
@@ -18,6 +28,7 @@ public class EnemyAi : MonoBehaviour
     {
         SetRandomPatrol();
         currentState = State.Patrol;
+        phScript = GameObject.Find("Player").GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -89,6 +100,19 @@ public class EnemyAi : MonoBehaviour
     }
     void AttackBehavior()
     {
-        Debug.Log("Attacking");
+        if (!onCooldown)
+        {
+            StartCoroutine(EnemyAttack());
+            Debug.Log(phScript.health);
+        }
+
+    }
+
+    IEnumerator EnemyAttack()
+    {
+        onCooldown = true;
+        phScript.health -= damageToDeal;
+        yield return new WaitForSeconds(attackCooldown);
+        onCooldown = false;
     }
 }
