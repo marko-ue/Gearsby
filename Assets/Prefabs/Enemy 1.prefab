@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 583286654301081735}
   - component: {fileID: 3714000223943636683}
   - component: {fileID: 7003945216956429337}
+  - component: {fileID: 7706255820081141899}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,3 +134,21 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &7706255820081141899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3481872120389368910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30727b6f641f5f499c2eee9e4464cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 1
+  detectionRange: 20
+  player: {fileID: 0}
+  patrolPoints: []
+  speed: 10
+  attackRange: 5
