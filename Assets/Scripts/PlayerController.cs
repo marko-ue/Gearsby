@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private int pickupRange = 100;
+    private int pickupRange = 2;
 
     [Header("Stamina Stats")]
     [SerializeField] float stamina = 100f;
