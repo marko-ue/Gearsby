@@ -6,5 +6,4 @@ public class ThrowableWeaponSO : ScriptableObject
     public int PhysicalDamage;
     public int ChemicalDamage;
     public bool IsThrowable;
-    public float ThrowForce;
 }

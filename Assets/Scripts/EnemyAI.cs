@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyAi : MonoBehaviour
 {
     [Header("Enemy Stats")]
-    [SerializeField] float health = 100;
     [SerializeField] float attackCooldown = 1f;
     [SerializeField] float speed = 10f;
     [SerializeField] float attackRange = 5f;

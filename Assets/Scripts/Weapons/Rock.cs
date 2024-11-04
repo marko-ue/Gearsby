@@ -16,7 +16,7 @@ public class Rock : MonoBehaviour
     {
         if (heldWeapon != null && Input.GetMouseButtonDown(0))
         {
-            throwWeaponScript.Throw();
+            throwWeaponScript.ThrowHeldWeapon();
         }
     }
     private void OnCollisionEnter(Collision other) 

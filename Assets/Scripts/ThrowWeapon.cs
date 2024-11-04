@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public class ThrowWeapon : MonoBehaviour
 {
+    [SerializeField] private float standardWeaponThrowForce = 10;
     private int pickupRange = 2;
     private Vector3 offset = new Vector3(0.46f, 0.7f, 1.86f);
 
     GameObject activeWeapon;
     GameObject heldWeapon;
-    [SerializeField] ThrowableWeaponSO throwableWeaponSO;
 
     // Start is called before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,9 +21,14 @@ public class Weapon : MonoBehaviour
         PickupWeapon();
 
         // If there is a weapon held
-        if (heldWeapon != null && Input.GetMouseButtonDown(0))
+        if (heldWeapon != null)
         {
-            ThrowWeapon();
+            heldWeapon.GetComponent<Collider>().enabled = false;
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                ThrowHeldWeapon();
+            }
         }
     }
 
@@ -47,8 +52,9 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private void ThrowWeapon()
+    public void ThrowHeldWeapon()
     {
+        heldWeapon.GetComponent<Collider>().enabled = true;
         // Detach the held weapon from the parent
         heldWeapon.transform.SetParent(null);
 
@@ -58,7 +64,7 @@ public class Weapon : MonoBehaviour
         rb.isKinematic = false;
 
         // Apply force in the direction the camera is facing
-        rb.AddForce(Camera.main.transform.forward * throwableWeaponSO.ThrowForce, ForceMode.Impulse);
+        rb.AddForce(Camera.main.transform.forward * standardWeaponThrowForce, ForceMode.Impulse);
 
         // Clear heldWeapon reference since it’s thrown
         heldWeapon = null;

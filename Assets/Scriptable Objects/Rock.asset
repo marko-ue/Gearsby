@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ab3b69d35662f40ad583d6c601cc21, type: 3}
   m_Name: Rock
   m_EditorClassIdentifier: 
-  Damage: 15
+  PhysicalDamage: 2
+  ChemicalDamage: 0
   IsThrowable: 1
   ThrowForce: 2

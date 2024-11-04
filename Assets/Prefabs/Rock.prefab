@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3088959033324132861}
   - component: {fileID: 262630562904257932}
   - component: {fileID: 2004903138750685831}
-  - component: {fileID: 2834883348313742865}
   - component: {fileID: -1581031598828062461}
+  - component: {fileID: 1687067394406640386}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Throwable Pickup
@@ -98,7 +98,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8843059540414440985}
   serializedVersion: 4
-  m_Mass: 0.2
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -138,19 +138,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &2834883348313742865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8843059540414440985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c79b354c642f7c14faeafed3069ca841, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwableWeaponSO: {fileID: 11400000, guid: d2400b40b42b3c2449cc1bb87f9e0d67, type: 2}
 --- !u!114 &-1581031598828062461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,3 +151,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwableWeaponSO: {fileID: 11400000, guid: d2400b40b42b3c2449cc1bb87f9e0d67, type: 2}
+--- !u!114 &1687067394406640386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8843059540414440985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1869a346fa5528b4bba7554ddd164c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standardWeaponThrowForce: 10
