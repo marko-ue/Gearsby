@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ThrowWeapon : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
     private int pickupRange = 2;
     private Vector3 offset = new Vector3(0.46f, 0.7f, 1.86f);
@@ -23,7 +23,7 @@ public class ThrowWeapon : MonoBehaviour
         // If there is a weapon held
         if (heldWeapon != null && Input.GetMouseButtonDown(0))
         {
-            Throw();
+            ThrowWeapon();
         }
     }
 
@@ -47,7 +47,7 @@ public class ThrowWeapon : MonoBehaviour
         }
     }
 
-    public void Throw()
+    private void ThrowWeapon()
     {
         // Detach the held weapon from the parent
         heldWeapon.transform.SetParent(null);

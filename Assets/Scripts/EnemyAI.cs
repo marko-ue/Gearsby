@@ -53,8 +53,6 @@ public class EnemyAi : MonoBehaviour
 
     }
 
-    
-
     void IdleBehavior()
     {
         //todo play idle animation

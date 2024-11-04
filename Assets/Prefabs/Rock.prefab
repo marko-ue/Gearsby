@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 262630562904257932}
   - component: {fileID: 2004903138750685831}
   - component: {fileID: 2834883348313742865}
+  - component: {fileID: -1581031598828062461}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Throwable Pickup
@@ -147,6 +148,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c79b354c642f7c14faeafed3069ca841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwableWeaponSO: {fileID: 11400000, guid: d2400b40b42b3c2449cc1bb87f9e0d67, type: 2}
+--- !u!114 &-1581031598828062461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8843059540414440985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc6d5c2507f28a46aadc2b50700f40a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   throwableWeaponSO: {fileID: 11400000, guid: d2400b40b42b3c2449cc1bb87f9e0d67, type: 2}
