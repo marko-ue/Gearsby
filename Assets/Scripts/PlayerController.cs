@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private int pickupRange = 2;
+    private bool canMove = true;
 
     [Header("Stamina Stats")]
     [SerializeField] float stamina = 100f;
@@ -33,6 +34,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!canMove) return;
+
         PickupRay();
         Stamina();
     }
@@ -45,14 +48,14 @@ public class PlayerController : MonoBehaviour
 
         if (pickupRayHit && hit.collider.CompareTag("Pickup") && Input.GetKeyDown(KeyCode.E))
         {
-            if (hit.collider.name.Contains("Cogwheel"))
+            ItemPickup itemPickup = hit.collider.GetComponent<ItemPickup>();
+            if (itemPickup != null)
             {
-                cogwheelCount++;
-                Debug.Log(cogwheelCount);
-                Destroy(hit.collider.gameObject);
+                itemPickup.Pickup();
             }
         }
     }
+
     void Stamina()
     {
         bool isMoving = starterAssetsInputs.move.magnitude > 0f; //Checks if the player is moving
@@ -73,5 +76,10 @@ public class PlayerController : MonoBehaviour
                 stamina = Mathf.Min(stamina, maxStamina);
             }
         }
+    }
+
+    public void EnableMovement(bool enable)
+    {
+        canMove = enable;
     }
 }

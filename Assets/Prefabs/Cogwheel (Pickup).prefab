@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5986965685533150595}
   - component: {fileID: 1354387500809910195}
   - component: {fileID: 7936843412076595546}
+  - component: {fileID: 1768341995433202195}
+  - component: {fileID: 6617867897726861795}
   m_Layer: 0
   m_Name: Cogwheel (Pickup)
   m_TagString: Pickup
@@ -27,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4614975069577662587}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.91, y: 3.55, z: -37}
   m_LocalScale: {x: 0.70832, y: 0.70832, z: 0.69043493}
   m_ConstrainProportionsScale: 0
@@ -108,3 +110,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1768341995433202195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4614975069577662587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cd162a70bafa44684fa06f6c1153bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 149b46e17c2c0f7418647d80e939fceb, type: 2}
+--- !u!114 &6617867897726861795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4614975069577662587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5940db3ca4d53e4c98d8cc478cc1eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 149b46e17c2c0f7418647d80e939fceb, type: 2}
