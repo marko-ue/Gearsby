@@ -1,4 +1,5 @@
 using StarterAssets;
+using System.ComponentModel.Design;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     [Header("Collectible Amount")]
     public int cogwheelCount = 0;
     StarterAssetsInputs starterAssetsInputs;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -25,7 +27,7 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -59,7 +61,6 @@ public class PlayerController : MonoBehaviour
         {
             stamina -= staminaDeduct * Time.deltaTime;
             stamina = Mathf.Max(stamina, minStamina);
-            Debug.Log(stamina);
             returnTimer = 0; // Reset the return timer when sprinting
         }
         else
@@ -70,9 +71,7 @@ public class PlayerController : MonoBehaviour
                 // Return stamina only after delay
                 stamina += staminaReturn * Time.deltaTime;
                 stamina = Mathf.Min(stamina, maxStamina);
-                Debug.Log(stamina);
             }
         }
-        
     }
 }
