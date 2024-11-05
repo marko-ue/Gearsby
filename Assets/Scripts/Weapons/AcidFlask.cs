@@ -5,6 +5,8 @@ public class AcidFlask : MonoBehaviour
     EnemyHealth enemyHealth;
     [SerializeField] ThrowableWeaponSO throwableWeaponSO;
     ThrowWeapon throwWeaponScript;
+
+    [SerializeField] GameObject acidSpill;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,10 +26,21 @@ public class AcidFlask : MonoBehaviour
     {
         if (!throwWeaponScript.isThrown) return;
         throwWeaponScript.isThrown = false;
+
         enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
-        enemyHealth?.TakeDamage(throwableWeaponSO.ChemicalDamage, EnemyHealth.DamageType.Physical);
-        Debug.Log("entered");
-        // TODO: make glass animation to play when the flask collides
+        enemyHealth?.TakeDamage(throwableWeaponSO.PhysicalDamage, EnemyHealth.DamageType.Physical);
+
+        // Raycast downwards to find the ground position
+        RaycastHit groundHit;
+        Vector3 spillPosition = transform.position;
+
+        if (Physics.Raycast(transform.position, Vector3.down, out groundHit))
+        {
+            spillPosition = groundHit.point;  // Set spill position to the ground
+        }
+
+        Instantiate(acidSpill, spillPosition, Quaternion.identity);
+
         Destroy(this.gameObject);
     }
 }

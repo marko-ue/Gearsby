@@ -190,9 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standardWeaponThrowForce: 10
-  isHeld: 0
   isThrown: 0
-  heldWeapon: {fileID: 0}
 --- !u!114 &-627903076343532255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwableWeaponSO: {fileID: 11400000, guid: 892d276a43682d14587fbb88763b4898, type: 2}
+  acidSpill: {fileID: 8098787946658644410, guid: 5b9d4501a5d7c7948aedaea1599b7725, type: 3}
 --- !u!54 &2313447346408549367
 Rigidbody:
   m_ObjectHideFlags: 0

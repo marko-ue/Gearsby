@@ -4,14 +4,12 @@ using UnityEngine;
 public class ThrowWeapon : MonoBehaviour
 {
     [SerializeField] private float standardWeaponThrowForce = 10;
-
-    public bool isHeld = false;
     public bool isThrown = false;
 
     private int pickupRange = 2;
     private Vector3 offset = new Vector3(0.46f, 0.7f, 1.86f);
     GameObject activeWeapon;
-    public GameObject heldWeapon;
+    GameObject heldWeapon;
 
     RaycastHit hit;
 
