@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 8616685848737228376}
   - component: {fileID: 8631983416003637873}
   - component: {fileID: 3747375500959666273}
+  - component: {fileID: 3790395289960317262}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -282,9 +283,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 0
-  canPush: 0
-  strength: 1.1
+    m_Bits: 4294967295
+  canPush: 1
+  strength: 1.12
 --- !u!114 &5420857361349278248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,7 +415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b0d7ae5c0c2dbe488c941365b6f5dd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwables: {fileID: 11400000, guid: d2400b40b42b3c2449cc1bb87f9e0d67, type: 2}
   stamina: 100
   staminaDeduct: 2
   staminaReturn: 3
@@ -436,6 +436,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!114 &3790395289960317262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0780417c785c9c2449302ea12e2982f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!1001 &2946133632433452343
 PrefabInstance:
   m_ObjectHideFlags: 0
