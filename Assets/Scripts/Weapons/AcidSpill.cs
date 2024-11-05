@@ -14,7 +14,7 @@ public class AcidSpill : MonoBehaviour
         {
             enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
             StartCoroutine(DamageCooldown());
-            Debug.Log(enemyHealth.currentHealth);
+            Debug.Log("Enemy Health" + enemyHealth.currentHealth);
         }
     }
 

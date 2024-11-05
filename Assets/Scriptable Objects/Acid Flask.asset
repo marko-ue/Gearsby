@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ab3b69d35662f40ad583d6c601cc21, type: 3}
   m_Name: Acid Flask
   m_EditorClassIdentifier: 
-  PhysicalDamage: 0
+  PhysicalDamage: 1
   ChemicalDamage: 10
   IsThrowable: 1
