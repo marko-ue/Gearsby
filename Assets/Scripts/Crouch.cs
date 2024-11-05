@@ -1,38 +1,69 @@
-using System.Collections;
-using System.Collections.Generic;
-using StarterAssets;
 using UnityEngine;
+using StarterAssets;
 
 public class Crouch : MonoBehaviour
 {
     StarterAssetsInputs starterAssetsInputs;
-    private Vector3 crouchScale = new Vector3(1, 0.5f, 1);
-    private Vector3 normalScale = new Vector3(1, 1, 1);
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake() 
+    CharacterController characterController;
+    public Transform PlayerCameraRoot;
+    public Transform heldItem; // Assign Active weapon so the item follows the player when hes crouched
+
+    private float normalHeight = 2.0f;
+    private float crouchHeight = 1.0f;
+    private Vector3 normalCenter = new Vector3(0, 1.0f, 0);
+    private Vector3 crouchCenter = new Vector3(0, 0.5f, 0);
+
+    private Vector3 itemNormalPos;
+    private Vector3 itemCrouchPos;
+    private Vector3 cameraRootNormalPos;
+    private Vector3 cameraRootCrouchPos;
+
+    private float crouchSpeed = 10f;
+
+    void Awake()
     {
         starterAssetsInputs = GetComponentInChildren<StarterAssetsInputs>();
-    }
-    void Start()
-    {
-        
+        characterController = GetComponent<CharacterController>();
+
+        // Initialize item positions for crouching
+        itemNormalPos = heldItem.localPosition;
+        itemCrouchPos = itemNormalPos + Vector3.down * 0.5f;
+
+        // Initialize PlayerCameraRoot crouch positions
+        cameraRootNormalPos = PlayerCameraRoot.localPosition;
+        cameraRootCrouchPos = cameraRootNormalPos + Vector3.down * 0.5f;
     }
 
-    // Update is called once per frame
     void Update()
     {
-       Crouching(); 
+        Crouching();
     }
+
     void Crouching()
     {
         if (starterAssetsInputs.crouch)
         {
-            transform.localScale = crouchScale;
-            
+            // Adjust CharacterController height and center
+            characterController.height = Mathf.Lerp(characterController.height, crouchHeight, Time.deltaTime * crouchSpeed);
+            characterController.center = Vector3.Lerp(characterController.center, crouchCenter, Time.deltaTime * crouchSpeed);
+
+            // Move held item to crouch position
+            heldItem.localPosition = Vector3.Lerp(heldItem.localPosition, itemCrouchPos, Time.deltaTime * crouchSpeed);
+
+            // Move Playercameraroot to crouch position
+            PlayerCameraRoot.localPosition = Vector3.Lerp(PlayerCameraRoot.localPosition, cameraRootCrouchPos, Time.deltaTime * crouchSpeed);
         }
-        else if(!starterAssetsInputs.crouch)
+        else
         {
-            transform.localScale = normalScale;
+            // Return to standing positions
+            characterController.height = Mathf.Lerp(characterController.height, normalHeight, Time.deltaTime * crouchSpeed);
+            characterController.center = Vector3.Lerp(characterController.center, normalCenter, Time.deltaTime * crouchSpeed);
+
+            // Move held item back to normal position
+            heldItem.localPosition = Vector3.Lerp(heldItem.localPosition, itemNormalPos, Time.deltaTime * crouchSpeed);
+
+            // Reset Playercameraroot to normal position
+            PlayerCameraRoot.localPosition = Vector3.Lerp(PlayerCameraRoot.localPosition, cameraRootNormalPos, Time.deltaTime * crouchSpeed);
         }
     }
 }
