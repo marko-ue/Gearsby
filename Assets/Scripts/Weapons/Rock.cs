@@ -26,7 +26,6 @@ public class Rock : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             enemyHealth?.TakeDamage(throwableWeaponSO.PhysicalDamage, EnemyHealth.DamageType.Physical);
-            Debug.Log(enemyHealth.currentHealth);
         }
     }
 }
