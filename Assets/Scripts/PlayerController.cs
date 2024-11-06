@@ -83,8 +83,13 @@ public class PlayerController : MonoBehaviour
         canMove = enable;
     }
 
-    public void EnableMovement(bool enable)
+        void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        canMove = enable;
+        string tagOfTheOtherObject = hit.collider.gameObject.tag;
+        if (tagOfTheOtherObject == "health_pack")
+        {
+            Destroy(hit.collider.gameObject);
+            GetComponent<ManagePlayerHealth>().ResetHealth();
+        }
     }
 }

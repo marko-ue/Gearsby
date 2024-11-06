@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbe8f663ebbeda249ac92de9de16f1e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 57938c897fa65fd4daabab8ec1121248, type: 3}
   m_Name: Cogwheel
   m_EditorClassIdentifier: 
   id: 1
