@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
     public int currentHealth;
     public int physicalArmorPercentage;
     public int chemicalArmorPercentage;
+    public bool isAlive = true;
 
     private void Awake() 
     {
@@ -37,6 +38,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            isAlive = false;
             Destroy(this.gameObject);
         }
     }

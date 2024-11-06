@@ -1158,6 +1158,7 @@ MonoBehaviour:
   currentHealth: 100
   physicalArmorPercentage: 0
   chemicalArmorPercentage: 0
+  isAlive: 1
 --- !u!4 &1307458761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8361412714912000025, guid: be47a982abca97f4390a8a16e33acf4e, type: 3}

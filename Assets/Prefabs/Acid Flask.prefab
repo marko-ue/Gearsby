@@ -204,7 +204,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwableWeaponSO: {fileID: 11400000, guid: 892d276a43682d14587fbb88763b4898, type: 2}
-  acidSpill: {fileID: 8098787946658644410, guid: 5b9d4501a5d7c7948aedaea1599b7725, type: 3}
+  acidSpillGround: {fileID: 8098787946658644410, guid: 5b9d4501a5d7c7948aedaea1599b7725, type: 3}
+  acidSpillEnemy: {fileID: 2320332600568711239, guid: 3977b064f3a3f15498aa09e907606d13, type: 3}
 --- !u!54 &2313447346408549367
 Rigidbody:
   m_ObjectHideFlags: 0

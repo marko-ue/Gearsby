@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class AcidFlask : MonoBehaviour
 {
+
     EnemyHealth enemyHealth;
     [SerializeField] ThrowableWeaponSO throwableWeaponSO;
     ThrowWeapon throwWeaponScript;
 
-    [SerializeField] GameObject acidSpill;
+    [SerializeField] GameObject acidSpillGround;
+    [SerializeField] GameObject acidSpillEnemy;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,12 +36,16 @@ public class AcidFlask : MonoBehaviour
         RaycastHit groundHit;
         Vector3 spillPosition = transform.position;
 
-        if (Physics.Raycast(transform.position, Vector3.down, out groundHit))
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            spillPosition = groundHit.point;  // Set spill position to the ground
+            Instantiate(acidSpillEnemy, other.gameObject.transform.position, Quaternion.identity);
         }
 
-        Instantiate(acidSpill, spillPosition, Quaternion.identity);
+        else if (Physics.Raycast(transform.position, Vector3.down, out groundHit))
+        {
+            spillPosition = groundHit.point;  // Set spill position to the ground
+            Instantiate(acidSpillGround, spillPosition, Quaternion.identity);
+        }
 
         Destroy(this.gameObject);
     }

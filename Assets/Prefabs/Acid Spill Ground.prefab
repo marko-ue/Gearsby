@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2656856781375906563}
   - component: {fileID: 3170755338029017315}
   m_Layer: 0
-  m_Name: Acid Spill
+  m_Name: Acid Spill Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
