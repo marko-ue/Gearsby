@@ -5,6 +5,7 @@ public class Crouch : MonoBehaviour
 {
     StarterAssetsInputs starterAssetsInputs;
     CharacterController characterController;
+    Climbing climbing;
     public Transform PlayerCameraRoot;
     public Transform heldItem; // Assign Active weapon so the item follows the player when hes crouched
 
@@ -18,12 +19,15 @@ public class Crouch : MonoBehaviour
     private Vector3 cameraRootNormalPos;
     private Vector3 cameraRootCrouchPos;
 
+    private float checkRange = 1f;
+
     private float crouchSpeed = 10f;
 
     void Awake()
     {
         starterAssetsInputs = GetComponentInChildren<StarterAssetsInputs>();
         characterController = GetComponent<CharacterController>();
+        climbing = GetComponent<Climbing>();
 
         // Initialize item positions for crouching
         itemNormalPos = heldItem.localPosition;
@@ -41,8 +45,15 @@ public class Crouch : MonoBehaviour
 
     void Crouching()
     {
+        RaycastHit hit;
+        bool checkCeilingRayHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.up, out hit, checkRange);
+        
         if (starterAssetsInputs.crouch)
         {
+            climbing.climbingAllowed = false;
+            starterAssetsInputs.jump = false;
+            starterAssetsInputs.moveSpeed = 0.5f;
+
             // Adjust CharacterController height and center
             characterController.height = Mathf.Lerp(characterController.height, crouchHeight, Time.deltaTime * crouchSpeed);
             characterController.center = Vector3.Lerp(characterController.center, crouchCenter, Time.deltaTime * crouchSpeed);
@@ -55,15 +66,25 @@ public class Crouch : MonoBehaviour
         }
         else
         {
-            // Return to standing positions
-            characterController.height = Mathf.Lerp(characterController.height, normalHeight, Time.deltaTime * crouchSpeed);
-            characterController.center = Vector3.Lerp(characterController.center, normalCenter, Time.deltaTime * crouchSpeed);
+            if (checkCeilingRayHit)
+            {
+                starterAssetsInputs.crouch = true;
+            }
+            else
+            {
+                climbing.climbingAllowed = true;
+                starterAssetsInputs.moveSpeed = 1f;
 
-            // Move held item back to normal position
-            heldItem.localPosition = Vector3.Lerp(heldItem.localPosition, itemNormalPos, Time.deltaTime * crouchSpeed);
+                // Return to standing positions
+                characterController.height = Mathf.Lerp(characterController.height, normalHeight, Time.deltaTime * crouchSpeed);
+                characterController.center = Vector3.Lerp(characterController.center, normalCenter, Time.deltaTime * crouchSpeed);
 
-            // Reset Playercameraroot to normal position
-            PlayerCameraRoot.localPosition = Vector3.Lerp(PlayerCameraRoot.localPosition, cameraRootNormalPos, Time.deltaTime * crouchSpeed);
+                // Move held item back to normal position
+                heldItem.localPosition = Vector3.Lerp(heldItem.localPosition, itemNormalPos, Time.deltaTime * crouchSpeed);
+
+                // Reset Playercameraroot to normal position
+                PlayerCameraRoot.localPosition = Vector3.Lerp(PlayerCameraRoot.localPosition, cameraRootNormalPos, Time.deltaTime * crouchSpeed);
+            }  
         }
     }
 }

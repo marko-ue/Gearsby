@@ -12,11 +12,11 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
-		
 		public bool crouch;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
+		public float moveSpeed = 1f;
 
 		[Header("Mouse Cursor Settings")]
 		public bool cursorLocked = true;
@@ -45,7 +45,7 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
-		public void OnCrouch (InputValue value)
+		public void OnCrouch(InputValue value)
 		{
 			CrouchInput(value.isPressed);
 		}

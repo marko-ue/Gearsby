@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 8631983416003637873}
   - component: {fileID: 3747375500959666273}
   - component: {fileID: 3790395289960317262}
+  - component: {fileID: 4979098329940102453}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -302,7 +303,9 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  crouch: 0
   analogMovement: 0
+  moveSpeed: 1
   cursorLocked: 1
   cursorInputForLook: 1
 --- !u!114 &8616685848737228376
@@ -449,6 +452,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
+  climbingAllowed: 1
+--- !u!114 &4979098329940102453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af5d9b76b8d5464a898c90b131cc579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCameraRoot: {fileID: 4135013735270702856}
+  heldItem: {fileID: 7684554693899317290}
 --- !u!1001 &2946133632433452343
 PrefabInstance:
   m_ObjectHideFlags: 0

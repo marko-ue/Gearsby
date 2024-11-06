@@ -38,7 +38,6 @@ public class ThrowWeapon : MonoBehaviour
 
     private void PickupWeapon()
     {
-        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * pickupRange, Color.red);
         bool pickupRayHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, pickupRange, ~0, QueryTriggerInteraction.Collide);
 
         if (pickupRayHit && hit.collider.CompareTag("Throwable Pickup") && Input.GetKeyDown(KeyCode.E))

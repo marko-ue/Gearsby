@@ -20,11 +20,13 @@ public class PlayerController : MonoBehaviour
     [Header("Collectible Amount")]
     public int cogwheelCount = 0;
     StarterAssetsInputs starterAssetsInputs;
+    private CharacterController characterController;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         starterAssetsInputs = GetComponentInChildren<StarterAssetsInputs>();
+        characterController = GetComponent<CharacterController>();
     }
     void Start()
     {
@@ -36,8 +38,17 @@ public class PlayerController : MonoBehaviour
     {
         if (!canMove) return;
 
+        MovePlayer();
         PickupRay();
         Stamina();
+    }
+
+    private void MovePlayer()
+    {
+        Vector3 move = new Vector3(starterAssetsInputs.move.x, 0, starterAssetsInputs.move.y);
+        move = transform.TransformDirection(move) * starterAssetsInputs.moveSpeed;
+
+        characterController.Move(move * Time.deltaTime);
     }
 
     private void PickupRay()
