@@ -18,7 +18,7 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] Transform[] patrolPoints;
 
-    PlayerHealth phScript;
+    ManagePlayerHealth phScript;
     
 
     private Transform currentPatrolPoint;
@@ -27,7 +27,7 @@ public class EnemyAi : MonoBehaviour
     {
         SetRandomPatrol();
         currentState = State.Patrol;
-        phScript = GameObject.Find("Player").GetComponent<PlayerHealth>();
+        phScript = GameObject.Find("Player").GetComponent<ManagePlayerHealth>();
     }
 
     // Update is called once per frame
@@ -107,10 +107,10 @@ public class EnemyAi : MonoBehaviour
 
     IEnumerator EnemyAttack()
     {
-        if (phScript.health != phScript.minHealth)
+        if (phScript.health != 0)
         {
             onCooldown = true;
-            phScript.health -= damageToDeal;
+            phScript.health -= (int)damageToDeal;
             yield return new WaitForSeconds(attackCooldown);
             onCooldown = false;
         }

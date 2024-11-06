@@ -8,6 +8,9 @@ TagManager:
   - Pickup
   - Throwable Pickup
   - Enemy
+  - BC
+  - health_pack
+  - target
   layers:
   - Default
   - TransparentFX
