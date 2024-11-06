@@ -2,16 +2,13 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float health = 100;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public float health = 100f;
+    public float maxHealth = 100f;
+    public float minHealth = 0f;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Clamp the health value between 0 and maxHealth
+        health = Mathf.Clamp(health, minHealth, maxHealth);
     }
 }

@@ -107,9 +107,12 @@ public class EnemyAi : MonoBehaviour
 
     IEnumerator EnemyAttack()
     {
-        onCooldown = true;
-        phScript.health -= damageToDeal;
-        yield return new WaitForSeconds(attackCooldown);
-        onCooldown = false;
+        if (phScript.health != phScript.minHealth)
+        {
+            onCooldown = true;
+            phScript.health -= damageToDeal;
+            yield return new WaitForSeconds(attackCooldown);
+            onCooldown = false;
+        }
     }
 }
