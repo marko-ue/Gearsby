@@ -71,3 +71,24 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Wwise-specific ignores
+Wwise/Authoring/
+Wwise/Cache/
+Wwise/Logs/
+Wwise/GeneratedSoundBanks/
+Wwise/Deployment/
+Wwise/ProjectCache/
+WwiseProject/*.user
+*.cache
+*.log
+.bak
+
+# Auto-generated Unity Wwise integration files
+Assets/Wwise/Audio/GeneratedSoundBanks/
+Assets/Wwise/Cache/*
+Assets/Wwise/Logs/*
+Assets/Wwise/ProjectCache/*
+
+# Ignore Mac-specific Wwise plugin files
+Assets/Wwise/API/Runtime/Plugins/Mac/
