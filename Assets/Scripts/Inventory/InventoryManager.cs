@@ -12,15 +12,21 @@ public class InventoryManager : MonoBehaviour
     public GameObject InventoryItem;
     public GameObject inventoryUI;
     private bool inventoryOpen = false;
-    private PlayerController playerController;
+    public PlayerController playerController;
     public Toggle EnableRemove;
     public InventoryItemController[] InventoryItems;
+
 
     private void Awake()
     {
         Instance = this;
 
         playerController = FindAnyObjectByType<PlayerController>();
+
+        if (FindAnyObjectByType<ItemDrop>() == null) 
+        { 
+            gameObject.AddComponent<ItemDrop>(); 
+        }
     }
 
     private void Update()
@@ -108,4 +114,5 @@ public class InventoryManager : MonoBehaviour
             InventoryItems[i].AddItem(Items[i]);
         }
     }
+
 }
