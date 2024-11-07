@@ -187,9 +187,10 @@ GameObject:
   - component: {fileID: 5420857361349278248}
   - component: {fileID: 8616685848737228376}
   - component: {fileID: 8631983416003637873}
-  - component: {fileID: 3747375500959666273}
   - component: {fileID: 3790395289960317262}
   - component: {fileID: 4979098329940102453}
+  - component: {fileID: 5350741590075700871}
+  - component: {fileID: 2455033528919086821}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -426,19 +427,6 @@ MonoBehaviour:
   returnDelay: 1
   returnTimer: 0
   cogwheelCount: 0
---- !u!114 &3747375500959666273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8616685848737228372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd784a5f6f07ff64190330cc4cc3eb08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
 --- !u!114 &3790395289960317262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,6 +455,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerCameraRoot: {fileID: 4135013735270702856}
   heldItem: {fileID: 7684554693899317290}
+--- !u!114 &5350741590075700871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1adb0894663e4142842ca02a21dedfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BC: {fileID: 7943863683630115896, guid: 64279e06bfee6df43a25046e12e4b685, type: 3}
+--- !u!114 &2455033528919086821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd3333f905dd3648b75c1b471db2721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alpha: 0
+  screenFlashBool: 0
+  health: 100
+--- !u!1 &9032705995984778716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5271851084928472351}
+  m_Layer: 0
+  m_Name: launcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5271851084928472351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9032705995984778716}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5871322115428966477}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2946133632433452343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -525,7 +572,10 @@ PrefabInstance:
       objectReference: {fileID: 4135013735270702856}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5271851084928472351}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
 --- !u!4 &5871322115428966477 stripped

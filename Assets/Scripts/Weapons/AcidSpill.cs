@@ -10,16 +10,17 @@ public class AcidSpill : MonoBehaviour
     private float destroyAcidDelay = 10f;
 
     EnemyHealth enemyHealth;
-    PlayerHealth phScript;
+    ManagePlayerHealth phScript;
     [SerializeField] ThrowableWeaponSO throwableWeaponSO;
 
-    private void Update() {
-        
+    private void Update() 
+    {
+
     }
 
     private void Start() 
     {
-        phScript = GameObject.Find("Player").GetComponent<PlayerHealth>();
+        phScript = GameObject.Find("Player").GetComponent<ManagePlayerHealth>();
         Invoke("DestroyAcid", destroyAcidDelay);
     }
     
@@ -32,7 +33,7 @@ public class AcidSpill : MonoBehaviour
             transform.position = other.transform.position;
         }
 // When we get particles for the flask it will look good, for now the spill will have to float after the enemy dies
-        if (!onCooldown)
+        else if (!onCooldown)
         {
             phScript.health -= throwableWeaponSO.ChemicalDamage;
             StartCoroutine(DamageCooldown());
@@ -55,6 +56,7 @@ public class AcidSpill : MonoBehaviour
             transform.position = groundHit.point;
         }
     }
+    
     void DestroyAcid()
     {
         Destroy(this.gameObject);
