@@ -10,6 +10,7 @@
   <LoadSoundEngineInEditMode>false</LoadSoundEngineInEditMode>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
+  <WwiseInstallationPathWindows>E:\Wwise\Wwise2023.1.0.8367</WwiseInstallationPathWindows>
   <WwiseProjectPath>../Gearsby_WwiseProject/Gearsby_WwiseProject.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
