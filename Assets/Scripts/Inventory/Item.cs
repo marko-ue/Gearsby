@@ -18,6 +18,7 @@ public class Item : ScriptableObject
     public enum ItemType
     {
         Health_Pack,
-        Cog_Wheel
+        Cog_Wheel,
+        Metal_Scrap
     }
 }

@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float returnTimer = 0f;
 
     [Header("Collectible Amount")]
-    public int cogwheelCount = 0;
     StarterAssetsInputs starterAssetsInputs;
     private CharacterController characterController;
 

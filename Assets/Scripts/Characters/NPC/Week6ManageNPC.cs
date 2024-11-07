@@ -46,15 +46,15 @@ public class Week6ManageNPC : MonoBehaviour
 
         if ((info.IsName("IDLE")))
         {
-            print("We are in an IDLE state");
+            //print("We are in an IDLE state");
             GetComponent<NavMeshAgent>().isStopped = true;
         }
         else if ((info.IsName("FOLLOW_PLAYER")))
         {
-            print("Following Player");
+            //print("Following Player");
             GetComponent<NavMeshAgent>().isStopped = false;
             GetComponent<NavMeshAgent>().SetDestination(target.transform.position);
-            print("We are in the FOLLOW_PLAYER state");
+            //print("We are in the FOLLOW_PLAYER state");
 
             if (Vector3.Distance(transform.position, target.transform.position) < 2.3)
             {
@@ -102,7 +102,7 @@ public class Week6ManageNPC : MonoBehaviour
 
     void Smell()
     {
-        print ("Smelling....");
+        //print ("Smelling....");
         GameObject[] allBCs = GameObject.FindGameObjectsWithTag ("BC");
         float minDistance = 2;
         bool detectedBC = false;
