@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5f49542d202d22145a62ba5dbcb300c8
+timeCreated: 1487341142
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 83313
+  packageName: PBR Melee Weapons Pack
+  packageVersion: 1.105
+  assetPath: Assets/PBRMeleeWeaponsPack/Weapons/Fireaxe/Fireaxe 01.prefab
+  uploadId: 390527

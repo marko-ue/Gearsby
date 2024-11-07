@@ -426,7 +426,6 @@ MonoBehaviour:
   minStamina: 0
   returnDelay: 1
   returnTimer: 0
-  cogwheelCount: 0
 --- !u!114 &3790395289960317262
 MonoBehaviour:
   m_ObjectHideFlags: 0

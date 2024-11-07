@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 6403443803d29c048a9b14822a1b3611
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Aurach Heavy
+  fontNames:
+  - Aurach Heavy
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 83313
+  packageName: PBR Melee Weapons Pack
+  packageVersion: 1.105
+  assetPath: Assets/PBRMeleeWeaponsPack/Misc/Fonts/Aurach Heavy.ttf
+  uploadId: 390527

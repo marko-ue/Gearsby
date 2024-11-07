@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 80c2246912bc7f74db4cc0125dd93896
+timeCreated: 1487264000
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 83313
+  packageName: PBR Melee Weapons Pack
+  packageVersion: 1.105
+  assetPath: Assets/PBRMeleeWeaponsPack/Weapons/Heavy Wrench/Materials/Heavy Wrench
+    03.mat
+  uploadId: 390527

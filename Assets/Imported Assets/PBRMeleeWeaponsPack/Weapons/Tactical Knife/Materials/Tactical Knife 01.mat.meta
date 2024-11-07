@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 01adf659b8b13054b928d2e1170a7267
+timeCreated: 1487329888
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 83313
+  packageName: PBR Melee Weapons Pack
+  packageVersion: 1.105
+  assetPath: Assets/PBRMeleeWeaponsPack/Weapons/Tactical Knife/Materials/Tactical
+    Knife 01.mat
+  uploadId: 390527

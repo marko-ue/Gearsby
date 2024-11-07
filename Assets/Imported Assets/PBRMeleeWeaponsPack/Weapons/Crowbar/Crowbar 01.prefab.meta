@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e178383ca0e5bfc4d9f328ceaf547c68
+timeCreated: 1487341084
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 83313
+  packageName: PBR Melee Weapons Pack
+  packageVersion: 1.105
+  assetPath: Assets/PBRMeleeWeaponsPack/Weapons/Crowbar/Crowbar 01.prefab
+  uploadId: 390527

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 21a5f414dc8e5e54995c7b9a3328625f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 83313
+  packageName: PBR Melee Weapons Pack
+  packageVersion: 1.105
+  assetPath: Assets/PBRMeleeWeaponsPack/Weapons/Shovel/Shovel 01.prefab
+  uploadId: 390527

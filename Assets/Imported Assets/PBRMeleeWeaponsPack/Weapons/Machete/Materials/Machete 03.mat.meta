@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2eb30d26160db594d986704e96a85280
+timeCreated: 1487264896
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 83313
+  packageName: PBR Melee Weapons Pack
+  packageVersion: 1.105
+  assetPath: Assets/PBRMeleeWeaponsPack/Weapons/Machete/Materials/Machete 03.mat
+  uploadId: 390527

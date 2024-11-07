@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 75abe92f611d0cf4d80f485ba21c0970
+timeCreated: 1487341403
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 83313
+  packageName: PBR Melee Weapons Pack
+  packageVersion: 1.105
+  assetPath: Assets/PBRMeleeWeaponsPack/Weapons/Heavy Wrench/Heavy Wrench 03.prefab
+  uploadId: 390527

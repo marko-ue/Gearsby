@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a5b7e7858dcebe94c820921ba26321cd
+timeCreated: 1486465981
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 83313
+  packageName: PBR Melee Weapons Pack
+  packageVersion: 1.105
+  assetPath: Assets/PBRMeleeWeaponsPack/Weapons/Baseball Bat/Materials/Baseball Bat
+    03.mat
+  uploadId: 390527
