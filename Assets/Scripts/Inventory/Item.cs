@@ -19,6 +19,7 @@ public class Item : ScriptableObject
     {
         Health_Pack,
         Cog_Wheel,
-        Metal_Scrap
+        Metal_Scrap,
+        Crowbar
     }
 }

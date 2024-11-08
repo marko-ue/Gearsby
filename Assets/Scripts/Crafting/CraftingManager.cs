@@ -19,32 +19,36 @@ public class CraftingManager : MonoBehaviour
         CheckRecipe();
     }
 
-    private void CheckRecipe()
+    public void CheckRecipe()
     {
-        // first update amount of owned items
-        cogwheelCount = inventory.Items.Count(item => item.itemName.Contains("Cog Wheel"));
-        Debug.Log("Cogwheel count: " + cogwheelCount);
-        metalScrapCount = inventory.Items.Count(item => item.itemName.Contains("Metal Scrap"));
-        Debug.Log("Metal Scrap count: " + metalScrapCount);
-
-        // checks if you can craft that recipe via a bool function, if you can, craft it, else grey out button
-        foreach (var recipe in craftingRecipes)
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            if (recipe != null)
+            // first update amount of owned items
+            cogwheelCount = inventory.Items.Count(item => item.itemName.Contains("Cog Wheel"));
+            Debug.Log("Cogwheel count: " + cogwheelCount);
+            metalScrapCount = inventory.Items.Count(item => item.itemName.Contains("Metal Scrap"));
+            Debug.Log("Metal Scrap count: " + metalScrapCount);
+
+            // checks if you can craft that recipe via a bool function, if you can, craft it, else grey out button
+            foreach (var recipe in craftingRecipes)
             {
-                if (CanCraftRecipe(recipe))
+                if (recipe != null)
                 {
-                    CraftRecipe(recipe);
-                }
-                else
-                {
-                    Debug.Log("Not enough materials for: " + recipe.recipeName); // grey out button
+                    if (CanCraftRecipe(recipe))
+                    {     
+                        CraftRecipe(recipe);
+                    }
+                    else
+                    {
+                        Debug.Log("Not enough materials for: " + recipe.recipeName); 
+                    }
                 }
             }
         }
     }
 
-    private bool CanCraftRecipe(CraftingRecipe recipe)
+
+    public bool CanCraftRecipe(CraftingRecipe recipe)
     {
         // checks the required items for that recipe
         foreach (var requirement in recipe.materialsRequired)
@@ -62,25 +66,31 @@ public class CraftingManager : MonoBehaviour
         return true;
     }
 
-    private void CraftRecipe(CraftingRecipe recipe)
+    public void CraftRecipe(CraftingRecipe recipe)
     {
-        Debug.Log("Crafting: " + recipe.recipeName);
+        if (CanCraftRecipe(recipe))
+        { 
+            Debug.Log("Crafting: " + recipe.recipeName);
 
-        // gets the requirements for the recipe
-        foreach (var requirement in recipe.materialsRequired)
-        {
-            // for each crafting item required,
-            for (int i = 0; i < requirement.quantityRequired; i++)
-            {   // remove those crafting items if not null
-                var itemToRemove = inventory.Items.FirstOrDefault(item => item.itemName.Contains(requirement.materialName));
-                if (itemToRemove != null)
+            // remove materials from inventory
+            foreach (var requirement in recipe.materialsRequired)
+            {
+                // iterate for each item required
+                for (int i = 0; i < requirement.quantityRequired; i++)
                 {
-                    inventory.Items.Remove(itemToRemove);
+                    var itemToRemove = inventory.Items.FirstOrDefault(item => item.itemName.Contains(requirement.materialName));
+                    if (itemToRemove != null)
+                    {
+                        inventory.Items.Remove(itemToRemove);
+                    }
                 }
             }
+            // Add the crafted item to the inventory
+            inventory.Items.Add(recipe.resultingItem);
         }
-
-        // add the crafted item to the inventory
-        inventory.Items.Add(recipe.resultingItem);
+        else
+        {
+            Debug.Log("Not enough materials for: " + recipe.recipeName);
+        }
     }
 }

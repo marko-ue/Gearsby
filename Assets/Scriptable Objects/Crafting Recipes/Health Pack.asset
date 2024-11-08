@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5671f65eed934541a4cc108ce82b2ae, type: 3}
-  m_Name: Crowbar
+  m_Name: Health Pack
   m_EditorClassIdentifier: 
-  recipeName: Crowbar
+  recipeName: Health Pack
   materialsRequired:
+  - materialName: Cog Wheel
+    quantityRequired: 1
   - materialName: Metal Scrap
-    quantityRequired: 2
-  resultingItem: {fileID: 11400000, guid: fe0340a7433a814458a6dff6a9a1c9bf, type: 2}
+    quantityRequired: 1
+  resultingItem: {fileID: 11400000, guid: 020bf7c0f2c7cc048a07d25abfbf6325, type: 2}
