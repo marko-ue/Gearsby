@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
@@ -35,6 +34,11 @@ public class InventoryManager : MonoBehaviour
         {
             ToggleInventory();
         }
+        
+        if (inventoryOpen) 
+        { 
+            ListItems(); 
+        } 
     }
 
     public void Add(Item item)
@@ -61,8 +65,11 @@ public class InventoryManager : MonoBehaviour
             var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
             var removeButton = obj.transform.Find("RemoveButton").GetComponent<Button>();
 
-            itemName.text = item.itemName;
-            itemIcon.sprite = item.icon;
+            if (item != null)
+            {
+                itemName.text = item.itemName;
+                itemIcon.sprite = item.icon;
+            }
 
             if (EnableRemove.isOn)
             {
@@ -81,10 +88,6 @@ public class InventoryManager : MonoBehaviour
         Cursor.visible = inventoryOpen; 
         playerController.EnableMovement(!inventoryOpen); 
         
-        if (inventoryOpen) 
-        { 
-            ListItems(); 
-        } 
     }
 
     public void EnableItemsRemove()

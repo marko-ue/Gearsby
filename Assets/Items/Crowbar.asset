@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5671f65eed934541a4cc108ce82b2ae, type: 3}
+  m_Script: {fileID: 11500000, guid: bbe8f663ebbeda249ac92de9de16f1e1, type: 3}
   m_Name: Crowbar
   m_EditorClassIdentifier: 
-  recipeName: Crowbar
-  materialsRequired:
-  - materialName: Metal Scrap
-    quantityRequired: 2
-  resultingItem: {fileID: 11400000, guid: fe0340a7433a814458a6dff6a9a1c9bf, type: 2}
+  id: 4
+  itemName: Crowbar
+  value: 1
+  icon: {fileID: 21300000, guid: 923b3a738a263434f8d2b997fc773b3e, type: 3}
+  itemType: 3

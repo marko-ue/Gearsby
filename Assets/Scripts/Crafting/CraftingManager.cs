@@ -1,8 +1,6 @@
 using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
-using UnityEngine.UI;
-using Unity.VisualScripting;
 
 public class CraftingManager : MonoBehaviour
 {
@@ -10,12 +8,10 @@ public class CraftingManager : MonoBehaviour
     public int metalScrapCount;
     InventoryManager inventory;
     public List<CraftingRecipe> craftingRecipes;
-    Image craftButtonColor;
 
     void Start()
     {
         inventory = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
-        craftButtonColor = GameObject.Find("Craft Button").GetComponent<Image>();
     }
 
     void Update()
@@ -72,14 +68,14 @@ public class CraftingManager : MonoBehaviour
 
     public void CraftRecipe(CraftingRecipe recipe)
     {
-        // Check if the recipe can be crafted and then perform the crafting
         if (CanCraftRecipe(recipe))
         { 
             Debug.Log("Crafting: " + recipe.recipeName);
 
-            // Remove materials from inventory
+            // remove materials from inventory
             foreach (var requirement in recipe.materialsRequired)
             {
+                // iterate for each item required
                 for (int i = 0; i < requirement.quantityRequired; i++)
                 {
                     var itemToRemove = inventory.Items.FirstOrDefault(item => item.itemName.Contains(requirement.materialName));
@@ -89,7 +85,6 @@ public class CraftingManager : MonoBehaviour
                     }
                 }
             }
-
             // Add the crafted item to the inventory
             inventory.Items.Add(recipe.resultingItem);
         }
