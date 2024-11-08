@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}" SchemaVersion="119">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="test" ID="{669DEB60-8D8C-47A5-A7D8-99A26DB8BD97}" ShortID="833258160">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{54CA47CF-AB3C-4F1C-9162-7A93ABE33C2B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{949908F5-0810-46C1-A27E-03DA9364096F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="sand1" ID="{8D683EEB-FDF3-43CF-B26E-65E1810071D3}" ShortID="687767762">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{54CA47CF-AB3C-4F1C-9162-7A93ABE33C2B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{949908F5-0810-46C1-A27E-03DA9364096F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sand1" ID="{58538750-9588-4586-8FB0-AED370204D22}">
+									<Language>SFX</Language>
+									<AudioFile>sand1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="182371521"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sand1" ID="{58538750-9588-4586-8FB0-AED370204D22}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sand2" ID="{87177128-5640-481C-B4B2-A5B536F87D2E}" ShortID="734047082">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{54CA47CF-AB3C-4F1C-9162-7A93ABE33C2B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{949908F5-0810-46C1-A27E-03DA9364096F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sand2" ID="{92907F8C-0DB0-4A5A-8136-78E25244D140}">
+									<Language>SFX</Language>
+									<AudioFile>sand2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="76250826"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sand2" ID="{92907F8C-0DB0-4A5A-8136-78E25244D140}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

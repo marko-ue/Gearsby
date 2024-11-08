@@ -21,17 +21,16 @@ public class CraftingManager : MonoBehaviour
 
     private void CheckRecipe()
     {
-        if (Input.GetKeyDown(KeyCode.C)) // will later be replaced by clicking a craft button on a recipe
-                                         // the button will have a scriptable object recipe attached to it
-        {
-            // first updates amount of owned items
-            cogwheelCount = inventory.Items.Count(item => item.itemName.Contains("Cog Wheel"));
-            Debug.Log("Cogwheel count: " + cogwheelCount);
-            metalScrapCount = inventory.Items.Count(item => item.itemName.Contains("Metal Scrap"));
-            Debug.Log("Metal Scrap count: " + metalScrapCount);
+        // first update amount of owned items
+        cogwheelCount = inventory.Items.Count(item => item.itemName.Contains("Cog Wheel"));
+        Debug.Log("Cogwheel count: " + cogwheelCount);
+        metalScrapCount = inventory.Items.Count(item => item.itemName.Contains("Metal Scrap"));
+        Debug.Log("Metal Scrap count: " + metalScrapCount);
 
-            // checks if you can craft that recipe via a bool function, if you can, craft it, else grey out button
-            foreach (var recipe in craftingRecipes)
+        // checks if you can craft that recipe via a bool function, if you can, craft it, else grey out button
+        foreach (var recipe in craftingRecipes)
+        {
+            if (recipe != null)
             {
                 if (CanCraftRecipe(recipe))
                 {
