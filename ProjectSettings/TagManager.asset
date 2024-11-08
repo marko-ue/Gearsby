@@ -11,6 +11,8 @@ TagManager:
   - BC
   - health_pack
   - target
+  - Cloth
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - Climbable
   - Water
   - UI
-  - 
+  - Openable
   - 
   - 
   - 

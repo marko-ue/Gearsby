@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 53dff44fb39bef449a3e919395e35fee
+timeCreated: 1458555977
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 58835
+  packageName: Chest of drawers
+  packageVersion: 1.0
+  assetPath: Assets/Chest of drawers/Sources/Materials/Furniture-metal.mat
+  uploadId: 110008

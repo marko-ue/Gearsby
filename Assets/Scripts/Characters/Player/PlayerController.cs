@@ -1,6 +1,4 @@
 using StarterAssets;
-using System.ComponentModel.Design;
-using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -21,18 +19,17 @@ public class PlayerController : MonoBehaviour
     StarterAssetsInputs starterAssetsInputs;
     private CharacterController characterController;
 
+    [Header("Door")]
+    public float interactRange = 3f; // Range within which the player can interact
+    public LayerMask openableLayer; // LayerMask for interactable objects
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         starterAssetsInputs = GetComponentInChildren<StarterAssetsInputs>();
         characterController = GetComponent<CharacterController>();
     }
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (!canMove) return;
@@ -40,6 +37,7 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
         PickupRay();
         Stamina();
+        OpenDoor();
     }
 
     private void MovePlayer()
@@ -93,4 +91,24 @@ public class PlayerController : MonoBehaviour
         canMove = enable;
     }
 
+    void OpenDoor()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward); // Raycast from camera's position
+            RaycastHit hit;
+
+            // Debug ray to see if it's hitting the door
+            Debug.DrawRay(ray.origin, ray.direction * interactRange, Color.red);
+
+            if (Physics.Raycast(ray, out hit, interactRange, openableLayer))
+            {
+                IOpenable openable = hit.collider.GetComponent<IOpenable>();
+                if (openable != null)
+                {
+                    openable.ToggleOpen(); // Toggle the door open/close
+                }
+            }
+        }
+    }
 }
