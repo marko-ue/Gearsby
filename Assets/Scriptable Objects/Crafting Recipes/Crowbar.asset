@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeName: Crowbar
   materialsRequired:
-  - materialName: Scrap Metal
+  - materialName: Metal Scrap
     quantityRequired: 2
   resultingItem: {fileID: 0}
