@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 4
   itemName: Crowbar
   value: 1
-  icon: {fileID: 21300000, guid: 923b3a738a263434f8d2b997fc773b3e, type: 3}
+  icon: {fileID: 21300000, guid: 9ab65968a058f00429643d2f1509a5e7, type: 3}
   itemType: 3
