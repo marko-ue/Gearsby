@@ -541,11 +541,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1390265996805896794, guid: c527db95a1e0c3541be13b9c59ce70b5, type: 3}
   m_PrefabInstance: {fileID: 1459288058}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &192850124 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-  m_PrefabInstance: {fileID: 744230378}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &249172142
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,13 +1128,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1802243202}
-    - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1802243203}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
 --- !u!4 &744351278 stripped
 Transform:
@@ -1358,6 +1347,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be47a982abca97f4390a8a16e33acf4e, type: 3}
+--- !u!1 &929422853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 929422855}
+  - component: {fileID: 929422854}
+  m_Layer: 0
+  m_Name: CraftingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &929422854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929422853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48054b2de703e6f40a4903d39515385e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cogwheelCount: 0
+  metalScrapCount: 0
+  craftingRecipes:
+  - {fileID: 0}
+--- !u!4 &929422855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929422853}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.955765, y: -4.446592, z: -43.602753}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &957988963
 GameObject:
   m_ObjectHideFlags: 0
@@ -3773,9 +3810,10 @@ SceneRoots:
   - {fileID: 1368767479}
   - {fileID: 2262607498491823403}
   - {fileID: 5966260959401999214}
-  - {fileID: 8496733115194628493}
   - {fileID: 1635782935}
   - {fileID: 1663856317}
   - {fileID: 304295805}
   - {fileID: 2082581484}
   - {fileID: 617648091}
+  - {fileID: 8496733115194628493}
+  - {fileID: 929422855}

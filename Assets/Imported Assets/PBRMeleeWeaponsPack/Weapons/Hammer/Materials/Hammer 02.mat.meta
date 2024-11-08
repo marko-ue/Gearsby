@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fec34a4b87853f44fac4f1ba5119202d
+timeCreated: 1486813717
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 83313
+  packageName: PBR Melee Weapons Pack
+  packageVersion: 1.105
+  assetPath: Assets/PBRMeleeWeaponsPack/Weapons/Hammer/Materials/Hammer 02.mat
+  uploadId: 390527

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3e452b0259bd29e4cbc54e0d7aa8c1bd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 83313
+  packageName: PBR Melee Weapons Pack
+  packageVersion: 1.105
+  assetPath: Assets/PBRMeleeWeaponsPack/Weapons/Shovel/Materials/Shovel 01.mat
+  uploadId: 390527

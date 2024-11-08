@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8b09dd016a08de54887a160a83dd95dc
+timeCreated: 1486813717
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 83313
+  packageName: PBR Melee Weapons Pack
+  packageVersion: 1.105
+  assetPath: Assets/PBRMeleeWeaponsPack/Weapons/Fireaxe/Materials/Fire Axe 03.mat
+  uploadId: 390527

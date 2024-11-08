@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e3cc20d0a3c4307409652e833946587d
+timeCreated: 1487341536
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 83313
+  packageName: PBR Melee Weapons Pack
+  packageVersion: 1.105
+  assetPath: Assets/PBRMeleeWeaponsPack/Weapons/Machete/Machete 01.prefab
+  uploadId: 390527
