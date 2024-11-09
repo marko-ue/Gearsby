@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using StarterAssets;
 using UnityEngine;
 
 
@@ -11,11 +12,14 @@ public class Climbing : MonoBehaviour
     public Camera cam;
     private float playerHeight = 2f;
     private float playerRadius = 0.5f;
+    private float grabRange = 1.6f;
     public bool climbingAllowed = true;
+    FirstPersonController firstPersonContoller;
     void Start()
     {
         Climbable = LayerMask.NameToLayer("Climbable");
         Climbable = ~Climbable;
+        firstPersonContoller = GetComponent<FirstPersonController>();
     }
 
     // Update is called once per frame
@@ -29,7 +33,7 @@ public class Climbing : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (Physics.Raycast(cam.transform.position, cam.transform.forward, out var firstHit, 1f, Climbable))
+                if (Physics.Raycast(cam.transform.position, cam.transform.forward, out var firstHit, grabRange, Climbable))
                 {
                     print("vaultable in front");
                     if (Physics.Raycast(firstHit.point + (cam.transform.forward * playerRadius) + (Vector3.up * 0.6f * playerHeight), Vector3.down, out var secondHit, playerHeight))
