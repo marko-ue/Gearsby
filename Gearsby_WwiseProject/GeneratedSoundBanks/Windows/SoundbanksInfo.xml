@@ -45,7 +45,7 @@
 			<ShortName>fs</ShortName>
 			<Path>fs.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D3B98E22-BF07-C589-21ED-52A71F2C7158}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3087B327-9964-5F37-DCF3-6401169ECDDC}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -67,7 +67,7 @@
 				</File>
 				<File Id="191270774" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump1.wav</ShortName>
-					<CachePath>SFX/jump1_024AAE00.wem</CachePath>
+					<CachePath>SFX/jump1_BB8E5985.wem</CachePath>
 				</File>
 				<File Id="215534549" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fs_concrete_2.wav</ShortName>
@@ -95,7 +95,7 @@
 				</File>
 				<File Id="294139425" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump2.wav</ShortName>
-					<CachePath>SFX/jump2_7B00D8EB.wem</CachePath>
+					<CachePath>SFX/jump2_7AA88BEB.wem</CachePath>
 				</File>
 				<File Id="325965509" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>gearwheel_big3.wav</ShortName>
@@ -143,7 +143,7 @@
 				</File>
 				<File Id="514253887" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>amb sd2.wav</ShortName>
-					<CachePath>SFX/amb sd2_0B3A059C.wem</CachePath>
+					<CachePath>SFX/amb sd2_6A3034F8.wem</CachePath>
 				</File>
 				<File Id="562187170" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_explosion_big.wav</ShortName>
@@ -384,5 +384,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6129301A-CFDA-E0CB-8CF6-82A8F7895CB3}</FileHash>
+	<FileHash>{4A265C96-2B9C-26CB-F0BC-06E28A84CD59}</FileHash>
 </SoundBanksInfo>
