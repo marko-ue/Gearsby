@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 
@@ -33,7 +33,7 @@ public class AkLogger
 		if (ms_Instance == null)
 		{
 			ms_Instance = this;
-			AkSoundEngine.SetErrorLogger(errorLoggerDelegate);
+			AkUnitySoundEngine.SetErrorLogger(errorLoggerDelegate);
 		}
 	}
 
@@ -45,7 +45,7 @@ public class AkLogger
 		{
 			ms_Instance = null;
 			errorLoggerDelegate = null;
-			AkSoundEngine.SetErrorLogger();
+			AkUnitySoundEngine.SetErrorLogger();
 		}
 	}
 

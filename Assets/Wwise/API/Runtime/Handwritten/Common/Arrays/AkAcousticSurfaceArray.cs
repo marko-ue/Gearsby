@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 public class AkAcousticSurfaceArray : AkBaseArray<AkAcousticSurface>
@@ -24,12 +24,12 @@ public class AkAcousticSurfaceArray : AkBaseArray<AkAcousticSurface>
 
 	protected override int StructureSize
 	{
-		get { return AkSoundEnginePINVOKE.CSharp_AkAcousticSurface_GetSizeOf(); }
+		get { return AkUnitySoundEnginePINVOKE.CSharp_AkAcousticSurface_GetSizeOf(); }
 	}
 
 	protected override void DefaultConstructAtIntPtr(System.IntPtr address)
 	{
-		AkSoundEnginePINVOKE.CSharp_AkAcousticSurface_Clear(address);
+		AkUnitySoundEnginePINVOKE.CSharp_AkAcousticSurface_Clear(address);
 	}
 
 	protected override AkAcousticSurface CreateNewReferenceFromIntPtr(System.IntPtr address)
@@ -39,7 +39,7 @@ public class AkAcousticSurfaceArray : AkBaseArray<AkAcousticSurface>
 
 	protected override void CloneIntoReferenceFromIntPtr(System.IntPtr address, AkAcousticSurface other)
 	{
-		AkSoundEnginePINVOKE.CSharp_AkAcousticSurface_Clone(address, AkAcousticSurface.getCPtr(other));
+		AkUnitySoundEnginePINVOKE.CSharp_AkAcousticSurface_Clone(address, AkAcousticSurface.getCPtr(other));
 	}
 }
 #endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.

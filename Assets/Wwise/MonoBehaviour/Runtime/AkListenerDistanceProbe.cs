@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 [UnityEngine.RequireComponent(typeof(AkAudioListener))]
@@ -33,16 +33,16 @@ public class AkListenerDistanceProbe : UnityEngine.MonoBehaviour
 	{
         if (distanceProbe)
         {
-            var listenerGameObjectID = AkSoundEngine.GetAkGameObjectID(this.gameObject);
-            var distanceProbeGameObjectID = AkSoundEngine.GetAkGameObjectID(distanceProbe.gameObject);
-			AkSoundEngine.SetDistanceProbe(listenerGameObjectID, distanceProbeGameObjectID);
+            var listenerGameObjectID = AkUnitySoundEngine.GetAkGameObjectID(this.gameObject);
+            var distanceProbeGameObjectID = AkUnitySoundEngine.GetAkGameObjectID(distanceProbe.gameObject);
+			AkUnitySoundEngine.SetDistanceProbe(listenerGameObjectID, distanceProbeGameObjectID);
         }
     }
 
 	private void OnDisable()
 	{
-        var listenerGameObjectID = AkSoundEngine.GetAkGameObjectID(this.gameObject);
-        AkSoundEngine.SetDistanceProbe(listenerGameObjectID, AkSoundEngine.AK_INVALID_GAME_OBJECT);
+        var listenerGameObjectID = AkUnitySoundEngine.GetAkGameObjectID(this.gameObject);
+        AkUnitySoundEngine.SetDistanceProbe(listenerGameObjectID, AkUnitySoundEngine.AK_INVALID_GAME_OBJECT);
 	}
 
 }

@@ -13,11 +13,11 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 [UnityEditor.CanEditMultipleObjects]
-[UnityEditor.CustomEditor(typeof(AkBank))]
+[UnityEditor.CustomEditor(typeof(AkBank), true)]
 public class AkBankInspector : AkBaseInspector
 {
 	private readonly AkUnityEventHandlerInspector m_LoadBankEventHandlerInspector = new AkUnityEventHandlerInspector();
@@ -58,8 +58,12 @@ public class AkBankInspector : AkBaseInspector
 #if !(AK_WWISE_ADDRESSABLES && UNITY_ADDRESSABLES)
 		using (new UnityEditor.EditorGUILayout.VerticalScope("box"))
 		{
-			UnityEditor.EditorGUILayout.PropertyField(decode, new UnityEngine.GUIContent("Decode compressed data:"));
-
+			UnityEngine.GUIStyle wrapLabelStyle = new UnityEngine.GUIStyle(UnityEditor.EditorStyles.label)
+			{
+				wordWrap = true
+			};
+			UnityEngine.GUILayout.Label("Decode compressed data (DEPRECATED):", wrapLabelStyle);
+			decode.boolValue = UnityEditor.EditorGUILayout.ToggleLeft(UnityEngine.GUIContent.none, decode.boolValue);
 			if (!decode.boolValue)
 			{
 				return;

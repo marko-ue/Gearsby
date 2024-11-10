@@ -12,7 +12,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 using System.Collections.Generic;
 
@@ -26,7 +26,7 @@ public abstract class WwiseObjectReference : UnityEngine.ScriptableObject
 
 	[AkShowOnly]
 	[UnityEngine.SerializeField]
-	private uint id = AkSoundEngine.AK_INVALID_UNIQUE_ID;
+	private uint id = AkUnitySoundEngine.AK_INVALID_UNIQUE_ID;
 
 	[AkShowOnly]
 	[UnityEngine.SerializeField]
@@ -105,7 +105,7 @@ public abstract class WwiseObjectReference : UnityEngine.ScriptableObject
 		{
 			objectReference = CreateInstance<WwiseObjectReference>();
 		}
-
+		
 		objectReference.guid = guid.ToString().ToUpper();
 
 		if (!s_objectReferenceDictionary.ContainsKey(wwiseObjectType))
@@ -208,6 +208,13 @@ public abstract class WwiseObjectReference : UnityEngine.ScriptableObject
 		}
 
 		var changed = UpdateWwiseObjectData(asset, name);
+		
+		if (wwiseObjectType == WwiseObjectType.Event)
+		{
+			//Need to directly set IsUserDefinedSoundBank, since we can't rely on the user to generate the bank after the creation of the reference.
+			WwiseEventReference eventRef = (WwiseEventReference)asset;
+			eventRef.UpdateIsUserDefinedSoundBank();
+		}
 		if (!assetExists)
 			UnityEditor.AssetDatabase.CreateAsset(asset, path);
 		else if (changed)

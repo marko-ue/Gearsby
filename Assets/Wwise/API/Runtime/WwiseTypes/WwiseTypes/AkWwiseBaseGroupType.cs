@@ -12,7 +12,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
@@ -36,7 +36,7 @@ namespace AK.Wwise
 
 		public uint GroupId
 		{
-			get { return GroupWwiseObjectReference ? GroupWwiseObjectReference.Id : AkSoundEngine.AK_INVALID_UNIQUE_ID; }
+			get { return GroupWwiseObjectReference ? GroupWwiseObjectReference.Id : AkUnitySoundEngine.AK_INVALID_UNIQUE_ID; }
 		}
 
 		public override bool IsValid()
@@ -45,13 +45,13 @@ namespace AK.Wwise
 		}
 
 		#region Obsolete
-		[System.Obsolete(AkSoundEngine.Deprecation_2018_1_2)]
+		[System.Obsolete(AkUnitySoundEngine.Deprecation_2018_1_2)]
 		public int groupID
 		{
 			get { return (int)GroupId; }
 		}
 
-		[System.Obsolete(AkSoundEngine.Deprecation_2018_1_6)]
+		[System.Obsolete(AkUnitySoundEngine.Deprecation_2018_1_6)]
 		public byte[] groupGuid
 		{
 			get

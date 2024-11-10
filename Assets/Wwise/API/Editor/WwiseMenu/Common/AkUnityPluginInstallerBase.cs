@@ -12,7 +12,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 #if UNITY_EDITOR
@@ -272,8 +272,8 @@ public class AkDocHelper
 	{
 		if (m_WwiseVersionString == string.Empty)
 		{
-			var temp = AkSoundEngine.GetMajorMinorVersion();
-			var temp2 = AkSoundEngine.GetSubminorBuildVersion();
+			var temp = AkUnitySoundEngine.GetMajorMinorVersion();
+			var temp2 = AkUnitySoundEngine.GetSubminorBuildVersion();
 			m_WwiseVersionString = (temp >> 16) + "." + (temp & 0xFFFF);
 			if (temp2 >> 16 != 0)
 				m_WwiseVersionString += "." + (temp2 >> 16);

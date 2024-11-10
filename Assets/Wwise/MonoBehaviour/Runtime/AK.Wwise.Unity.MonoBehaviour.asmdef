@@ -5,7 +5,8 @@
         "Unity.Addressables",
         "Unity.ResourceManager",
         "AK.Wwise.Unity.API.WwiseTypes",
-        "AK.Wwise.Unity.Addressables"
+        "AK.Wwise.Unity.Addressables",
+        "AK.Wwise.Unity.ProjectDatabase"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

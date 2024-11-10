@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 [UnityEngine.AddComponentMenu("Wwise/Spatial Audio/AkRoom")]
@@ -71,6 +71,8 @@ public class AkRoom : AkTriggerHandler
 	private int previousGeometryState;
 
 	private bool bSentToWwise = false;
+	private bool isSolid = false;
+
 	private ulong geometryID = AkSurfaceReflector.INVALID_GEOMETRY_ID;
 	private bool bGeometrySetByRoom = false;
 
@@ -194,7 +196,7 @@ public class AkRoom : AkTriggerHandler
 	/// Access the room's ID
 	public ulong GetID()
 	{
-		return AkSoundEngine.GetAkGameObjectID(gameObject);
+		return AkUnitySoundEngine.GetAkGameObjectID(gameObject);
 	}
 
 	public bool IsAssociatedGeometryFromCollider()
@@ -211,8 +213,25 @@ public class AkRoom : AkTriggerHandler
 
 		if (roomCollider.GetType() == typeof(UnityEngine.MeshCollider))
 		{
+			var MeshGeometryData = new AkSurfaceReflector.GeometryData();
+			AkSurfaceReflector.GetGeometryDataFromMesh(((UnityEngine.MeshCollider)roomCollider).sharedMesh, ref MeshGeometryData);
+			for (int s = 0; s < MeshGeometryData.numSurfaces; s++)
+			{
+				MeshGeometryData.surfaces[s].transmissionLoss = 0;
+			}
+
 			geometryID = GetID();
-			AkSurfaceReflector.SetGeometryFromMesh(((UnityEngine.MeshCollider)roomCollider).sharedMesh, geometryID, false, false);
+			AkUnitySoundEngine.SetGeometry(
+				geometryID,
+				MeshGeometryData.triangles,
+				MeshGeometryData.numTriangles,
+				MeshGeometryData.vertices,
+				MeshGeometryData.numVertices,
+				MeshGeometryData.surfaces,
+				MeshGeometryData.numSurfaces,
+				false,
+				false);
+
 			bGeometrySetByRoom = true;
 		}
 		else if ((roomCollider.GetType() == typeof(UnityEngine.BoxCollider) || (roomCollider.GetType() == typeof(UnityEngine.CapsuleCollider)) && AkInitializer.CubeGeometryData.numTriangles != 0))
@@ -220,16 +239,16 @@ public class AkRoom : AkTriggerHandler
 			// The capsule collider is approximated with a cube geometry
 			geometryID = GetID();
 
-			AkSoundEngine.SetGeometry(
-			geometryID,
-			AkInitializer.CubeGeometryData.triangles,
-			AkInitializer.CubeGeometryData.numTriangles,
-			AkInitializer.CubeGeometryData.vertices,
-			AkInitializer.CubeGeometryData.numVertices,
-			AkInitializer.CubeGeometryData.surfaces,
-			AkInitializer.CubeGeometryData.numSurfaces,
-			false,
-			false);
+			AkUnitySoundEngine.SetGeometry(
+				geometryID,
+				AkInitializer.CubeGeometryData.triangles,
+				AkInitializer.CubeGeometryData.numTriangles,
+				AkInitializer.CubeGeometryData.vertices,
+				AkInitializer.CubeGeometryData.numVertices,
+				AkInitializer.CubeGeometryData.surfaces,
+				AkInitializer.CubeGeometryData.numSurfaces,
+				false,
+				false);
 
 			bGeometrySetByRoom = true;
 		}
@@ -237,16 +256,16 @@ public class AkRoom : AkTriggerHandler
 		{
 			geometryID = GetID();
 
-			AkSoundEngine.SetGeometry(
-			geometryID,
-			AkInitializer.SphereGeometryData.triangles,
-			AkInitializer.SphereGeometryData.numTriangles,
-			AkInitializer.SphereGeometryData.vertices,
-			AkInitializer.SphereGeometryData.numVertices,
-			AkInitializer.SphereGeometryData.surfaces,
-			AkInitializer.SphereGeometryData.numSurfaces,
-			false,
-			false);
+			AkUnitySoundEngine.SetGeometry(
+				geometryID,
+				AkInitializer.SphereGeometryData.triangles,
+				AkInitializer.SphereGeometryData.numTriangles,
+				AkInitializer.SphereGeometryData.vertices,
+				AkInitializer.SphereGeometryData.numVertices,
+				AkInitializer.SphereGeometryData.surfaces,
+				AkInitializer.SphereGeometryData.numSurfaces,
+				false,
+				false);
 
 			bGeometrySetByRoom = true;
 		}
@@ -277,7 +296,7 @@ public class AkRoom : AkTriggerHandler
 		if (roomCollider.GetType() == typeof(UnityEngine.MeshCollider))
 		{
 			geometryID = GetID();
-			AkSurfaceReflector.SetGeometryInstance(geometryID, geometryID, INVALID_ROOM_ID, transform, false);
+			AkSurfaceReflector.SetGeometryInstance(geometryID, geometryID, transform, false, isSolid);
 		}
 		else if (roomCollider.GetType() == typeof(UnityEngine.BoxCollider) && AkInitializer.CubeGeometryData.numTriangles != 0)
 		{
@@ -290,7 +309,7 @@ public class AkRoom : AkTriggerHandler
 				transform.lossyScale.y * ((UnityEngine.BoxCollider)roomCollider).size.y,
 				transform.lossyScale.z * ((UnityEngine.BoxCollider)roomCollider).size.z);
 
-			AkSoundEngine.SetGeometryInstance(geometryID, geometryInstanceTransform, geometryInstanceScale, geometryID, INVALID_ROOM_ID, false);
+			AkUnitySoundEngine.SetGeometryInstance(geometryID, geometryInstanceTransform, geometryInstanceScale, geometryID, false, isSolid);
 		}
 		else if (roomCollider.GetType() == typeof(UnityEngine.CapsuleCollider) && AkInitializer.CubeGeometryData.numTriangles != 0)
 		{
@@ -304,7 +323,7 @@ public class AkRoom : AkTriggerHandler
 				((UnityEngine.CapsuleCollider)roomCollider).height,
 				((UnityEngine.CapsuleCollider)roomCollider).direction);
 
-			AkSoundEngine.SetGeometryInstance(geometryID, geometryInstanceTransform, geometryInstanceScale, geometryID, INVALID_ROOM_ID, false);
+			AkUnitySoundEngine.SetGeometryInstance(geometryID, geometryInstanceTransform, geometryInstanceScale, geometryID, false, isSolid);
 		}
 		else if (roomCollider.GetType() == typeof(UnityEngine.SphereCollider) && AkInitializer.SphereGeometryData.numTriangles != 0)
 		{
@@ -314,7 +333,7 @@ public class AkRoom : AkTriggerHandler
 			geometryInstanceTransform.Set(roomCollider.bounds.center, transform.forward, transform.up);
 			UnityEngine.Vector3 geometryInstanceScale = roomCollider.bounds.size;
 
-			AkSoundEngine.SetGeometryInstance(geometryID, geometryInstanceTransform, geometryInstanceScale, geometryID, INVALID_ROOM_ID, false);
+			AkUnitySoundEngine.SetGeometryInstance(geometryID, geometryInstanceTransform, geometryInstanceScale, geometryID, false, isSolid);
 		}
 		else
 		{
@@ -325,7 +344,7 @@ public class AkRoom : AkTriggerHandler
 
 	public void SetRoom()
 	{
-		if (!AkSoundEngine.IsInitialized())
+		if (!AkUnitySoundEngine.IsInitialized())
 		{
 			return;
 		}
@@ -341,6 +360,7 @@ public class AkRoom : AkTriggerHandler
 
 			RoomGameObj_AuxSendLevelToSelf = roomToneAuxSend,
 			RoomGameObj_KeepRegistered = roomToneEvent.IsValid(),
+			RoomPriority = priority
 		};
 
 		if (bSentToWwise == false)
@@ -353,7 +373,7 @@ public class AkRoom : AkTriggerHandler
 			SetGeometryInstanceFromCollider();
 		}
 
-		AkSoundEngine.SetRoom(GetID(), roomParams, geometryID, name);
+		AkUnitySoundEngine.SetRoom(GetID(), roomParams, geometryID, name);
 		bSentToWwise = true;
 	}
 
@@ -363,7 +383,7 @@ public class AkRoom : AkTriggerHandler
 		{
 			if (IsAssociatedGeometryFromCollider())
 			{
-				AkSoundEngine.RemoveGeometryInstance(GetID());
+				AkUnitySoundEngine.RemoveGeometryInstance(GetID());
 			}
 			geometryID = id;
 		}
@@ -472,6 +492,7 @@ public class AkRoom : AkTriggerHandler
 		AkSurfaceReflector surfaceReflectorComponent = gameObject.GetComponent<AkSurfaceReflector>();
 		if (surfaceReflectorComponent != null && surfaceReflectorComponent.enabled)
 		{
+			isSolid = surfaceReflectorComponent.Solid;
 			geometryID = surfaceReflectorComponent.GetID();
 		}
 		else
@@ -512,18 +533,18 @@ public class AkRoom : AkTriggerHandler
 		AkRoomManager.RegisterRoomUpdate(this);
 		if (IsAssociatedGeometryFromCollider())
 		{
-			AkSoundEngine.RemoveGeometryInstance(GetID());
+			AkUnitySoundEngine.RemoveGeometryInstance(GetID());
 		}
 		geometryID = AkSurfaceReflector.INVALID_GEOMETRY_ID;
 
 		// stop sounds applied to the room game object
 		if (roomToneEvent.IsValid())
 		{
-			AkSoundEngine.StopAll(GetID());
+			AkUnitySoundEngine.StopAll(GetID());
 		}
 
 		RoomCount--;
-		AkSoundEngine.RemoveRoom(GetID());
+		AkUnitySoundEngine.RemoveRoom(GetID());
 		bSentToWwise = false;
 	}
 
@@ -531,7 +552,7 @@ public class AkRoom : AkTriggerHandler
 	{
 		if (bGeometrySetByRoom)
 		{
-			AkSoundEngine.RemoveGeometry(GetID());
+			AkUnitySoundEngine.RemoveGeometry(GetID());
 			bGeometrySetByRoom = false;
 		}
 
@@ -675,8 +696,90 @@ public class AkRoom : AkTriggerHandler
 		}
 	}
 
-#region Obsolete
-	[System.Obsolete(AkSoundEngine.Deprecation_2021_1_0)]
+	#region OutdoorsRoom
+	private static ulong INVALID_ROOM_GAMEOBJECT_ID = unchecked((ulong)(-4));
+	private static AkRoom.OutdoorsRoomParameters _currentOutdoorsRoomParameters = AkRoom.OutdoorsRoomParameters.Default;
+
+	static public AkRoom.OutdoorsRoomParameters currentOutdoorsRoomParameters { get { return _currentOutdoorsRoomParameters; } }
+
+	public struct OutdoorsRoomParameters
+	{
+		public OutdoorsRoomParameters(AK.Wwise.AuxBus in_reverbAuxBus, float in_reverbLevel, float in_transmissionLoss, float in_auxSendLevel, bool in_keepRegistered)
+		{
+			reverbAuxBus = in_reverbAuxBus;
+			reverbLevel = in_reverbLevel;
+			transmissionLoss = in_transmissionLoss;
+			auxSendLevel = in_auxSendLevel;
+			keepRegistered = in_keepRegistered;
+		}
+
+		public AK.Wwise.AuxBus reverbAuxBus;
+		public float reverbLevel;
+		public float transmissionLoss;
+		public float auxSendLevel;
+		public bool keepRegistered;
+
+		public static OutdoorsRoomParameters Default
+		{
+			get { return new OutdoorsRoomParameters(null, 1.0f, .0f, .0f, false); }
+		}
+	}
+
+	static public void SetOutdoorsRoomParameters(OutdoorsRoomParameters in_outdoorsRoomParameters)
+	{
+		_currentOutdoorsRoomParameters = in_outdoorsRoomParameters;
+
+		if (!AkUnitySoundEngine.IsInitialized())
+		{
+			return;
+		}
+
+		AkRoomParams roomParams = new AkRoomParams();
+
+		uint shortID = AK.Wwise.AuxBus.InvalidId;
+		if (_currentOutdoorsRoomParameters.reverbAuxBus != null && _currentOutdoorsRoomParameters.reverbAuxBus.IsValid())
+		{
+			shortID = _currentOutdoorsRoomParameters.reverbAuxBus.Id;
+			if (shortID == AK.Wwise.AuxBus.InvalidId)
+			{
+				UnityEngine.Debug.Log("AkRoom.SetOutdoorsRoomParameters : AuxBus passed in parameters has an invalid ShortId.");
+			}
+		}
+		roomParams.ReverbAuxBus = shortID;
+
+		roomParams.ReverbLevel = _currentOutdoorsRoomParameters.reverbLevel;
+		roomParams.TransmissionLoss = _currentOutdoorsRoomParameters.transmissionLoss;
+		roomParams.RoomGameObj_AuxSendLevelToSelf = _currentOutdoorsRoomParameters.auxSendLevel;
+		roomParams.RoomGameObj_KeepRegistered = _currentOutdoorsRoomParameters.keepRegistered;
+		roomParams.RoomPriority = 1;
+
+		AkUnitySoundEngine.SetRoom(AkRoom.INVALID_ROOM_ID, roomParams, AkSurfaceReflector.INVALID_GEOMETRY_ID, "Outdoors");
+	}
+
+	static public uint PostEventOutdoors(AK.Wwise.Event in_event)
+	{
+		if (!in_event.IsValid())
+			return AkUnitySoundEngine.AK_INVALID_PLAYING_ID;
+
+		// before posting an event to the outdoors room, we need to make sure the room Game Object ID exists
+		// We need to set AkRoomParams.RoomGameObj_KeepRegistered to true
+		if (!_currentOutdoorsRoomParameters.keepRegistered)
+		{
+			_currentOutdoorsRoomParameters.keepRegistered = true;
+			AkRoom.SetOutdoorsRoomParameters(_currentOutdoorsRoomParameters);
+		}
+
+		return in_event.Post(AkRoom.INVALID_ROOM_GAMEOBJECT_ID);
+	}
+
+	static public void StopOutdoors()
+	{
+		AkUnitySoundEngine.StopAll(AkRoom.INVALID_ROOM_GAMEOBJECT_ID);
+	}
+	#endregion
+
+	#region Obsolete
+	[System.Obsolete(AkUnitySoundEngine.Deprecation_2021_1_0)]
 	public float wallOcclusion
 	{
 		get
@@ -689,17 +792,17 @@ public class AkRoom : AkTriggerHandler
 		}
 	}
 
-	[System.Obsolete(AkSoundEngine.Deprecation_2023_1_0)]
+	[System.Obsolete(AkUnitySoundEngine.Deprecation_2023_1_0)]
 	public ulong GetGeometryID()
 	{
 		return geometryID;
 	}
 
-	[System.Obsolete(AkSoundEngine.Deprecation_2023_1_0)]
+	[System.Obsolete(AkUnitySoundEngine.Deprecation_2023_1_0)]
 	public void SetGeometryID(ulong id)
 	{
 		geometryID = id;
 	}
-#endregion
+	#endregion
 }
 #endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.

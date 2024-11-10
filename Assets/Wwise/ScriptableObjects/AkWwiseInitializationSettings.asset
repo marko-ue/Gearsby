@@ -16,13 +16,16 @@ MonoBehaviour:
   - Mac
   - Windows
   PlatformSettingsList:
-  - {fileID: 11400000, guid: 586d839039053b24e943eae12e2d68df, type: 2}
-  - {fileID: 11400000, guid: c660753c58cb5ab478d0d97b434814e2, type: 2}
+  - {fileID: 11400000, guid: b4b177a97326e9c468501143d8fb3c92, type: 2}
+  - {fileID: 11400000, guid: 68c5a7f61b6f40847b698d308aa31f8a, type: 2}
   InvalidReferencePlatforms: []
   UserSettings:
     m_BasePath: Audio\GeneratedSoundBanks
     m_StartupLanguage: English(US)
     m_EngineLogging: 1
+    m_IsDecodedBankEnabled: 0
+    m_IsAutoBankEnabled: 1
+    m_DefaultScalingFactor: 1
     m_MaximumNumberOfPositioningPaths: 255
     m_CommandQueueSize: 262144
     m_SamplesPerFrame: 512
@@ -50,6 +53,11 @@ MonoBehaviour:
       m_EnableGeometricDiffractionAndTransmission: 1
       m_CalcEmitterVirtualPosition: 1
       m_LoadBalancingSpread: 1
+      m_MaxDiffractionPaths: 8
+      m_MaxGlobalReflectionPaths: 0
+      m_MaxDiffractionAngleDegrees: 180
+      m_SmoothingConstantMs: 0
+      m_TransmissionOperation: 2
   AdvancedSettings:
     m_IOMemorySize: 2097152
     m_TargetAutoStreamBufferLengthMs: 380
@@ -65,7 +73,15 @@ MonoBehaviour:
     m_SuspendAudioDuringFocusLoss: 1
     m_RenderDuringFocusLoss: 0
     m_SoundBankPersistentDataPath: 
-    m_MemoryAllocationSizeLimit: 0
+    m_MemoryPrimarySbaInitSize: 2097152
+    m_MemoryPrimaryTlsfInitSize: 2097152
+    m_MemoryPrimaryTlsfSpanSize: 2097152
+    m_MemoryPrimaryReservedLimit: 0
+    m_MemoryPrimaryAllocSizeHuge: 2097152
+    m_MemoryMediaTlsfInitSize: 2097152
+    m_MemoryMediaTlsfSpanSize: 2097152
+    m_MemoryMediaReservedLimit: 0
+    m_MemoryMediaAllocSizeHuge: 2097152
     m_MemoryDebugLevel: 0
   CommsSettings:
     m_PoolSize: 262144

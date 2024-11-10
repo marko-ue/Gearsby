@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 [UnityEngine.AddComponentMenu("Wwise/AkEmitterObstructionOcclusion")]
@@ -49,11 +49,11 @@ public class AkEmitterObstructionOcclusion : AkObstructionOcclusion
 	{
 		if (AkSpatialAudioListener.TheSpatialAudioListener != null && AkRoom.RoomCount > 0)
 		{
-			AkSoundEngine.SetObjectObstructionAndOcclusion(gameObject, ObsOccPair.Key.gameObject, ObsOccPair.Value.currentValue, 0.0f);
+			AkUnitySoundEngine.SetObjectObstructionAndOcclusion(gameObject, ObsOccPair.Key.gameObject, ObsOccPair.Value.currentValue, 0.0f);
 		}
 		else
 		{
-			AkSoundEngine.SetObjectObstructionAndOcclusion(gameObject, ObsOccPair.Key.gameObject, 0.0f, ObsOccPair.Value.currentValue);
+			AkUnitySoundEngine.SetObjectObstructionAndOcclusion(gameObject, ObsOccPair.Key.gameObject, 0.0f, ObsOccPair.Value.currentValue);
 		}
 	}
 }

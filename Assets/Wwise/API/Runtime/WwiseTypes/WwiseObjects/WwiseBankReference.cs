@@ -12,7 +12,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 using System.IO;
@@ -35,14 +35,13 @@ public class WwiseBankReference : WwiseObjectReference
 
 #if UNITY_EDITOR
 
-	public void OnEnable()
-	{
-		AkAssetUtilities.AddressableBankUpdated += UpdateAddressableBankReference;
-	}
-
 	public override void CompleteData()
 	{
+#if WWISE_ADDRESSABLES_24_1_OR_LATER
+		SetAddressableBank(AkAssetUtilities.GetAddressableBankAsset(DisplayName, false));
+#else
 		SetAddressableBank(AkAssetUtilities.GetAddressableBankAsset(DisplayName));
+#endif
 	}
 
 	public override bool IsComplete()
@@ -83,11 +82,6 @@ public class WwiseBankReference : WwiseObjectReference
 			}
 		}
 		return false;
-	}
-
-	public void OnDestroy()
-	{
-		AkAssetUtilities.AddressableBankUpdated -= UpdateAddressableBankReference;
 	}
 
 #endif

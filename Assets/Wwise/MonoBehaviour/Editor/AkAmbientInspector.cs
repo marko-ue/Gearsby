@@ -13,11 +13,11 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 [UnityEditor.CanEditMultipleObjects]
-[UnityEditor.CustomEditor(typeof(AkAmbient))]
+[UnityEditor.CustomEditor(typeof(AkAmbient), true)]
 public class AkAmbientInspector : AkEventInspector
 {
     public enum AttenuationSphereOptions
@@ -54,7 +54,7 @@ public class AkAmbientInspector : AkEventInspector
 
         currentAttSphereOp = attSphereProperties[target];
 
-        AkWwiseSoundbanksInfoXMLFileWatcher.Instance.XMLUpdated += PopulateMaxAttenuation;
+        WwiseProjectDatabase.SoundBankDirectoryUpdated += PopulateMaxAttenuation;
     }
 
     public new void OnDisable()
@@ -63,7 +63,7 @@ public class AkAmbientInspector : AkEventInspector
 
         DefaultHandles.Hidden = false;
 
-        AkWwiseSoundbanksInfoXMLFileWatcher.Instance.XMLUpdated -= PopulateMaxAttenuation;
+        WwiseProjectDatabase.SoundBankDirectoryUpdated -= PopulateMaxAttenuation;
     }
 
     public override void OnChildInspectorGUI()
@@ -240,7 +240,7 @@ public class AkAmbientInspector : AkEventInspector
         if (currentAttSphereOp == AttenuationSphereOptions.Current_Event_Only)
         {
             // Get the max attenuation for the event (if available)
-            var radius = AkWwiseProjectInfo.GetData().GetEventMaxAttenuation(m_AkAmbient.data.Id);
+            var radius = AkWwiseProjectInfo.GetData().GetEventMaxAttenuation(m_AkAmbient.data.Id) * m_AkAmbient.gameObject.GetComponent<AkGameObj>().ScalingFactor;
 
             if (m_AkAmbient.multiPositionTypeLabel == MultiPositionTypeLabel.Simple_Mode)
             {

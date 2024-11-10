@@ -13,12 +13,12 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 [UnityEngine.AddComponentMenu("Wwise/AkWwiseTrigger")]
 [UnityEngine.ExecuteInEditMode]
-/// @brief This will call \c AkSoundEngine.PostTrigger() whenever the selected Unity event is triggered. For example this component could be set on a Unity collider to trigger when an object enters it.
+/// @brief This will call \c AkUnitySoundEngine.PostTrigger() whenever the selected Unity event is triggered. For example this component could be set on a Unity collider to trigger when an object enters it.
 /// \sa 
 /// - <a href="https://www.audiokinetic.com/en/library/edge/?source=Help&id=working_with_triggers_overview" target="_blank">Working with Triggers > Overview</a> (Note: This is described in the Wwise SDK documentation.)
 public class AkWwiseTrigger : AkDragDropTriggerHandler
@@ -38,6 +38,7 @@ public class AkWwiseTrigger : AkDragDropTriggerHandler
 		{
 			UnityEngine.GUIUtility.hotControl = 0;
 			data.ObjectReference = reference;
+			AkWwiseTypes.DragAndDropObjectReference = null;
 		}
 #endif
 	}

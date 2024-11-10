@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 public class AkReflectionPathInfoArray : AkBaseArray<AkReflectionPathInfo>
@@ -24,7 +24,7 @@ public class AkReflectionPathInfoArray : AkBaseArray<AkReflectionPathInfo>
 
 	protected override int StructureSize
 	{
-		get { return AkSoundEnginePINVOKE.CSharp_AkReflectionPathInfo_GetSizeOf(); }
+		get { return AkUnitySoundEnginePINVOKE.CSharp_AkReflectionPathInfo_GetSizeOf(); }
 	}
 
 	protected override AkReflectionPathInfo CreateNewReferenceFromIntPtr(System.IntPtr address)
@@ -34,7 +34,7 @@ public class AkReflectionPathInfoArray : AkBaseArray<AkReflectionPathInfo>
 
 	protected override void CloneIntoReferenceFromIntPtr(System.IntPtr address, AkReflectionPathInfo other)
 	{
-		AkSoundEnginePINVOKE.CSharp_AkReflectionPathInfo_Clone(address, AkReflectionPathInfo.getCPtr(other));
+		AkUnitySoundEnginePINVOKE.CSharp_AkReflectionPathInfo_Clone(address, AkReflectionPathInfo.getCPtr(other));
 	}
 }
 #endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.

@@ -1,6 +1,7 @@
 {
     "name": "AK.Wwise.Unity.API",
     "references": [ 
+        "AK.Wwise.Unity.ProjectDatabase"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

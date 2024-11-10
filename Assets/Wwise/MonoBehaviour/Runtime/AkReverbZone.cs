@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 [UnityEngine.AddComponentMenu("Wwise/Spatial Audio/AkReverbZone")]
@@ -40,7 +40,7 @@ public class AkReverbZone : UnityEngine.MonoBehaviour
 
 	[UnityEngine.Tooltip("Width of the transition region between the Reverb Zone and its parent. The transition region is centered around the Reverb Zone geometry. It only applies where triangle transmission loss is set to 0.")]
 	/// Width of the transition region between the Reverb Zone and its parent. The transition zone is centered around the Reverb Zone geometry. It only applies where triangle transmission loss is set to 0.
-	public float TransitionRegionWidth = 0.0f;
+	public float TransitionRegionWidth = 1.0f;
 
 	private bool needsUpdate = false;
 

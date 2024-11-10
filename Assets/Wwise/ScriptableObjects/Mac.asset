@@ -17,6 +17,7 @@ MonoBehaviour:
   - UserSettings.m_BasePath
   - UserSettings.m_StartupLanguage
   - UserSettings.m_EngineLogging
+  - UserSettings.m_DefaultScalingFactor
   - UserSettings.m_MaximumNumberOfPositioningPaths
   - UserSettings.m_MemoryCutoffThreshold
   - UserSettings.m_CommandQueueSize
@@ -62,12 +63,24 @@ MonoBehaviour:
   - AdvancedSettings.m_SoundBankPersistentDataPath
   - AdvancedSettings.m_DebugOutOfRangeCheckEnabled
   - AdvancedSettings.m_DebugOutOfRangeLimit
-  - AdvancedSettings.m_MemoryAllocationSizeLimit
+  - AdvancedSettings.m_UseSubFoldersForGeneratedFiles
+  - AdvancedSettings.m_MemoryPrimarySbaInitSize
+  - AdvancedSettings.m_MemoryPrimaryTlsfInitSize
+  - AdvancedSettings.m_MemoryPrimaryTlsfSpanSize
+  - AdvancedSettings.m_MemoryPrimaryReservedLimit
+  - AdvancedSettings.m_MemoryPrimaryAllocSizeHuge
+  - AdvancedSettings.m_MemoryMediaTlsfInitSize
+  - AdvancedSettings.m_MemoryMediaTlsfSpanSize
+  - AdvancedSettings.m_MemoryMediaReservedLimit
+  - AdvancedSettings.m_MemoryMediaAllocSizeHuge
   - AdvancedSettings.m_MemoryDebugLevel
   UserSettings:
     m_BasePath: Audio\GeneratedSoundBanks
     m_StartupLanguage: English(US)
     m_EngineLogging: 1
+    m_IsDecodedBankEnabled: 0
+    m_IsAutoBankEnabled: 1
+    m_DefaultScalingFactor: 1
     m_MaximumNumberOfPositioningPaths: 255
     m_CommandQueueSize: 262144
     m_SamplesPerFrame: 512
@@ -95,6 +108,11 @@ MonoBehaviour:
       m_EnableGeometricDiffractionAndTransmission: 1
       m_CalcEmitterVirtualPosition: 1
       m_LoadBalancingSpread: 1
+      m_MaxDiffractionPaths: 8
+      m_MaxGlobalReflectionPaths: 0
+      m_MaxDiffractionAngleDegrees: 180
+      m_SmoothingConstantMs: 0
+      m_TransmissionOperation: 2
   AdvancedSettings:
     m_IOMemorySize: 2097152
     m_TargetAutoStreamBufferLengthMs: 380
@@ -110,7 +128,15 @@ MonoBehaviour:
     m_SuspendAudioDuringFocusLoss: 1
     m_RenderDuringFocusLoss: 0
     m_SoundBankPersistentDataPath: 
-    m_MemoryAllocationSizeLimit: 0
+    m_MemoryPrimarySbaInitSize: 2097152
+    m_MemoryPrimaryTlsfInitSize: 2097152
+    m_MemoryPrimaryTlsfSpanSize: 2097152
+    m_MemoryPrimaryReservedLimit: 0
+    m_MemoryPrimaryAllocSizeHuge: 2097152
+    m_MemoryMediaTlsfInitSize: 2097152
+    m_MemoryMediaTlsfSpanSize: 2097152
+    m_MemoryMediaReservedLimit: 0
+    m_MemoryMediaAllocSizeHuge: 2097152
     m_MemoryDebugLevel: 0
     NumSpatialAudioPointSources: 128
     VerboseSystemOutput: 0

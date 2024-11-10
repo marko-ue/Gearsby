@@ -13,8 +13,10 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
+
+using System.Text.RegularExpressions;
 
 /// <summary>
 ///     This class is responsible for determining the path where sound banks are located. When using custom platforms, this
@@ -92,6 +94,10 @@ public partial class AkBasePathGetter
 			fullBasePath = fullBasePath.Substring(1);
 #endif
 
+#if UNITY_OPENHARMONY
+		fullBasePath = fullBasePath.Substring(fullBasePath.IndexOf("Data"));
+#endif
+
 		// Combine base path with platform sub-folder
 		var platformBasePath = System.IO.Path.Combine(fullBasePath, platformName);
 		AkUtilities.FixSlashes(ref platformBasePath);
@@ -133,6 +139,21 @@ public partial class AkBasePathGetter
 		AkUtilities.FixSlashes(ref fullBasePath);
 		return fullBasePath;
 	}
+	
+	public static string GetWwiseRootOutputPath(string wwiseAbsolutePath = "")
+	{
+		string wwiseRootOuputPath = AkUtilities.GetRootOutputPath(wwiseAbsolutePath == "" ? AkWwiseEditorSettings.WwiseProjectAbsolutePath : wwiseAbsolutePath);
+#if UNITY_EDITOR_OSX
+		wwiseRootOuputPath = AkUtilities.ParseOsxPathFromWinePath(wwiseRootOuputPath);
+#endif
+		if (System.IO.Path.IsPathRooted(wwiseRootOuputPath))
+		{
+			return wwiseRootOuputPath;
+		}
+		var combinedPath = System.IO.Path.Combine(GetWwiseProjectDirectory(wwiseAbsolutePath), wwiseRootOuputPath);
+		AkUtilities.FixSlashes(ref combinedPath);
+		return combinedPath;
+	}
 
 	public static string GetWwiseProjectPath()
 	{
@@ -140,9 +161,9 @@ public partial class AkBasePathGetter
 		return AkUtilities.GetFullPath(UnityEngine.Application.dataPath, Settings.WwiseProjectPath);
 	}
 
-	public static string GetWwiseProjectDirectory()
+	public static string GetWwiseProjectDirectory(string wwiseAbsolutePath = "")
 	{
-		var projectPath= AkUtilities.GetFullPath(UnityEngine.Application.dataPath, AkWwiseEditorSettings.Instance.WwiseProjectPath);
+		var projectPath= AkUtilities.GetFullPath(UnityEngine.Application.dataPath, wwiseAbsolutePath == "" ? AkWwiseEditorSettings.Instance.WwiseProjectPath : wwiseAbsolutePath);
 		return System.IO.Path.GetDirectoryName(projectPath);
 	}
 
@@ -248,7 +269,7 @@ public partial class AkBasePathGetter
 			tempSoundBankBasePath = GetPlatformBasePath();
 
 #if !AK_WWISE_ADDRESSABLES //Don't log this if we're using addressables
-#if !UNITY_EDITOR && UNITY_ANDROID
+#if !UNITY_EDITOR && (UNITY_ANDROID || UNITY_OPENHARMONY)
 			// Can't use File.Exists on Android, assume banks are there
 			var InitBnkFound = true;
 #else

@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 [UnityEngine.AddComponentMenu("Wwise/AkEnvironment")]
@@ -61,6 +61,7 @@ public class AkEnvironment : UnityEngine.MonoBehaviour
 		{
 			UnityEngine.GUIUtility.hotControl = 0;
 			data.ObjectReference = reference;
+			AkWwiseTypes.DragAndDropObjectReference = null;
 		}
 #endif
 
@@ -100,10 +101,10 @@ public class AkEnvironment : UnityEngine.MonoBehaviour
 	}
 
 	#region Obsolete
-	[System.Obsolete(AkSoundEngine.Deprecation_2018_1_2)]
-	public int m_auxBusID { get { return (int)(data == null ? AkSoundEngine.AK_INVALID_UNIQUE_ID : data.Id); } }
+	[System.Obsolete(AkUnitySoundEngine.Deprecation_2018_1_2)]
+	public int m_auxBusID { get { return (int)(data == null ? AkUnitySoundEngine.AK_INVALID_UNIQUE_ID : data.Id); } }
 
-	[System.Obsolete(AkSoundEngine.Deprecation_2018_1_6)]
+	[System.Obsolete(AkUnitySoundEngine.Deprecation_2018_1_6)]
 	public byte[] valueGuid
 	{
 		get
@@ -116,13 +117,13 @@ public class AkEnvironment : UnityEngine.MonoBehaviour
 		}
 	}
 
-	[System.Obsolete(AkSoundEngine.Deprecation_2018_1_2)]
+	[System.Obsolete(AkUnitySoundEngine.Deprecation_2018_1_2)]
 	public uint GetAuxBusID()
 	{
 		return data.Id;
 	}
 
-	[System.Obsolete(AkSoundEngine.Deprecation_2018_1_6)]
+	[System.Obsolete(AkUnitySoundEngine.Deprecation_2018_1_6)]
 	public UnityEngine.Collider GetCollider()
 	{
 		return Collider;
@@ -134,7 +135,7 @@ public class AkEnvironment : UnityEngine.MonoBehaviour
 	[UnityEngine.HideInInspector]
 	[UnityEngine.SerializeField]
 	[UnityEngine.Serialization.FormerlySerializedAs("m_auxBusID")]
-	private int auxBusIdInternal = (int)AkSoundEngine.AK_INVALID_UNIQUE_ID;
+	private int auxBusIdInternal = (int)AkUnitySoundEngine.AK_INVALID_UNIQUE_ID;
 	[UnityEngine.HideInInspector]
 	[UnityEngine.SerializeField]
 	[UnityEngine.Serialization.FormerlySerializedAs("valueGuid")]

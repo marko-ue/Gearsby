@@ -5,10 +5,14 @@
 		<SourceFilesRoot>../../../../Gearsby_WwiseProject/.cache</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>../../../../Gearsby_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{05CFD9D6-1CB6-5BAE-60E6-40C4C58D3DF9}">
+			<ShortName>mainsoundbank</ShortName>
+			<Path>mainsoundbank.bnk</Path>
+		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{547EA011-A81D-C515-A029-6F3433EF8BC0}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -384,5 +388,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B8EF3FE4-BF2D-7329-2F46-6F5A3A87EF89}</FileHash>
+	<FileHash>{77DFA84A-62EE-EA55-5083-F9BA84A21867}</FileHash>
 </SoundBanksInfo>

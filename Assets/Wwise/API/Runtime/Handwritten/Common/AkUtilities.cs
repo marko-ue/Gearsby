@@ -12,12 +12,14 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 #if !(UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+using System;
 using System.Linq;
 #if UNITY_EDITOR
+using System.IO;
 using UnityEditor;
 
 public enum AkWwiseMenuOrder
@@ -54,6 +56,7 @@ public partial class AkUtilities
 		AkEventCallback_v2018_1_6 = 16,
 		AkAmbient_v2019_1_0 = 17,
 		NewScriptableObjectFolder_v2019_2_0 = 18,
+		AutoDefinedSoundBanks_v2023_1_0 = 19,
 		/// <summary>
 		/// The value that is currently in the Version.txt file.
 		/// </summary>
@@ -96,6 +99,7 @@ public partial class AkUtilities
 		new System.Collections.Generic.Dictionary<string, string>();
 
 	private static System.DateTime s_LastBankPathUpdate = System.DateTime.MinValue;
+	private static bool s_AutoBankEnabled = true;
 
 	private static readonly System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>>
 		s_BaseToCustomPF = new System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>>();
@@ -144,15 +148,21 @@ public partial class AkUtilities
 			result = System.IO.Path.Combine(settings.WwiseInstallationPathWindows, @"Authoring\x64\Release\bin\WwiseConsole.exe");
 
 			if (!System.IO.File.Exists(result))
+			{
 				result = System.IO.Path.Combine(settings.WwiseInstallationPathWindows, @"Authoring\Win32\Release\bin\WwiseConsole.exe");
+			}
 		}
 #elif UNITY_EDITOR_OSX
 		if (!string.IsNullOrEmpty(settings.WwiseInstallationPathMac))
+		{
 			result = System.IO.Path.Combine(settings.WwiseInstallationPathMac, "Contents/Tools/WwiseConsole.sh");
+		}
 #endif
 
 		if (result != null && System.IO.File.Exists(result))
+		{
 			return result;
+		}
 
 		return null;
 	}
@@ -199,7 +209,9 @@ public partial class AkUtilities
 			foreach (var platform in platforms)
 			{
 				if (!string.IsNullOrEmpty(platform))
+				{
 					arguments += " " + platform;
+				}
 			}
 		}
 
@@ -227,7 +239,9 @@ public partial class AkUtilities
 			System.IO.Path.GetFileNameWithoutExtension(wwiseProjectPath) + "." + System.Environment.UserName + ".wsettings");
 
 		if (!System.IO.File.Exists(userConfigFile))
+		{
 			return false;
+		}
 
 		var userConfigDoc = new System.Xml.XmlDocument();
 		userConfigDoc.Load(userConfigFile);
@@ -237,6 +251,11 @@ public partial class AkUtilities
 			System.Xml.XPath.XPathExpression.Compile("//Property[@Name='SoundBankPathUserOverride' and @Value = 'True']"));
 
 		return userConfigNode != null;
+	}
+
+	public static bool IsAutoBankEnabled()
+	{
+		return s_AutoBankEnabled;
 	}
 
 	public static System.Collections.Generic.IDictionary<string, System.Collections.Generic.List<string>> PlatformMapping
@@ -279,20 +298,23 @@ public partial class AkUtilities
 		try
 		{
 			if (WwiseProjectPath.Length == 0)
+			{
 				return;
+			}
 
 			if (!AkUtilities.IsWwiseProjectAvailable)
-				return;
-
-			var t = System.IO.File.GetLastWriteTime(WwiseProjectPath);
-			if (t <= s_LastBankPathUpdate)
-				return;
+			{
+				IsWwiseProjectAvailable = System.IO.File.Exists(WwiseProjectPath);
+				if (!IsWwiseProjectAvailable)
+				{
+					return;
+				}
+			}
 
 			s_ProjectBankPaths.Clear();
 			var doc = new System.Xml.XmlDocument();
 			doc.Load(WwiseProjectPath);
 			var Navigator = doc.CreateNavigator();
-			s_LastBankPathUpdate = t;
 
 			// Gather the mapping of Custom platform to Base platform
 			var itpf = Navigator.Select("//Platform");
@@ -306,7 +328,7 @@ public partial class AkUtilities
 					customList = new System.Collections.Generic.List<string>();
 					s_BaseToCustomPF[basePF] = customList;
 				}
-				
+
 				customList.Add(node.GetAttribute("Name", ""));
 			}
 
@@ -325,16 +347,47 @@ public partial class AkUtilities
 			UnityEngine.Debug.LogError("WwiseUnity: Error while reading project " + WwiseProjectPath + ". Exception: " + ex.Message);
 		}
 	}
+	
+	private static void UpdateAutoBankSetting(string WwiseProjectPath)
+	{
+		var doc = new System.Xml.XmlDocument { PreserveWhitespace = true };
+		doc.Load(WwiseProjectPath);
+		var Navigator = doc.CreateNavigator();
+
+		// Navigate the wproj file (XML format) to where our setting should be
+		var pathInXml = string.Format("/WwiseDocument/ProjectInfo/Project/PropertyList/Property[@Name='{0}']", "AutoSoundBankEnabled");
+		var expression = System.Xml.XPath.XPathExpression.Compile(pathInXml);
+		var node = Navigator.SelectSingleNode(expression);
+		s_AutoBankEnabled = node != null;
+		AkWwiseInitializationSettings.Instance.IsAutoBankEnabled = s_AutoBankEnabled;
+	}
+	
+	public static string GetRootOutputPath(string WwiseProjectPath)
+	{
+		var doc = new System.Xml.XmlDocument { PreserveWhitespace = true };
+		doc.Load(WwiseProjectPath);
+		var Navigator = doc.CreateNavigator();
+
+		// Navigate the wproj file (XML format) to where our setting should be
+		var pathInXml = string.Format("/WwiseDocument/ProjectInfo/Project/PropertyList/Property[@Name='{0}']", "SoundBankHeaderFilePath");
+		var expression = System.Xml.XPath.XPathExpression.Compile(pathInXml);
+		var rootOutputPath = Navigator.SelectSingleNode(expression).GetAttribute("Value", "");
+		return rootOutputPath;
+	}
 
 	public static void SetSoundbanksDestinationFoldersInWproj(string WwiseProjectPath, string destinationPath)
 	{
 		try
 		{
 			if (WwiseProjectPath.Length == 0)
+			{
 				return;
+			}
 
 			if (!System.IO.File.Exists(WwiseProjectPath))
+			{
 				return;
+			}
 
 			s_ProjectBankPaths.Clear();
 
@@ -368,6 +421,16 @@ public partial class AkUtilities
 				node.SetValue(path);
 				s_ProjectBankPaths[pf] = path;
 			}
+			it = Navigator.Select("//Property[@Name='SoundBankHeaderFilePath']");
+			foreach (System.Xml.XPath.XPathNavigator node in it)
+			{
+				if (node.MoveToAttribute("Value", ""))
+				{
+					var path = $"{destinationPath}";
+					FixSlashes(ref path);
+					node.SetValue(path);
+				}
+			}
 			doc.Save(WwiseProjectPath);
 		}
 		catch (System.Exception ex)
@@ -376,63 +439,95 @@ public partial class AkUtilities
 		}
 	}
 
-	public static void SoundBankDestinationsUpdated(string WwiseProjectPath)
-	{
-		UpdateSoundbanksDestinationFolders(WwiseProjectPath);
-	}
-
-	// Set SoundBank-related bool settings in the wproj file.
-	public static bool EnableBoolSoundbankSettingInWproj(string SettingName, string WwiseProjectPath)
+	private static void CheckWwiseProjectUpdate(string WwiseProjectPath)
 	{
 		try
 		{
 			if (WwiseProjectPath.Length == 0)
-				return true;
+				return;
 
+			if (!AkUtilities.IsWwiseProjectAvailable)
+				return;
+
+			var t = System.IO.File.GetLastWriteTime(WwiseProjectPath);
+			if (t <= s_LastBankPathUpdate)
+				return;
+			s_LastBankPathUpdate = t;
+			UpdateSoundbanksDestinationFolders(WwiseProjectPath);
+			UpdateAutoBankSetting(WwiseProjectPath);
+		}
+		catch (System.Exception ex)
+		{
+			UnityEngine.Debug.LogError("WwiseUnity: Error while reading project " + WwiseProjectPath + ". Exception: " + ex.Message);
+		}
+	}
+
+	public static void WwiseProjectUpdated(string WwiseProjectPath)
+	{
+		CheckWwiseProjectUpdate(WwiseProjectPath);
+	}
+
+	// Set SoundBank-related bool settings in the wproj file.
+	public static bool ToggleBoolSoundbankSettingInWproj(string[] SettingName, string WwiseProjectPath, bool Enable = true)
+	{
+		try
+		{
+			if (WwiseProjectPath.Length == 0)
+			{
+				return true;
+			}
+			
 			var doc = new System.Xml.XmlDocument { PreserveWhitespace = true };
 			doc.Load(WwiseProjectPath);
 			var Navigator = doc.CreateNavigator();
+			bool WprojWasEdited = false;
 
-			// Navigate the wproj file (XML format) to where our setting should be
-			var pathInXml = string.Format("/WwiseDocument/ProjectInfo/Project/PropertyList/Property[@Name='{0}']", SettingName);
-			var expression = System.Xml.XPath.XPathExpression.Compile(pathInXml);
-			var node = Navigator.SelectSingleNode(expression);
-			if (node == null)
+			foreach (var name in SettingName)
 			{
-				// Setting isn't in the wproj, add it
-				// Navigate to the SoundBankHeaderFilePath property (it is always there)
-				expression =
-					System.Xml.XPath.XPathExpression.Compile(
-						"/WwiseDocument/ProjectInfo/Project/PropertyList/Property[@Name='SoundBankHeaderFilePath']");
-				node = Navigator.SelectSingleNode(expression);
+				// Navigate the wproj file (XML format) to where our setting should be
+				var pathInXml = string.Format("/WwiseDocument/ProjectInfo/Project/PropertyList/Property[@Name='{0}']",
+					name);
+				var expression = System.Xml.XPath.XPathExpression.Compile(pathInXml);
+				var node = Navigator.SelectSingleNode(expression);
 				if (node == null)
 				{
-					// SoundBankHeaderFilePath not in wproj, invalid wproj file
-					UnityEngine.Debug.LogError(
-						"WwiseUnity: Could not find SoundBankHeaderFilePath property in Wwise project file. File is invalid.");
-					return false;
+					// Setting isn't in the wproj, add it
+					// Navigate to the SoundBankHeaderFilePath property (it is always there)
+					expression =
+						System.Xml.XPath.XPathExpression.Compile(
+							"/WwiseDocument/ProjectInfo/Project/PropertyList/Property[@Name='SoundBankHeaderFilePath']");
+					node = Navigator.SelectSingleNode(expression);
+					if (node == null)
+					{
+						// SoundBankHeaderFilePath not in wproj, invalid wproj file
+						UnityEngine.Debug.LogError(
+							"WwiseUnity: Could not find SoundBankHeaderFilePath property in Wwise project file. File is invalid.");
+						return false;
+					}
+
+					// Add the setting right above SoundBankHeaderFilePath
+					var propertyToInsert = string.Format("<Property Name=\"{0}\" Type=\"bool\" Value=\"{1}\"/>", name, Enable ? "True" : "False");
+					node.InsertBefore(propertyToInsert);
+					WprojWasEdited = true;
 				}
+				else if (node.GetAttribute("Value", "") == (Enable ? "False" : "True"))
+				{
+					// Value is present, we simply have to modify it.
+					if (!node.MoveToAttribute("Value", ""))
+					{
+						return false;
+					}
 
-				// Add the setting right above SoundBankHeaderFilePath
-				var propertyToInsert = string.Format("<Property Name=\"{0}\" Type=\"bool\" Value=\"True\"/>", SettingName);
-				node.InsertBefore(propertyToInsert);
+					// Modify the value to true
+					node.SetValue(Enable ? "True" : "False");
+					WprojWasEdited = true;
+				}
 			}
-			else if (node.GetAttribute("Value", "") == "False")
+
+			if (WprojWasEdited)
 			{
-				// Value is present, we simply have to modify it.
-				if (!node.MoveToAttribute("Value", ""))
-					return false;
-
-				// Modify the value to true
-				node.SetValue("True");
+				doc.Save(WwiseProjectPath);
 			}
-			else
-			{
-				// Parameter already set, nothing to do!
-				return true;
-			}
-
-			doc.Save(WwiseProjectPath);
 			return true;
 		}
 		catch
@@ -446,7 +541,9 @@ public partial class AkUtilities
 		try
 		{
 			if (WwiseProjectPath.Length == 0)
+			{
 				return true;
+			}
 
 			var doc = new System.Xml.XmlDocument { PreserveWhitespace = true };
 			doc.Load(WwiseProjectPath);
@@ -466,7 +563,9 @@ public partial class AkUtilities
 
 			// Change the "Value" attribute
 			if (!node.MoveToAttribute("Value", ""))
+			{
 				return false;
+			}
 
 			node.SetValue(SoundbankPath);
 			doc.Save(WwiseProjectPath);
@@ -476,6 +575,20 @@ public partial class AkUtilities
 		{
 			return false;
 		}
+	}
+	
+	public static bool IsSettingEnabled(string wProjPath, string settingName)
+	{
+		var doc = new System.Xml.XmlDocument { PreserveWhitespace = true };
+		doc.Load(wProjPath);
+		var Navigator = doc.CreateNavigator();
+
+		// Navigate the wproj file (XML format) to where or setting should be
+		var pathInXml = string.Format("/WwiseDocument/ProjectInfo/Project/PropertyList/Property[@Name='{0}']", settingName);
+		var expression = System.Xml.XPath.XPathExpression.Compile(pathInXml);
+		var node = Navigator.SelectSingleNode(expression);
+		var IsJsonFileGenerationEnabled = node != null ? node.GetAttribute("Value", "") : "False";
+		return IsJsonFileGenerationEnabled == "True";
 	}
 
 	// Make two paths relative to each other
@@ -490,16 +603,22 @@ public partial class AkUtilities
 		try
 		{
 			if (string.IsNullOrEmpty(fromPath))
+			{
 				return toPath;
+			}
 
 			if (string.IsNullOrEmpty(toPath))
+			{
 				return "";
+			}
 
 			var fromUri = new System.Uri(fromPath);
 			var toUri = new System.Uri(toPath);
 
 			if (fromUri.Scheme != toUri.Scheme)
+			{
 				return toPath;
+			}
 
 			var relativeUri = fromUri.MakeRelativeUri(toUri);
 			var relativePath = System.Uri.UnescapeDataString(relativeUri.ToString());
@@ -516,15 +635,21 @@ public partial class AkUtilities
 	public static string GetFullPath(string BasePath, string RelativePath)
 	{
 		if (string.IsNullOrEmpty(BasePath))
+		{
 			return "";
+		}
 
 		var wrongSeparatorChar = System.IO.Path.DirectorySeparatorChar == '/' ? '\\' : '/';
 
 		if (string.IsNullOrEmpty(RelativePath))
+		{
 			return BasePath.Replace(wrongSeparatorChar, System.IO.Path.DirectorySeparatorChar);
+		}
 
 		if (System.IO.Path.GetPathRoot(RelativePath) != "")
+		{
 			return RelativePath.Replace(wrongSeparatorChar, System.IO.Path.DirectorySeparatorChar);
+		}
 
 		return System.IO.Path.GetFullPath(System.IO.Path.Combine(BasePath, RelativePath));
 	}
@@ -539,20 +664,26 @@ public partial class AkUtilities
 		}
 
 		if (!System.IO.Directory.Exists(destDirName))
+		{
 			System.IO.Directory.CreateDirectory(destDirName);
+		}
 
 		var files = dir.GetFiles();
 		foreach (var file in files)
 		{
 			var destFilePath = System.IO.Path.Combine(destDirName, file.Name);
 			if (System.IO.File.Exists(destFilePath))
+			{
 				UnityEngine.Debug.LogWarningFormat("WwiseUnity: Destination file path will be overwritten: {0}", destFilePath);
+			}
 
 			file.CopyTo(destFilePath, true);
 		}
 
 		if (!copySubDirs)
+		{
 			return true;
+		}
 
 		var dirs = dir.GetDirectories();
 		foreach (var subdir in dirs)
@@ -574,29 +705,40 @@ public partial class AkUtilities
 		}
 
 		if (!System.IO.Directory.Exists(destDirName))
+		{
 			AssetDatabase.CreateFolder(System.IO.Path.GetDirectoryName(destDirName), System.IO.Path.GetFileName(destDirName));
+		}
 
 		var files = dir.GetFiles();
 		string error, source, destFilePath;
 		foreach (var file in files)
 		{
-			if (file.Extension == ".meta") continue;
+			if (file.Extension == ".meta")
+			{
+				continue;
+			}
 
 			destFilePath = System.IO.Path.Combine(destDirName, file.Name);
 			if (System.IO.File.Exists(destFilePath))
+			{
 				UnityEngine.Debug.LogWarningFormat("WwiseUnity: Destination file path will be overwritten: {0}", destFilePath);
+			}
 
 			source = System.IO.Path.Combine("Assets", AkUtilities.MakeRelativePath(UnityEngine.Application.dataPath, file.FullName));
 			source = source.Replace(System.IO.Path.AltDirectorySeparatorChar, System.IO.Path.DirectorySeparatorChar);
 
 			error = AssetDatabase.MoveAsset(source, destFilePath);
 			if (!string.IsNullOrEmpty(error))
+			{
 				UnityEngine.Debug.LogErrorFormat("WwiseUnity: Error while attempting to move <{0}> to <{1}>: {2}", source, destFilePath, error);
+			}
 
 		}
 
 		if (!copySubDirs)
+		{
 			return true;
+		}
 
 		var dirs = dir.GetDirectories();
 		foreach (var subdir in dirs)
@@ -608,7 +750,9 @@ public partial class AkUtilities
 			error = UnityEditor.AssetDatabase.MoveAsset(source, destSubDirName);
 
 			if (!string.IsNullOrEmpty(error))
+			{
 				UnityEngine.Debug.LogErrorFormat("WwiseUnity: Error while attempting to move <{0}> to <{1}>: {2}", source, destSubDirName, error);
+			}
 		}
 
 		return true;
@@ -642,7 +786,9 @@ public partial class AkUtilities
 		}
 
 		if (created)
+		{
 			UnityEditor.AssetDatabase.SaveAssets();
+		}
 
 		return true;
 	}
@@ -659,7 +805,9 @@ public partial class AkUtilities
 		newPath = newPath.Replace(System.IO.Path.AltDirectorySeparatorChar, System.IO.Path.DirectorySeparatorChar);
 		
 		if (oldPath.Equals(newPath, System.StringComparison.OrdinalIgnoreCase))
+		{
 			return false;
+		}
 
 		if (!AssetDatabase.IsValidFolder(oldPath))
 		{
@@ -673,18 +821,24 @@ public partial class AkUtilities
 		{
 			error = UnityEditor.AssetDatabase.RenameAsset(oldPath, newPath.Substring(newParentFolder.Length + 1));
 			if (string.IsNullOrEmpty(error))
+			{
 				return true;
+			}
 
 			UnityEngine.Debug.LogErrorFormat("WwiseUnity: Error while attempting to rename folder <{0}> to <{1}>: {2}", oldPath, newPath, error);
 			return false;
 		}
 
 		if (!CreateFolder(newParentFolder))
+		{
 			return false;
+		}
 
 		error = UnityEditor.AssetDatabase.MoveAsset(oldPath, newPath);
 		if (string.IsNullOrEmpty(error))
+		{
 			return true;
+		}
 
 		UnityEngine.Debug.LogWarningFormat("WwiseUnity: Error while attempting to move folder <{0}> to <{1}>: {2}", oldPath, newPath, error);
 		return false;
@@ -695,7 +849,9 @@ public partial class AkUtilities
 		var windows = UnityEngine.Resources.FindObjectsOfTypeAll<UnityEditor.EditorWindow>();
 		foreach (var win in windows)
 			if (win.titleContent.text == "Inspector")
+			{
 				win.Repaint();
+			}
 	}
 
 	public static string ParseOsxPathFromWinePath(string path)
@@ -711,15 +867,21 @@ public partial class AkUtilities
 	{
 		var serializedProperty = property.serializedObject.FindProperty("m_Script");
 		if (serializedProperty == null)
+		{
 			return null;
+		}
 
 		var monoScript = serializedProperty.objectReferenceValue as UnityEditor.MonoScript;
 		if (monoScript == null)
+		{
 			return null;
+		}
 
 		var scriptTypeFromProperty = monoScript.GetClass();
 		if (scriptTypeFromProperty == null)
+		{
 			return null;
+		}
 
 		return GetFieldInfoFromPropertyPath(scriptTypeFromProperty, property.propertyPath);
 	}
@@ -736,9 +898,13 @@ public partial class AkUtilities
 			if (i < array.Length - 1 && text == "Array" && array[i + 1].StartsWith("data["))
 			{
 				if (type.IsArray)
+				{
 					type = type.GetElementType();
+				}
 				else if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(System.Collections.Generic.List<>))
+				{
 					type = type.GetGenericArguments()[0];
+				}
 
 				i++;
 			}
@@ -756,7 +922,9 @@ public partial class AkUtilities
 
 					type2 = type2.BaseType;
 					if (type2 == null)
+					{
 						return null;
+					}
 				}
 			}
 		}
@@ -768,7 +936,9 @@ public partial class AkUtilities
 	{
 		var attributes = field.GetCustomAttributes(typeof(UnityEngine.TooltipAttribute), inherit) as UnityEngine.TooltipAttribute[];
 		if (attributes != null && attributes.Length > 0)
+		{
 			return attributes[0].tooltip;
+		}
 
 		return string.Empty;
 	}
@@ -786,13 +956,17 @@ public partial class AkUtilities
 	public static void FixSlashes(ref string path, char separatorChar, char badChar, bool addTrailingSlash)
 	{
 		if (string.IsNullOrEmpty(path))
+		{
 			return;
+		}
 
 		path = path.Trim().Replace(badChar, separatorChar).TrimStart('\\');
 
 		// Append a trailing slash to play nicely with Wwise
 		if (addTrailingSlash && !path.EndsWith(separatorChar.ToString()))
+		{
 			path += separatorChar;
+		}
 	}
 
 	public static void FixSlashes(ref string path)
@@ -883,7 +1057,9 @@ public partial class AkUtilities
 			}
 
 			if (s_hashSize == 32)
+			{
 				return hval;
+			}
 
 			// XOR-Fold to the required number of bits
 			return (hval >> s_hashSize) ^ (hval & s_mask);

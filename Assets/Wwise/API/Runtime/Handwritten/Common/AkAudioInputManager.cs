@@ -12,7 +12,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
@@ -85,7 +85,7 @@ public static class AkAudioInputManager
 	{
 		TryInitialize();
 		var playingID =
-			AkSoundEngine.PostEvent(akEventID, gameObject, (uint) AkCallbackType.AK_EndOfEvent, EventCallback, null);
+			AkUnitySoundEngine.PostEvent(akEventID, gameObject, (uint) AkCallbackType.AK_EndOfEvent, EventCallback, null);
 		AddPlayingID(playingID, sampleDelegate, formatDelegate);
 		return playingID;
 	}
@@ -106,7 +106,7 @@ public static class AkAudioInputManager
 	{
 		TryInitialize();
 		var playingID =
-			AkSoundEngine.PostEvent(akEventName, gameObject, (uint) AkCallbackType.AK_EndOfEvent, EventCallback, null);
+			AkUnitySoundEngine.PostEvent(akEventName, gameObject, (uint) AkCallbackType.AK_EndOfEvent, EventCallback, null);
 		AddPlayingID(playingID, sampleDelegate, formatDelegate);
 		return playingID;
 	}
@@ -133,14 +133,14 @@ public static class AkAudioInputManager
 		if (!initialized)
 		{
 			initialized = true;
-			AkSoundEngine.SetAudioInputCallbacks(audioSamplesDelegate, audioFormatDelegate);
+			AkUnitySoundEngine.SetAudioInputCallbacks(audioSamplesDelegate, audioFormatDelegate);
 		}
 	}
 
 	private static void AddPlayingID(uint playingID, AudioSamplesDelegate sampleDelegate,
 		AudioFormatDelegate formatDelegate)
 	{
-		if (playingID == AkSoundEngine.AK_INVALID_PLAYING_ID || sampleDelegate == null)
+		if (playingID == AkUnitySoundEngine.AK_INVALID_PLAYING_ID || sampleDelegate == null)
 			return;
 
 		audioSamplesDelegates.Add(playingID, sampleDelegate);

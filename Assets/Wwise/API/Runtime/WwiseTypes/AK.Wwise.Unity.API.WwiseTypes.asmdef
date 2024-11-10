@@ -3,7 +3,8 @@
     "references": [
         "AK.Wwise.Unity.API",
         "Unity.Addressables",
-        "AK.Wwise.Unity.Addressables"
+        "AK.Wwise.Unity.Addressables",
+        "AK.Wwise.Unity.ProjectDatabase"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

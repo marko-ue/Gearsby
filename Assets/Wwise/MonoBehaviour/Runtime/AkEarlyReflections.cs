@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 
@@ -42,17 +42,17 @@ public class AkEarlyReflections : UnityEngine.MonoBehaviour
 	{
 		if (reflectionsAuxBus != null)
 		{
-			AkSoundEngine.SetEarlyReflectionsAuxSend(gameObject, reflectionsAuxBus.Id);
+			AkUnitySoundEngine.SetEarlyReflectionsAuxSend(gameObject, reflectionsAuxBus.Id);
 		}
 
-		AkSoundEngine.SetEarlyReflectionsVolume(gameObject, reflectionsVolume);
+		AkUnitySoundEngine.SetEarlyReflectionsVolume(gameObject, reflectionsVolume);
 	}
 
 	public void SetEarlyReflectionsVolume(float volume)
 	{
 		if (reflectionsVolume != volume)
 		{
-			AkSoundEngine.SetEarlyReflectionsVolume(gameObject, volume);
+			AkUnitySoundEngine.SetEarlyReflectionsVolume(gameObject, volume);
 			reflectionsVolume = volume;
 		}
 	}

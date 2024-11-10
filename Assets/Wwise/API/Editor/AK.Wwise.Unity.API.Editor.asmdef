@@ -4,7 +4,8 @@
         "AK.Wwise.Unity.API",
         "AK.Wwise.Unity.API.WwiseTypes",
         "AK.Wwise.Unity.MonoBehaviour",
-        "Ak.Wwise.Api.WAAPI"
+        "Ak.Wwise.Api.WAAPI",
+        "AK.Wwise.Unity.ProjectDatabase"
     ],
     "includePlatforms": [
         "Editor"

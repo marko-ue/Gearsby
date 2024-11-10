@@ -18,13 +18,13 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
 [UnityEngine.Timeline.TrackColor(0.855f, 0.8623f, 0.870f)]
 [UnityEngine.Timeline.TrackClipType(typeof(AkEventPlayable))]
 [UnityEngine.Timeline.TrackBindingType(typeof(UnityEngine.GameObject))]
-[System.Obsolete(AkSoundEngine.Deprecation_2019_2_0)]
+[System.Obsolete(AkUnitySoundEngine.Deprecation_2019_2_0)]
 #if UNITY_2019_1_OR_NEWER
 [UnityEngine.Timeline.HideInMenu]
 #endif

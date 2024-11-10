@@ -18,10 +18,10 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
-[System.Obsolete(AkSoundEngine.Deprecation_2019_2_0)]
+[System.Obsolete(AkUnitySoundEngine.Deprecation_2019_2_0)]
 [UnityEditor.CustomEditor(typeof(AkRTPCPlayable))]
 public class AkRTPCPlayableInspector : UnityEditor.Editor
 {
@@ -46,7 +46,7 @@ public class AkRTPCPlayableInspector : UnityEditor.Editor
 
 	public override void OnInspectorGUI()
 	{
-		UnityEditor.EditorGUILayout.HelpBox(AkSoundEngine.Deprecation_2019_2_0, UnityEditor.MessageType.Warning);
+		UnityEditor.EditorGUILayout.HelpBox(AkUnitySoundEngine.Deprecation_2019_2_0, UnityEditor.MessageType.Warning);
 
 		serializedObject.Update();
 

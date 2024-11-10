@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -134,7 +134,7 @@ public static class AkWwiseProjectInfo
 		if (AkUtilities.IsWwiseProjectAvailable)
 		{
 			bDirty = AkWwiseWWUBuilder.Populate();
-			bDirty |= AkWwiseXMLBuilder.Populate();
+			bDirty |= AkWwiseJSONBuilder.Populate();
 			if (bDirty)
 			{
 				UnityEditor.EditorUtility.SetDirty(GetData());
