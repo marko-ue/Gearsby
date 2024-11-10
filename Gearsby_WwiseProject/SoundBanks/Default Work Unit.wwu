@@ -8,6 +8,16 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="Main" ID="{E98273AE-2EE3-49C6-8063-FE09334FB690}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Ambience" ID="{7119D57A-6674-43FA-BBB2-EA4E283DA39D}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Objects" ID="{1A670A14-3362-454C-AD3E-6C78B3F77C45}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player" ID="{CA056418-C589-48FC-BBB2-B78EF6C1770B}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SFX" ID="{9019B2A3-85AD-4E33-818A-76D44E6EC095}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

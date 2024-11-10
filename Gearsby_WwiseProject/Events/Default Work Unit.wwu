@@ -3,17 +3,324 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="fs" ID="{C61A8E76-F657-4367-863A-69C0D7676407}">
+				<Folder Name="Player" ID="{CA056418-C589-48FC-BBB2-B78EF6C1770B}" ShortID="832639659">
 					<ChildrenList>
-						<Action Name="" ID="{5A466D10-7F2D-41FB-B04B-CE233BFE134C}" ShortID="355360290">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="test" ID="{669DEB60-8D8C-47A5-A7D8-99A26DB8BD97}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Play_crouch" ID="{0D594692-C8B8-4488-AE6E-A8590A87785E}">
+							<ChildrenList>
+								<Action Name="" ID="{31395BBC-4D19-4A23-B751-A64570193542}" ShortID="107842743">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="crouch" ID="{04764D6C-9361-482F-AF03-DDC9B117D8FC}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Footsteps" ID="{710E7D9B-8209-4EF1-9C9D-AB8BAFF8B108}">
+							<ChildrenList>
+								<Action Name="" ID="{F7A6A0A7-B1C7-45A9-B8FD-494A0AB1B29F}" ShortID="611791304">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Footsteps" ID="{D36E57B0-1D04-47FF-AE55-35F896EEB3BB}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_player_jump" ID="{C2C7167F-115D-4043-B773-31D6B7377DF5}">
+							<ChildrenList>
+								<Action Name="" ID="{9CF2BAE5-9387-4F02-B754-F3EB21399548}" ShortID="909634902">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="player_jump" ID="{5CA409DB-D627-4B4B-A13B-CE933C5FFC62}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_player_crafting" ID="{491120A4-6361-4480-B353-86405D435535}">
+							<ChildrenList>
+								<Action Name="" ID="{6633B28B-A078-4FA4-BCFB-4A66068492FA}" ShortID="516859276">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="player_crafting" ID="{29B7535F-76EE-4C1C-ABCC-6095D06C705A}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_player_pickup" ID="{096B313A-88BF-44F2-8127-63E5D47D71B8}">
+							<ChildrenList>
+								<Action Name="" ID="{56D0AF29-7E04-4D19-B83C-E34057B09F52}" ShortID="86618976">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="player_pickup" ID="{8F387A05-0CE4-447D-AF0F-997727C3658B}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_uncrouch" ID="{B6D58378-4DE8-4979-932F-A7ED70CC23FD}">
+							<ChildrenList>
+								<Action Name="" ID="{C9BDD0FA-5B79-4B56-93F7-083441A658B3}" ShortID="928791867">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="uncrouch" ID="{288C19C0-2829-4869-B223-B0F53970CEF0}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_player_land" ID="{1658014B-6F87-43B0-85CD-6BC439E1617E}">
+							<ChildrenList>
+								<Action Name="" ID="{2AAA1A62-C564-4840-BF72-E3AD9D01AB82}" ShortID="886176815">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="land" ID="{038AA603-2571-4434-A1A9-F097275F2AC5}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
+				</Folder>
+				<Folder Name="Ambience" ID="{7119D57A-6674-43FA-BBB2-EA4E283DA39D}" ShortID="811956567">
+					<ChildrenList>
+						<Event Name="amb" ID="{44186391-7428-4330-840C-B24BF3FBCD77}">
+							<ChildrenList>
+								<Action Name="" ID="{882D07C1-B10C-4DE4-9088-3AD820D94068}" ShortID="173765292">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="0"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="outside" ID="{093A65F3-23E4-43A8-9F23-7839E59497CC}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B5141CA9-F496-41F2-A697-412D1D63AD95}" ShortID="241542042">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="roomtone" ID="{0810920B-1745-4866-B02E-9F5C7B1B37C0}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BD71EF5A-AC62-400B-847F-A466A3C90960}" ShortID="601174229">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="outside_sounddesign" ID="{AD476882-BE37-48BE-B524-25D48C12922B}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="amb_stop" ID="{D742EA32-B01B-4AE8-8648-112950A4CEEE}">
+							<ChildrenList>
+								<Action Name="" ID="{7DBC8774-F5CB-4053-BA5B-B76ED2566159}" ShortID="633300339">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="outside" ID="{093A65F3-23E4-43A8-9F23-7839E59497CC}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CF2A0E39-7762-4B61-AC9D-54876A720108}" ShortID="67268865">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="outside_sounddesign" ID="{AD476882-BE37-48BE-B524-25D48C12922B}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{699F35C9-985C-4B4F-A916-D47D297891CC}" ShortID="537015015">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="roomtone" ID="{0810920B-1745-4866-B02E-9F5C7B1B37C0}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="SFX" ID="{9019B2A3-85AD-4E33-818A-76D44E6EC095}" ShortID="584843234">
+					<ChildrenList>
+						<Event Name="Play_sfx_explosion_small" ID="{EC052705-B3E0-4D32-A058-61729FAE2D7D}">
+							<ChildrenList>
+								<Action Name="" ID="{73B084E6-D8BC-4B26-A4A9-740CAE761E5E}" ShortID="574903758">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_explosion_small" ID="{FEDEDE33-89FA-4B95-9F74-A7B3AF80FB2F}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_sfx_spark" ID="{5EBBC129-8547-4439-A5E6-E9DC4328B236}">
+							<ChildrenList>
+								<Action Name="" ID="{77AA3B32-DA75-41DA-BC50-152A0B0A585A}" ShortID="1014656703">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_spark" ID="{1AC57B07-0BD1-4545-A91E-97FE97B4E385}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_sfx_explosion_big" ID="{F96632EC-57FD-4FC8-A39B-54ED8178B980}">
+							<ChildrenList>
+								<Action Name="" ID="{60626366-FA5B-40EC-BC7C-85EDDF995755}" ShortID="492697124">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_explosion_big" ID="{BB8C6F22-D6B9-44DA-9030-334EAC5D435C}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Objects" ID="{1A670A14-3362-454C-AD3E-6C78B3F77C45}" ShortID="477882695">
+					<ChildrenList>
+						<Folder Name="gearwheels" ID="{77CA40EA-BD11-40E1-A9B4-E94AB81AAE5D}" ShortID="782352991">
+							<ChildrenList>
+								<Event Name="Play_gearwheel_big2" ID="{E21FF4A3-84D9-46CC-8C86-AC78FDA40EDA}">
+									<ChildrenList>
+										<Action Name="" ID="{D5696024-D655-4EB8-B20C-E71465663082}" ShortID="195596674">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="gearwheel_big2" ID="{87A22852-79B2-4F3A-BDEC-903A5275DDDF}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_gearwheel_big3" ID="{C974E195-F93E-4034-B066-F823F31195D4}">
+									<ChildrenList>
+										<Action Name="" ID="{F439C74E-D3AB-47EA-8BD4-8FACAC181AC4}" ShortID="31248344">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="gearwheel_big3" ID="{935404A9-F714-4113-9C63-FD86239F6C1C}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_gearwheel_small_1" ID="{A4E0700F-E87E-4E3F-A667-5AB14EBAD83D}">
+									<ChildrenList>
+										<Action Name="" ID="{074C9D93-D9E8-4188-AF6D-8DA8E5F8B59B}" ShortID="46811567">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="gearwheel_small_1" ID="{066F9C89-716D-4F12-8B3D-CD8B275E388F}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_gearwheel_big1" ID="{1040413C-908C-4DE0-BE20-7DD01B357582}">
+									<ChildrenList>
+										<Action Name="" ID="{D4CABE29-9AEC-4C1A-B254-F8E810117C4D}" ShortID="401891680">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="gearwheel_big1" ID="{CD10F32D-32AF-4DDC-91AF-34BCD04B6A06}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_gearwheel_small_2" ID="{F5462479-2C61-45C7-985D-56E916E2E2E2}">
+									<ChildrenList>
+										<Action Name="" ID="{3B1B7198-762F-4DB2-B626-F15DF76BAC0F}" ShortID="912458412">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="gearwheel_small_2" ID="{2877BF50-37F2-4634-97BB-F9828EB04301}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_gearwheel_small_1" ID="{DE7BB310-D4FE-4B65-AD2D-2C9020B7F327}">
+									<ChildrenList>
+										<Action Name="" ID="{B3F3E06D-354D-4A18-B6E5-1BD7AFF3894C}" ShortID="807550391">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="gearwheel_small_1" ID="{066F9C89-716D-4F12-8B3D-CD8B275E388F}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_gearwheel_small_2" ID="{C81544A5-A085-40AE-B744-A545A2090E7F}">
+									<ChildrenList>
+										<Action Name="" ID="{08B8A082-5242-4255-990C-275290F2F5F1}" ShortID="336523016">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="gearwheel_small_2" ID="{2877BF50-37F2-4634-97BB-F9828EB04301}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_gearwheel_big1" ID="{3B99479D-3400-4558-8EB6-7052FA429531}">
+									<ChildrenList>
+										<Action Name="" ID="{63C43536-F125-4FB2-8C0B-8240E46ADCD0}" ShortID="54843296">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="gearwheel_big1" ID="{CD10F32D-32AF-4DDC-91AF-34BCD04B6A06}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_gearwheel_big3" ID="{805A67DC-B894-4257-A7FC-CCB04D08A648}">
+									<ChildrenList>
+										<Action Name="" ID="{2024EAF8-7683-4C26-BFD8-9F8343BAB0CD}" ShortID="1069106203">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="gearwheel_big3" ID="{935404A9-F714-4113-9C63-FD86239F6C1C}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_gearwheel_big2" ID="{C0C43921-7164-4654-9450-935CCF4796D4}">
+									<ChildrenList>
+										<Action Name="" ID="{9E4DC62C-E778-4C7F-9B2C-FC2CC38AC684}" ShortID="645522593">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="gearwheel_big2" ID="{87A22852-79B2-4F3A-BDEC-903A5275DDDF}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -1,0 +1,89 @@
+Event	ID	Name			Wwise Object Path	Notes
+	562256996	Play_player_jump			\Default Work Unit\Player\Play_player_jump	
+	729984210	amb_stop			\Default Work Unit\Ambience\amb_stop	
+	869605300	Stop_gearwheel_big3			\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big3	
+	869605301	Stop_gearwheel_big2			\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big2	
+	869605302	Stop_gearwheel_big1			\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big1	
+	1066065249	Stop_gearwheel_small_2			\Default Work Unit\Objects\gearwheels\Stop_gearwheel_small_2	
+	1066065250	Stop_gearwheel_small_1			\Default Work Unit\Objects\gearwheels\Stop_gearwheel_small_1	
+	1117531639	amb			\Default Work Unit\Ambience\amb	
+	1206242149	Play_sfx_spark			\Default Work Unit\SFX\Play_sfx_spark	
+	1976423929	Play_uncrouch			\Default Work Unit\Player\Play_uncrouch	
+	2003218848	Play_sfx_explosion_big			\Default Work Unit\SFX\Play_sfx_explosion_big	
+	2395824906	Play_player_crafting			\Default Work Unit\Player\Play_player_crafting	
+	3077863823	Play_sfx_explosion_small			\Default Work Unit\SFX\Play_sfx_explosion_small	
+	3379724016	Play_gearwheel_big1			\Default Work Unit\Objects\gearwheels\Play_gearwheel_big1	
+	3379724018	Play_gearwheel_big3			\Default Work Unit\Objects\gearwheels\Play_gearwheel_big3	
+	3379724019	Play_gearwheel_big2			\Default Work Unit\Objects\gearwheels\Play_gearwheel_big2	
+	3652445300	Play_player_pickup			\Default Work Unit\Player\Play_player_pickup	
+	3854155799	Play_Footsteps			\Default Work Unit\Player\Play_Footsteps	
+	3880120448	Play_gearwheel_small_1			\Default Work Unit\Objects\gearwheels\Play_gearwheel_small_1	
+	3880120451	Play_gearwheel_small_2			\Default Work Unit\Objects\gearwheels\Play_gearwheel_small_2	
+	3989731860	Play_crouch			\Default Work Unit\Player\Play_crouch	
+	4249207015	Play_player_land			\Default Work Unit\Player\Play_player_land	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2385628198	Footsteps			\Default Work Unit\Footsteps	
+
+Switch	ID	Name	Switch Group			Notes
+	841620460	Concrete	Footsteps			
+	2058049674	wood	Footsteps			
+	2473969246	metal	Footsteps			
+	4248645337	grass	Footsteps			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	232210557	in_out_side			\Default Work Unit\in_out_side	
+
+State	ID	Name	State Group			Notes
+	748895195	None	in_out_side			
+	1319799452	inside_house	in_out_side			
+	4145910067	outside_house	in_out_side			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	30616111	fs_wood_2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_wood_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_2		84144
+	120599801	fs_concrete_5	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_concrete_5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_5		60144
+	160416403	fs_wood_7	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_wood_7_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_7		83288
+	178792215	fs_wood_9	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_wood_9_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_9		83288
+	191270774	jump1	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\jump1_024AAE00.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\jump\player_jump\jump1		130428
+	215534549	fs_concrete_2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_concrete_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_2		61068
+	239899283	gearwheel_small_1	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\gearwheel_small_1_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\gearweels\gearwheel_small_1		1058912
+	250773777	fs_wood_1	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_wood_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_1		83288
+	256062630	sfx_explosion_small	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\sfx_explosion_small_4CED645D.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_explosion_small		511000
+	271938364	land1	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\land1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\land\player_land_concrete\land1		111836
+	276668504	fs_wood_4	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_wood_4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_4		83288
+	294139425	jump2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\jump2_7B00D8EB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\jump\player_jump\jump2		112428
+	325965509	gearwheel_big3	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\gearwheel_big3_273277BC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\gearweels\gearwheel_big3		1799220
+	339971893	fs_wood_8	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_wood_8_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_8		83288
+	344323858	fs_concrete_4	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_concrete_4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_4		60144
+	413944778	jump3	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\jump3_D98EA55B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\jump\player_jump\jump3		95288
+	425838404	uncrouch	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\uncrouch_8DC01555.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\crouch\uncrouch		133992
+	432449031	roomtone	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\roomtone_2F05DB0A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Env\Ambience\roomtone		3689684
+	448393177	land_wood	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\land_wood_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\land\player_land_wood\land_wood		85860
+	460880279	land_wood2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\land_wood2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\land\player_land_wood\land_wood2		84144
+	464333412	fs_concrete_6	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_concrete_6_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_6		61992
+	477806905	fs_concrete_3	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_concrete_3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_3		60144
+	499614530	fs_concrete_9	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_concrete_9_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_9		61992
+	514253887	outside_sounddesign	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\amb sd2_0B3A059C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Env\Ambience\outside_sounddesign		10775220
+	562187170	sfx_explosion_big	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\sfx_explosion_big_66AC71BE.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_explosion_big		652428
+	593250279	crouch	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\crouch_CC330728.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\crouch\crouch		133992
+	634952087	fs_wood_11	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_wood_11_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_11		83288
+	651898324	fs_wood_3	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_wood_3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_3		83288
+	673616570	gearwheel_big2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\gearwheel_big2_53309ED9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\gearweels\gearwheel_big2		1735528
+	719774501	fs_wood_5	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_wood_5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_5		83288
+	759287006	fs_concrete_8	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_concrete_8_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_8		61068
+	776067418	fs_concrete_11	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_concrete_11_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_11		61068
+	810323791	fs_concrete_1	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_concrete_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_1		61068
+	815742297	fs_concrete_7	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_concrete_7_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_7		61992
+	817431570	land3	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\land3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\land\player_land_concrete\land3		97068
+	826279942	player_crafting	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\player_crafting_DF0A2EEF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\action\player_crafting		185856
+	842749808	land_wood3	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\land_wood3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\land\player_land_wood\land_wood3		82428
+	858740261	fs_concrete_10	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_concrete_10_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_10		60144
+	863935299	player_pickup	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\player_pickup_1359BEEF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\action\player_pickup		114144
+	892688682	gearwheel_big1	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\gearwheel_big1_4D40E08B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\gearweels\gearwheel_big1		2057684
+	912769731	outside	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\outside_9D8F0DB7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Env\Ambience\outside		12113684
+	981518875	gearwheel_small_2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\gearwheel_medium_1_636D5E22.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\gearweels\gearwheel_small_2		2201684
+	993634849	fs_wood_6	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_wood_6_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_6		83288
+	1000058938	sfx_spark	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\sfx_spark_CC4BC7F3.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_spark		267572
+	1016587892	land2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\land2_A3412CDC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\land\player_land_concrete\land2		82296
+	1057856872	fs_wood_10	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\Windows\SFX\fs_wood_10_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_10		83288
+
