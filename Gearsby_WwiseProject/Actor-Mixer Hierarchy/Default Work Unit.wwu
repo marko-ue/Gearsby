@@ -737,7 +737,9 @@
 											<ChildrenList>
 												<AudioFileSource Name="jump3" ID="{6568E708-A027-413C-A65E-0AA530287560}">
 													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.668270833333333"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.408093137254902"/>
+														<Property Name="LoopEnd" Type="Real64" Value="0.46998924291939"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>jump3.wav</AudioFile>

@@ -45,7 +45,7 @@
 			<ShortName>fs</ShortName>
 			<Path>fs.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3087B327-9964-5F37-DCF3-6401169ECDDC}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2038D1F0-EEE6-5BBA-6588-7566624CE06E}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -111,7 +111,7 @@
 				</File>
 				<File Id="413944778" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump3.wav</ShortName>
-					<CachePath>SFX/jump3_D98EA55B.wem</CachePath>
+					<CachePath>SFX/jump3_40625B16.wem</CachePath>
 				</File>
 				<File Id="425838404" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>uncrouch.wav</ShortName>
@@ -384,5 +384,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E1367B4F-B3F7-B02B-B8F4-776C590E4547}</FileHash>
+	<FileHash>{33A725AF-D643-AA65-F45C-3F0C4BBE21CD}</FileHash>
 </SoundBanksInfo>
