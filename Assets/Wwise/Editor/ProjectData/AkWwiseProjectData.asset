@@ -148,8 +148,8 @@ MonoBehaviour:
         guid: 32ea42d71bb0e84a8648112950a4ceee
       Path: Events\Default Work Unit\Ambience\amb_stop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Ambience
       guid: 7ad519717466fa43bbb2ea4e283da39d
       id: 85412153
@@ -222,8 +222,8 @@ MonoBehaviour:
         guid: 9246590db8c88844ae6ea8590a87785e
       Path: Events\Default Work Unit\Player\Play_crouch
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.8100911
+      minDuration: 0.8100911
     - name: Play_Footsteps
       guid: 9b7d0e710982f14e9c9dab8baff8b108
       id: 3854155799
@@ -242,8 +242,8 @@ MonoBehaviour:
         guid: 9b7d0e710982f14e9c9dab8baff8b108
       Path: Events\Default Work Unit\Player\Play_Footsteps
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.4375
+      minDuration: 0.3125
     - name: Play_gearwheel_big1
       guid: 3c4140108c90e04dbe207dd01b357582
       id: 3379724016
@@ -264,7 +264,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 3c4140108c90e04dbe207dd01b357582
       Path: Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_big1
-      maxAttenuation: 0
+      maxAttenuation: 20
       maxDuration: -1
       minDuration: -1
     - name: Play_gearwheel_big2
@@ -287,7 +287,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: a3f41fe2d984cc468c86ac78fda40eda
       Path: Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_big2
-      maxAttenuation: 0
+      maxAttenuation: 20
       maxDuration: -1
       minDuration: -1
     - name: Play_gearwheel_big3
@@ -310,7 +310,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 95e174c93ef93440b066f823f31195d4
       Path: Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_big3
-      maxAttenuation: 0
+      maxAttenuation: 20
       maxDuration: -1
       minDuration: -1
     - name: Play_gearwheel_small_1
@@ -333,7 +333,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0f70e0a47ee83f4ea6675ab14ebad83d
       Path: Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_small_1
-      maxAttenuation: 0
+      maxAttenuation: 20
       maxDuration: -1
       minDuration: -1
     - name: Play_gearwheel_small_2
@@ -356,7 +356,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 792446f5612cc745985d56e916e2e2e2
       Path: Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_small_2
-      maxAttenuation: 0
+      maxAttenuation: 20
       maxDuration: -1
       minDuration: -1
     - name: Play_player_crafting
@@ -377,8 +377,8 @@ MonoBehaviour:
         guid: a420114961638044b35386405d435535
       Path: Events\Default Work Unit\Player\Play_player_crafting
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.9672489
+      minDuration: 0.9672489
     - name: Play_player_jump
       guid: 7f16c7c25d114340b77331d6b7377df5
       id: 562256996
@@ -397,8 +397,8 @@ MonoBehaviour:
         guid: 7f16c7c25d114340b77331d6b7377df5
       Path: Events\Default Work Unit\Player\Play_player_jump
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.718912
+      minDuration: 0.52500814
     - name: Play_player_land
       guid: 4b015816876fb04385cd6bc439e1617e
       id: 4249207015
@@ -417,8 +417,8 @@ MonoBehaviour:
         guid: 4b015816876fb04385cd6bc439e1617e
       Path: Events\Default Work Unit\Player\Play_player_land
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.6529689
+      minDuration: 0.38119328
     - name: Play_player_pickup
       guid: 3a316b09bf88f244812763e5d47d71b8
       id: 3652445300
@@ -437,8 +437,8 @@ MonoBehaviour:
         guid: 3a316b09bf88f244812763e5d47d71b8
       Path: Events\Default Work Unit\Player\Play_player_pickup
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.59375
+      minDuration: 0.59375
     - name: Play_sfx_explosion_big
       guid: ec3266f9fd57c84fa39b54ed8178b980
       id: 2003218848
@@ -456,9 +456,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: ec3266f9fd57c84fa39b54ed8178b980
       Path: Events\Default Work Unit\SFX\Play_sfx_explosion_big
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 50
+      maxDuration: 3.3973124
+      minDuration: 3.3973124
     - name: Play_sfx_explosion_small
       guid: 052705ece0b3324da05861729fae2d7d
       id: 3077863823
@@ -476,9 +476,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 052705ece0b3324da05861729fae2d7d
       Path: Events\Default Work Unit\SFX\Play_sfx_explosion_small
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 50
+      maxDuration: 2.6607084
+      minDuration: 2.6607084
     - name: Play_sfx_spark
       guid: 29c1bb5e47853944a5e6e9dc4328b236
       id: 1206242149
@@ -496,9 +496,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 29c1bb5e47853944a5e6e9dc4328b236
       Path: Events\Default Work Unit\SFX\Play_sfx_spark
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 50
+      maxDuration: 1.3928542
+      minDuration: 1.3928542
     - name: Play_uncrouch
       guid: 7883d5b6e84d7949932fa7ed70cc23fd
       id: 1976423929
@@ -517,8 +517,8 @@ MonoBehaviour:
         guid: 7883d5b6e84d7949932fa7ed70cc23fd
       Path: Events\Default Work Unit\Player\Play_uncrouch
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.62106776
+      minDuration: 0.62106776
     - name: Player
       guid: 186405ca89c5fc48bbb2b78ef6c1770b
       id: 1069431850
@@ -574,8 +574,8 @@ MonoBehaviour:
         guid: 9d47993b003458458eb67052fa429531
       Path: Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_gearwheel_big2
       guid: 2139c4c0647154469450935ccf4796d4
       id: 869605301
@@ -597,8 +597,8 @@ MonoBehaviour:
         guid: 2139c4c0647154469450935ccf4796d4
       Path: Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big2
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_gearwheel_big3
       guid: dc675a8094b85742a7fcccb04d08a648
       id: 869605300
@@ -620,8 +620,8 @@ MonoBehaviour:
         guid: dc675a8094b85742a7fcccb04d08a648
       Path: Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big3
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_gearwheel_small_1
       guid: 10b37bdefed4654bad2d2c9020b7f327
       id: 1066065250
@@ -643,8 +643,8 @@ MonoBehaviour:
         guid: 10b37bdefed4654bad2d2c9020b7f327
       Path: Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_small_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_gearwheel_small_2
       guid: a54415c885a0ae40b744a545a2090e7f
       id: 1066065249
@@ -666,8 +666,8 @@ MonoBehaviour:
         guid: a54415c885a0ae40b744a545a2090e7f
       Path: Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_small_2
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

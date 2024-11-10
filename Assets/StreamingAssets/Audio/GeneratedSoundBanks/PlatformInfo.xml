@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PlatformInfo>
-	<Platform Name="Windows" BasePlatform="Windows" Generator="2023.1.0.8367"/>
+	<Platform Name="Windows" BasePlatform="Windows" Generator="2024.1.0.8669"/>
 	<RootPaths>
 		<ProjectRoot>../../../../Gearsby_WwiseProject</ProjectRoot>
-		<SourceFilesRoot>../../../../Gearsby_WwiseProject/.cache/Windows</SourceFilesRoot>
+		<SourceFilesRoot>../../../../Gearsby_WwiseProject/.cache</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>../../../../Gearsby_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
@@ -28,5 +28,5 @@
 		<PrintObjectGuid>false</PrintObjectGuid>
 		<PrintObjectPath>false</PrintObjectPath>
 	</Settings>
-	<FileHash>{51677AAB-153A-0F9D-52ED-5556949CC7A9}</FileHash>
+	<FileHash>{3A42A9B2-085F-7106-0569-66DC7C846148}</FileHash>
 </PlatformInfo>

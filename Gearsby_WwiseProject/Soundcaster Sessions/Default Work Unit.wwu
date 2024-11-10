@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{26E2C7B9-AC57-4446-A922-526E586095B2}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{26E2C7B9-AC57-4446-A922-526E586095B2}" SchemaVersion="123">
 	<SoundcasterSessions>
 		<WorkUnit Name="Default Work Unit" ID="{26E2C7B9-AC57-4446-A922-526E586095B2}" PersistMode="Standalone">
 			<ChildrenList>
@@ -59,7 +59,7 @@
 						<CurrentStateRef Name="inside_house" ID="{436EEC45-078F-4F9F-90B7-2BB6FF36D421}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Concrete" ID="{D1AEEF25-803B-459A-87BB-AEC0F1710065}"/>
+						<CurrentSwitchRef Name="wood" ID="{CA972D6A-ECF8-4B4D-90E5-01FE9D6D0F6F}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
