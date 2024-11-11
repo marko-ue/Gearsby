@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18867c60b6ad334bb83c56b268bfc2b, type: 3}
   m_Name: 491120A4-6361-4480-B353-86405D435535
   m_EditorClassIdentifier: 
-  objectName: Play_player_crafting
-  id: 2395824906
+  objectName: Play_player_craft_normal
+  id: 1971662352
   guid: 491120A4-6361-4480-B353-86405D435535
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

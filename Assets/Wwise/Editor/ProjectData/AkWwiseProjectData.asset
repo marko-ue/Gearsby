@@ -118,12 +118,742 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 7a8b5a3938a43540bb2d1dc02b0ec082
+      guid: 07bf8baa218fcf4293d9192c9e718494
     ParentPath: Events\Default Work Unit
-    guid: 7a8b5a3938a43540bb2d1dc02b0ec082
+    guid: 07bf8baa218fcf4293d9192c9e718494
     GuidInternal: 
-    m_lastTime: -8584703382304766713
-    List: []
+    m_lastTime: -8584702604644264758
+    List:
+    - name: amb
+      guid: 9163184428743043840cb24bf3fbcd77
+      id: 1117531639
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 7ad519717466fa43bbb2ea4e283da39d
+      - ElementName: amb
+        ObjectType: 3
+        guid: 9163184428743043840cb24bf3fbcd77
+      Path: Events\Default Work Unit\Ambience\amb
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: amb_stop
+      guid: 32ea42d71bb0e84a8648112950a4ceee
+      id: 729984210
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 7ad519717466fa43bbb2ea4e283da39d
+      - ElementName: amb_stop
+        ObjectType: 3
+        guid: 32ea42d71bb0e84a8648112950a4ceee
+      Path: Events\Default Work Unit\Ambience\amb_stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Ambience
+      guid: 7ad519717466fa43bbb2ea4e283da39d
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 7ad519717466fa43bbb2ea4e283da39d
+      Path: Events\Default Work Unit\Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: doors
+      guid: ec5124eada1f75469e662dcd074a32b9
+      id: 2150196036
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: doors
+        ObjectType: 4
+        guid: ec5124eada1f75469e662dcd074a32b9
+      Path: Events\Default Work Unit\Objects\doors
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: drawers
+      guid: ebeb4e7209e17144a7961a84daa850e5
+      id: 1462380605
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: drawers
+        ObjectType: 4
+        guid: ebeb4e7209e17144a7961a84daa850e5
+      Path: Events\Default Work Unit\Objects\drawers
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: gearwheels
+      guid: ea40ca7711bde140a9b4e94ab81aae5d
+      id: 8205100
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: gearwheels
+        ObjectType: 4
+        guid: ea40ca7711bde140a9b4e94ab81aae5d
+      Path: Events\Default Work Unit\Objects\gearwheels
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Objects
+      guid: 140a671a62334c45ad3e6c78b3f77c45
+      id: 1695690031
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      Path: Events\Default Work Unit\Objects
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_crouch
+      guid: 9246590db8c88844ae6ea8590a87785e
+      id: 3989731860
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Player
+        ObjectType: 4
+        guid: 186405ca89c5fc48bbb2b78ef6c1770b
+      - ElementName: Play_crouch
+        ObjectType: 3
+        guid: 9246590db8c88844ae6ea8590a87785e
+      Path: Events\Default Work Unit\Player\Play_crouch
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_door_close
+      guid: 5d34082476e6a24abb4654e68d316eef
+      id: 2292458263
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: doors
+        ObjectType: 4
+        guid: ec5124eada1f75469e662dcd074a32b9
+      - ElementName: Play_door_close
+        ObjectType: 3
+        guid: 5d34082476e6a24abb4654e68d316eef
+      Path: Events\Default Work Unit\Objects\doors\Play_door_close
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_door_open
+      guid: a714b5a3e0d35f44af053daa3a8a559a
+      id: 1660008929
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: doors
+        ObjectType: 4
+        guid: ec5124eada1f75469e662dcd074a32b9
+      - ElementName: Play_door_open
+        ObjectType: 3
+        guid: a714b5a3e0d35f44af053daa3a8a559a
+      Path: Events\Default Work Unit\Objects\doors\Play_door_open
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_drawer_close
+      guid: e9febe47bd3064418f4b43736c333eef
+      id: 2315829540
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: drawers
+        ObjectType: 4
+        guid: ebeb4e7209e17144a7961a84daa850e5
+      - ElementName: Play_drawer_close
+        ObjectType: 3
+        guid: e9febe47bd3064418f4b43736c333eef
+      Path: Events\Default Work Unit\Objects\drawers\Play_drawer_close
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_drawer_open
+      guid: 9d882cb301149b41b8c3842b9f39eddb
+      id: 1958703520
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: drawers
+        ObjectType: 4
+        guid: ebeb4e7209e17144a7961a84daa850e5
+      - ElementName: Play_drawer_open
+        ObjectType: 3
+        guid: 9d882cb301149b41b8c3842b9f39eddb
+      Path: Events\Default Work Unit\Objects\drawers\Play_drawer_open
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Footsteps
+      guid: 9b7d0e710982f14e9c9dab8baff8b108
+      id: 3854155799
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Player
+        ObjectType: 4
+        guid: 186405ca89c5fc48bbb2b78ef6c1770b
+      - ElementName: Play_Footsteps
+        ObjectType: 3
+        guid: 9b7d0e710982f14e9c9dab8baff8b108
+      Path: Events\Default Work Unit\Player\Play_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_gearwheel_big1
+      guid: 3c4140108c90e04dbe207dd01b357582
+      id: 3379724016
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: gearwheels
+        ObjectType: 4
+        guid: ea40ca7711bde140a9b4e94ab81aae5d
+      - ElementName: Play_gearwheel_big1
+        ObjectType: 3
+        guid: 3c4140108c90e04dbe207dd01b357582
+      Path: Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_big1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_gearwheel_big2
+      guid: a3f41fe2d984cc468c86ac78fda40eda
+      id: 3379724019
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: gearwheels
+        ObjectType: 4
+        guid: ea40ca7711bde140a9b4e94ab81aae5d
+      - ElementName: Play_gearwheel_big2
+        ObjectType: 3
+        guid: a3f41fe2d984cc468c86ac78fda40eda
+      Path: Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_big2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_gearwheel_big3
+      guid: 95e174c93ef93440b066f823f31195d4
+      id: 3379724018
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: gearwheels
+        ObjectType: 4
+        guid: ea40ca7711bde140a9b4e94ab81aae5d
+      - ElementName: Play_gearwheel_big3
+        ObjectType: 3
+        guid: 95e174c93ef93440b066f823f31195d4
+      Path: Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_big3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_gearwheel_small_1
+      guid: 0f70e0a47ee83f4ea6675ab14ebad83d
+      id: 3880120448
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: gearwheels
+        ObjectType: 4
+        guid: ea40ca7711bde140a9b4e94ab81aae5d
+      - ElementName: Play_gearwheel_small_1
+        ObjectType: 3
+        guid: 0f70e0a47ee83f4ea6675ab14ebad83d
+      Path: Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_small_1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_gearwheel_small_2
+      guid: 792446f5612cc745985d56e916e2e2e2
+      id: 3880120451
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: gearwheels
+        ObjectType: 4
+        guid: ea40ca7711bde140a9b4e94ab81aae5d
+      - ElementName: Play_gearwheel_small_2
+        ObjectType: 3
+        guid: 792446f5612cc745985d56e916e2e2e2
+      Path: Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_small_2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_player_craft_fail
+      guid: 2e7d76f169d7b641ab6ee9e9b8b236f5
+      id: 902684097
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Player
+        ObjectType: 4
+        guid: 186405ca89c5fc48bbb2b78ef6c1770b
+      - ElementName: Play_player_craft_fail
+        ObjectType: 3
+        guid: 2e7d76f169d7b641ab6ee9e9b8b236f5
+      Path: Events\Default Work Unit\Player\Play_player_craft_fail
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_player_craft_liquid
+      guid: d470f9b1ce0e874f939f1bdc107f8368
+      id: 2230999485
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Player
+        ObjectType: 4
+        guid: 186405ca89c5fc48bbb2b78ef6c1770b
+      - ElementName: Play_player_craft_liquid
+        ObjectType: 3
+        guid: d470f9b1ce0e874f939f1bdc107f8368
+      Path: Events\Default Work Unit\Player\Play_player_craft_liquid
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_player_craft_normal
+      guid: a420114961638044b35386405d435535
+      id: 1971662352
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Player
+        ObjectType: 4
+        guid: 186405ca89c5fc48bbb2b78ef6c1770b
+      - ElementName: Play_player_craft_normal
+        ObjectType: 3
+        guid: a420114961638044b35386405d435535
+      Path: Events\Default Work Unit\Player\Play_player_craft_normal
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_player_jump
+      guid: 7f16c7c25d114340b77331d6b7377df5
+      id: 562256996
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Player
+        ObjectType: 4
+        guid: 186405ca89c5fc48bbb2b78ef6c1770b
+      - ElementName: Play_player_jump
+        ObjectType: 3
+        guid: 7f16c7c25d114340b77331d6b7377df5
+      Path: Events\Default Work Unit\Player\Play_player_jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_player_land
+      guid: 4b015816876fb04385cd6bc439e1617e
+      id: 4249207015
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Player
+        ObjectType: 4
+        guid: 186405ca89c5fc48bbb2b78ef6c1770b
+      - ElementName: Play_player_land
+        ObjectType: 3
+        guid: 4b015816876fb04385cd6bc439e1617e
+      Path: Events\Default Work Unit\Player\Play_player_land
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_player_pickup
+      guid: 3a316b09bf88f244812763e5d47d71b8
+      id: 3652445300
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Player
+        ObjectType: 4
+        guid: 186405ca89c5fc48bbb2b78ef6c1770b
+      - ElementName: Play_player_pickup
+        ObjectType: 3
+        guid: 3a316b09bf88f244812763e5d47d71b8
+      Path: Events\Default Work Unit\Player\Play_player_pickup
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_sfx_explosion_big
+      guid: ec3266f9fd57c84fa39b54ed8178b980
+      id: 2003218848
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: SFX
+        ObjectType: 4
+        guid: a3b21990ad85334e818a76d44e6ec095
+      - ElementName: Play_sfx_explosion_big
+        ObjectType: 3
+        guid: ec3266f9fd57c84fa39b54ed8178b980
+      Path: Events\Default Work Unit\SFX\Play_sfx_explosion_big
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_sfx_explosion_small
+      guid: 052705ece0b3324da05861729fae2d7d
+      id: 3077863823
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: SFX
+        ObjectType: 4
+        guid: a3b21990ad85334e818a76d44e6ec095
+      - ElementName: Play_sfx_explosion_small
+        ObjectType: 3
+        guid: 052705ece0b3324da05861729fae2d7d
+      Path: Events\Default Work Unit\SFX\Play_sfx_explosion_small
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_sfx_spark
+      guid: 29c1bb5e47853944a5e6e9dc4328b236
+      id: 1206242149
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: SFX
+        ObjectType: 4
+        guid: a3b21990ad85334e818a76d44e6ec095
+      - ElementName: Play_sfx_spark
+        ObjectType: 3
+        guid: 29c1bb5e47853944a5e6e9dc4328b236
+      Path: Events\Default Work Unit\SFX\Play_sfx_spark
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_uncrouch
+      guid: 7883d5b6e84d7949932fa7ed70cc23fd
+      id: 1976423929
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Player
+        ObjectType: 4
+        guid: 186405ca89c5fc48bbb2b78ef6c1770b
+      - ElementName: Play_uncrouch
+        ObjectType: 3
+        guid: 7883d5b6e84d7949932fa7ed70cc23fd
+      Path: Events\Default Work Unit\Player\Play_uncrouch
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player
+      guid: 186405ca89c5fc48bbb2b78ef6c1770b
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Player
+        ObjectType: 4
+        guid: 186405ca89c5fc48bbb2b78ef6c1770b
+      Path: Events\Default Work Unit\Player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX
+      guid: a3b21990ad85334e818a76d44e6ec095
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: SFX
+        ObjectType: 4
+        guid: a3b21990ad85334e818a76d44e6ec095
+      Path: Events\Default Work Unit\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_gearwheel_big1
+      guid: 9d47993b003458458eb67052fa429531
+      id: 869605302
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: gearwheels
+        ObjectType: 4
+        guid: ea40ca7711bde140a9b4e94ab81aae5d
+      - ElementName: Stop_gearwheel_big1
+        ObjectType: 3
+        guid: 9d47993b003458458eb67052fa429531
+      Path: Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_gearwheel_big2
+      guid: 2139c4c0647154469450935ccf4796d4
+      id: 869605301
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: gearwheels
+        ObjectType: 4
+        guid: ea40ca7711bde140a9b4e94ab81aae5d
+      - ElementName: Stop_gearwheel_big2
+        ObjectType: 3
+        guid: 2139c4c0647154469450935ccf4796d4
+      Path: Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_gearwheel_big3
+      guid: dc675a8094b85742a7fcccb04d08a648
+      id: 869605300
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: gearwheels
+        ObjectType: 4
+        guid: ea40ca7711bde140a9b4e94ab81aae5d
+      - ElementName: Stop_gearwheel_big3
+        ObjectType: 3
+        guid: dc675a8094b85742a7fcccb04d08a648
+      Path: Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_gearwheel_small_1
+      guid: 10b37bdefed4654bad2d2c9020b7f327
+      id: 1066065250
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: gearwheels
+        ObjectType: 4
+        guid: ea40ca7711bde140a9b4e94ab81aae5d
+      - ElementName: Stop_gearwheel_small_1
+        ObjectType: 3
+        guid: 10b37bdefed4654bad2d2c9020b7f327
+      Path: Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_small_1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_gearwheel_small_2
+      guid: a54415c885a0ae40b744a545a2090e7f
+      id: 1066065249
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: gearwheels
+        ObjectType: 4
+        guid: ea40ca7711bde140a9b4e94ab81aae5d
+      - ElementName: Stop_gearwheel_small_2
+        ObjectType: 3
+        guid: a54415c885a0ae40b744a545a2090e7f
+      Path: Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_small_2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -146,12 +876,144 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: c9f96366e0cc0643b86f767e4d443e08
+      guid: 37b8218e46e0164fb6ccef0338b932d3
     ParentPath: States\Default Work Unit
-    guid: c9f96366e0cc0643b86f767e4d443e08
+    guid: 37b8218e46e0164fb6ccef0338b932d3
     GuidInternal: 
-    m_lastTime: -8584703382303892544
-    List: []
+    m_lastTime: -8584702612749189219
+    List:
+    - name: in_out_side
+      guid: db4708f31c7dc041afbbe1c952b346de
+      id: 232210557
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 37b8218e46e0164fb6ccef0338b932d3
+      - ElementName: in_out_side
+        ObjectType: 9
+        guid: db4708f31c7dc041afbbe1c952b346de
+      Path: States\Default Work Unit\in_out_side
+      values:
+      - name: inside_house
+        guid: 45ec6e438f079f4f90b72bb6ff36d421
+        id: 1319799452
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 37b8218e46e0164fb6ccef0338b932d3
+        - ElementName: in_out_side
+          ObjectType: 9
+          guid: db4708f31c7dc041afbbe1c952b346de
+        - ElementName: inside_house
+          ObjectType: 8
+          guid: 45ec6e438f079f4f90b72bb6ff36d421
+      - name: None
+        guid: 0c71b5a47a1cf34191e461d7eaf6a0b2
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 37b8218e46e0164fb6ccef0338b932d3
+        - ElementName: in_out_side
+          ObjectType: 9
+          guid: db4708f31c7dc041afbbe1c952b346de
+        - ElementName: None
+          ObjectType: 8
+          guid: 0c71b5a47a1cf34191e461d7eaf6a0b2
+      - name: outside_house
+        guid: a4185a4a16962c4787808ea6e93ab824
+        id: 4145910067
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 37b8218e46e0164fb6ccef0338b932d3
+        - ElementName: in_out_side
+          ObjectType: 9
+          guid: db4708f31c7dc041afbbe1c952b346de
+        - ElementName: outside_house
+          ObjectType: 8
+          guid: a4185a4a16962c4787808ea6e93ab824
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: rain
+      guid: a50352b96fe89b4ba04e26989ded132a
+      id: 2043403999
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 37b8218e46e0164fb6ccef0338b932d3
+      - ElementName: rain
+        ObjectType: 9
+        guid: a50352b96fe89b4ba04e26989ded132a
+      Path: States\Default Work Unit\rain
+      values:
+      - name: no_rain
+        guid: 9bb22a7f69f71541b1858aca05965919
+        id: 126481933
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 37b8218e46e0164fb6ccef0338b932d3
+        - ElementName: rain
+          ObjectType: 9
+          guid: a50352b96fe89b4ba04e26989ded132a
+        - ElementName: no_rain
+          ObjectType: 8
+          guid: 9bb22a7f69f71541b1858aca05965919
+      - name: None
+        guid: 802528c311efab43a5a67e4fdfc88503
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 37b8218e46e0164fb6ccef0338b932d3
+        - ElementName: rain
+          ObjectType: 9
+          guid: a50352b96fe89b4ba04e26989ded132a
+        - ElementName: None
+          ObjectType: 8
+          guid: 802528c311efab43a5a67e4fdfc88503
+      - name: rain
+        guid: b180bd4d845eaf4d95bebcaf8d36146d
+        id: 2043403999
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 37b8218e46e0164fb6ccef0338b932d3
+        - ElementName: rain
+          ObjectType: 9
+          guid: a50352b96fe89b4ba04e26989ded132a
+        - ElementName: rain
+          ObjectType: 8
+          guid: b180bd4d845eaf4d95bebcaf8d36146d
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -160,12 +1022,160 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 47648706b1f2614aacfd62d47983136e
+      guid: 370ee4b64f263942afaf3090bb665bfb
     ParentPath: Switches\Default Work Unit
-    guid: 47648706b1f2614aacfd62d47983136e
+    guid: 370ee4b64f263942afaf3090bb665bfb
     GuidInternal: 
-    m_lastTime: -8584703382303642554
-    List: []
+    m_lastTime: -8584702612749369657
+    List:
+    - name: footsteps_material
+      guid: 5b330c7861f7a647afa226629dedd882
+      id: 1682461626
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 370ee4b64f263942afaf3090bb665bfb
+      - ElementName: footsteps_material
+        ObjectType: 11
+        guid: 5b330c7861f7a647afa226629dedd882
+      Path: Switches\Default Work Unit\footsteps_material
+      values:
+      - name: Concrete
+        guid: 25efaed13b809a4587bbaec0f1710065
+        id: 841620460
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 370ee4b64f263942afaf3090bb665bfb
+        - ElementName: footsteps_material
+          ObjectType: 11
+          guid: 5b330c7861f7a647afa226629dedd882
+        - ElementName: Concrete
+          ObjectType: 10
+          guid: 25efaed13b809a4587bbaec0f1710065
+      - name: grass
+        guid: 3bb1e14a88156940b770b4fc857cbe79
+        id: 4248645337
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 370ee4b64f263942afaf3090bb665bfb
+        - ElementName: footsteps_material
+          ObjectType: 11
+          guid: 5b330c7861f7a647afa226629dedd882
+        - ElementName: grass
+          ObjectType: 10
+          guid: 3bb1e14a88156940b770b4fc857cbe79
+      - name: metal
+        guid: ff2de6080b8e85408661082282f73edc
+        id: 2473969246
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 370ee4b64f263942afaf3090bb665bfb
+        - ElementName: footsteps_material
+          ObjectType: 11
+          guid: 5b330c7861f7a647afa226629dedd882
+        - ElementName: metal
+          ObjectType: 10
+          guid: ff2de6080b8e85408661082282f73edc
+      - name: wood
+        guid: 6a2d97caf8ec4d4b90e501fe9d6d0f6f
+        id: 2058049674
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 370ee4b64f263942afaf3090bb665bfb
+        - ElementName: footsteps_material
+          ObjectType: 11
+          guid: 5b330c7861f7a647afa226629dedd882
+        - ElementName: wood
+          ObjectType: 10
+          guid: 6a2d97caf8ec4d4b90e501fe9d6d0f6f
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: landing_materials
+      guid: 5652f214b4b6de468db36b2acd9b78ea
+      id: 1039744521
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 370ee4b64f263942afaf3090bb665bfb
+      - ElementName: landing_materials
+        ObjectType: 11
+        guid: 5652f214b4b6de468db36b2acd9b78ea
+      Path: Switches\Default Work Unit\landing_materials
+      values:
+      - name: concrete
+        guid: 3de167ad7b8a7c468394c26dabc5012f
+        id: 841620460
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 370ee4b64f263942afaf3090bb665bfb
+        - ElementName: landing_materials
+          ObjectType: 11
+          guid: 5652f214b4b6de468db36b2acd9b78ea
+        - ElementName: concrete
+          ObjectType: 10
+          guid: 3de167ad7b8a7c468394c26dabc5012f
+      - name: metal
+        guid: 34893793c686a440a6fe4995f6b795cb
+        id: 2473969246
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 370ee4b64f263942afaf3090bb665bfb
+        - ElementName: landing_materials
+          ObjectType: 11
+          guid: 5652f214b4b6de468db36b2acd9b78ea
+        - ElementName: metal
+          ObjectType: 10
+          guid: 34893793c686a440a6fe4995f6b795cb
+      - name: wood
+        guid: b7a76f3c51f9cb46912d1815032daf58
+        id: 2058049674
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 370ee4b64f263942afaf3090bb665bfb
+        - ElementName: landing_materials
+          ObjectType: 11
+          guid: 5652f214b4b6de468db36b2acd9b78ea
+        - ElementName: wood
+          ObjectType: 10
+          guid: b7a76f3c51f9cb46912d1815032daf58
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
