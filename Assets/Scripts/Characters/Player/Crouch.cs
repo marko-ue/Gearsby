@@ -25,6 +25,7 @@ public class Crouch : MonoBehaviour
     private bool crouchOnCooldown = false;
 
     public AK.Wwise.Event crouchSound;
+    public AK.Wwise.Event uncrouchSound;
 
     void Awake()
     {
@@ -80,8 +81,14 @@ public class Crouch : MonoBehaviour
             {
                 starterAssetsInputs.crouch = true;
             }
+            
             else
             {
+                if (crouchOnCooldown)
+                {
+                    uncrouchSound.Post(this.gameObject);
+                }
+
                 crouchOnCooldown = false;
                 climbing.climbingAllowed = true;
                 starterAssetsInputs.moveSpeed = 1f;

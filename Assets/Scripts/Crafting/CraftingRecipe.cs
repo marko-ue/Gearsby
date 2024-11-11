@@ -5,6 +5,9 @@ using UnityEngine;
 public class CraftingRecipe : ScriptableObject
 {
     public string recipeName;
+    [Header("Solid/liquid")]
+    [Tooltip("Specify the recipe type in either Solid or Liquid")]
+    public string recipeType;
     public List<MaterialsRequired> materialsRequired;
     public Item resultingItem;
 

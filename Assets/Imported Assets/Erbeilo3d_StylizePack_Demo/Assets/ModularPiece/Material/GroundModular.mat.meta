@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c7d4c3b2b99e99e4ebdb61c857d5b9ea
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 220218
+  packageName: Stylize Modular House Demo - Erbeilo 3D
+  packageVersion: 1.0
+  assetPath: Assets/Erbeilo3d_StylizePack_Demo/Assets/ModularPiece/Material/GroundModular.mat
+  uploadId: 495862
