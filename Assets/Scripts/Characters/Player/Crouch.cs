@@ -51,9 +51,8 @@ public class Crouch : MonoBehaviour
         RaycastHit hit;
         bool checkCeilingRayHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.up, out hit, checkRange);
         
-        if (starterAssetsInputs.crouch && !crouchOnCooldown)
-        {
-            crouchOnCooldown = true;
+        if (starterAssetsInputs.crouch)
+        {   
             climbing.climbingAllowed = false;
             starterAssetsInputs.jump = false;
             starterAssetsInputs.sprint = false;
@@ -68,6 +67,12 @@ public class Crouch : MonoBehaviour
 
             // Move Playercameraroot to crouch position
             PlayerCameraRoot.localPosition = Vector3.Lerp(PlayerCameraRoot.localPosition, cameraRootCrouchPos, Time.deltaTime * crouchSpeed);
+
+            if (!crouchOnCooldown)
+            {
+                crouchSound.Post(this.gameObject);
+                crouchOnCooldown = true;
+            }
         }
         else
         {   
@@ -77,6 +82,7 @@ public class Crouch : MonoBehaviour
             }
             else
             {
+                crouchOnCooldown = false;
                 climbing.climbingAllowed = true;
                 starterAssetsInputs.moveSpeed = 1f;
 
