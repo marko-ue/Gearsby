@@ -64,8 +64,8 @@
 						<CurrentStateRef Name="no_rain" ID="{7F2AB29B-F769-4115-B185-8ACA05965919}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="concrete" ID="{AD67E13D-8A7B-467C-8394-C26DABC5012F}"/>
-						<CurrentSwitchRef Name="Concrete" ID="{D1AEEF25-803B-459A-87BB-AEC0F1710065}"/>
+						<CurrentSwitchRef Name="wood" ID="{3C6FA7B7-F951-46CB-912D-1815032DAF58}"/>
+						<CurrentSwitchRef Name="wood" ID="{CA972D6A-ECF8-4B4D-90E5-01FE9D6D0F6F}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
