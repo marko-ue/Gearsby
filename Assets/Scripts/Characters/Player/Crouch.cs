@@ -52,6 +52,7 @@ public class Crouch : MonoBehaviour
         {
             climbing.climbingAllowed = false;
             starterAssetsInputs.jump = false;
+            starterAssetsInputs.sprint = false;
             starterAssetsInputs.moveSpeed = 0.5f;
 
             // Adjust CharacterController height and center
