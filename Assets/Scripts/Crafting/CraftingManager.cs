@@ -66,10 +66,10 @@ public class CraftingManager : MonoBehaviour
         return true;
     }
 
-    public void CraftRecipe(CraftingRecipe recipe)
+    public bool CraftRecipe(CraftingRecipe recipe)
     {
         if (CanCraftRecipe(recipe))
-        { 
+        {
             Debug.Log("Crafting: " + recipe.recipeName);
 
             // remove materials from inventory
@@ -81,16 +81,18 @@ public class CraftingManager : MonoBehaviour
                     var itemToRemove = inventory.Items.FirstOrDefault(item => item.itemName.Contains(requirement.materialName));
                     if (itemToRemove != null)
                     {
-                        inventory.Items.Remove(itemToRemove);
+                        inventory.Items.Remove(itemToRemove);        
                     }
                 }
             }
             // Add the crafted item to the inventory
             inventory.Items.Add(recipe.resultingItem);
+            return true;
         }
         else
         {
             Debug.Log("Not enough materials for: " + recipe.recipeName);
+            return false;
         }
     }
 }

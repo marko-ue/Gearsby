@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private bool canMove = true;
 
     [Header("Stamina Stats")]
+    [SerializeField] float sprintSpeed; // walk speed multiplied by sprint speed value
     [SerializeField] float stamina = 100f;
     [SerializeField] float staminaDeduct = 2f;
     [SerializeField] float staminaReturn = 3f;
@@ -45,7 +46,7 @@ public class PlayerController : MonoBehaviour
         Vector3 move = new Vector3(starterAssetsInputs.move.x, 0, starterAssetsInputs.move.y);
         move = transform.TransformDirection(move) * starterAssetsInputs.moveSpeed;
 
-        characterController.Move(move * Time.deltaTime);
+        characterController.Move(move * sprintSpeed * Time.deltaTime);
     }
 
     private void PickupRay()
@@ -72,10 +73,12 @@ public class PlayerController : MonoBehaviour
         {
             stamina -= staminaDeduct * Time.deltaTime;
             stamina = Mathf.Max(stamina, minStamina);
+            sprintSpeed = 1.25f;
             returnTimer = 0; // Reset the return timer when sprinting
         }
         else
         {
+            sprintSpeed = 1f;
             returnTimer += Time.deltaTime; //return timer when not sprinting
             if (returnTimer >= returnDelay)
             {

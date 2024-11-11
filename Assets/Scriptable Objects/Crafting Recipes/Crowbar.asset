@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Crowbar
   m_EditorClassIdentifier: 
   recipeName: Crowbar
+  recipeType: Solid
   materialsRequired:
   - materialName: Metal Scrap
     quantityRequired: 2

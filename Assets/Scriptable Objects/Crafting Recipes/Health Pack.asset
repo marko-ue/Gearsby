@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Health Pack
   m_EditorClassIdentifier: 
   recipeName: Health Pack
+  recipeType: Solid
   materialsRequired:
   - materialName: Cog Wheel
     quantityRequired: 1

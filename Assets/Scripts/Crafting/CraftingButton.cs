@@ -10,6 +10,8 @@ public class CraftingButton : MonoBehaviour
     private CraftingManager craftingManager;
     private Image buttonImage;
 
+    public AK.Wwise.Event solidCraftSound; // there will be a liquid craft sound added later
+
     void Start()
     {
         craftingManager = GameObject.Find("CraftingManager").GetComponent<CraftingManager>();
@@ -21,6 +23,20 @@ public class CraftingButton : MonoBehaviour
     private void CraftItem()
     {
         // trigger the crafting process using the assigned recipe
-        craftingManager.CraftRecipe(craftingRecipe);
+        if (craftingManager.CraftRecipe(craftingRecipe))
+        {
+            if (craftingRecipe.recipeType == "Solid")
+            {
+                solidCraftSound.Post(this.gameObject);
+            }
+            else
+            {
+                // play liquid crafting sound, if there end up being more types of recipes add else if
+            }
+        }
+        else
+        {
+            // play sound for not enough materials
+        }     
     }
 }

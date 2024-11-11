@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -11,8 +12,10 @@ namespace StarterAssets
 #endif
 	public class FirstPersonController : MonoBehaviour
 	{
+
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
+		public bool moving = false;
 		public float MoveSpeed = 4.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
 		public float SprintSpeed = 6.0f;
@@ -32,6 +35,18 @@ namespace StarterAssets
 		public float JumpTimeout = 0.1f;
 		[Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
 		public float FallTimeout = 0.15f;
+
+		[Header("Player Sounds")]
+		public AK.Wwise.Event footstepSound;
+		public AK.Wwise.Event jumpSound;
+
+		[Header("Player Sound Variables")]
+		bool footstepOnCooldown = false;
+		float walkFootstepCooldown = 0.35f;
+		float sprintFootstepCooldown = 0.25f; // making this any lower will make sounds overlap
+		float crouchFootstepCooldown = 0.70f; 
+
+		bool jumpOnCooldown = false;
 
 		[Header("Player Grounded")]
 		[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
@@ -64,7 +79,8 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
-	
+		StarterAssetsInputs inputs;
+
 #if ENABLE_INPUT_SYSTEM
 		private PlayerInput _playerInput;
 #endif
@@ -78,11 +94,11 @@ namespace StarterAssets
 		{
 			get
 			{
-				#if ENABLE_INPUT_SYSTEM
+#if ENABLE_INPUT_SYSTEM
 				return _playerInput.currentControlScheme == "KeyboardMouse";
-				#else
+#else
 				return false;
-				#endif
+#endif
 			}
 		}
 
@@ -97,6 +113,8 @@ namespace StarterAssets
 
 		private void Start()
 		{
+			inputs = GetComponent<StarterAssetsInputs>();
+
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM
@@ -136,7 +154,7 @@ namespace StarterAssets
 			{
 				//Don't multiply mouse input by Time.deltaTime
 				float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
-				
+
 				_cinemachineTargetPitch += _input.look.y * RotationSpeed * deltaTimeMultiplier;
 				_rotationVelocity = _input.look.x * RotationSpeed * deltaTimeMultiplier;
 
@@ -153,6 +171,34 @@ namespace StarterAssets
 
 		private void Move()
 		{
+			moving = true;
+
+			// play footstep sound if grounded, if not on cooldown, and if there's movement
+			if (Grounded && !footstepOnCooldown && _input.move != Vector2.zero)
+			{
+				if (inputs.sprint)
+				{
+					footstepSound.Post(this.gameObject);
+					footstepOnCooldown = true;
+					StartCoroutine(FootstepCooldown(sprintFootstepCooldown));
+					Debug.Log("sprint playing");
+				}
+				else if (inputs.crouch)
+				{
+					footstepSound.Post(this.gameObject);
+					footstepOnCooldown = true;
+					StartCoroutine(FootstepCooldown(crouchFootstepCooldown));
+					Debug.Log("crouch playing");
+				}
+				else
+				{
+					footstepSound.Post(this.gameObject);
+					footstepOnCooldown = true;
+					StartCoroutine(FootstepCooldown(walkFootstepCooldown));
+					Debug.Log("move playing");
+				}
+			}
+
 			// set target speed based on move speed, sprint speed and if sprint is pressed
 			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
@@ -160,7 +206,11 @@ namespace StarterAssets
 
 			// note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
 			// if there is no input, set the target speed to 0
-			if (_input.move == Vector2.zero) targetSpeed = 0.0f;
+			if (_input.move == Vector2.zero)
+			{
+				targetSpeed = 0.0f;
+				moving = false;
+			}
 
 			// a reference to the players current horizontal velocity
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
@@ -212,10 +262,13 @@ namespace StarterAssets
 				}
 
 				// Jump
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+				if (_input.jump && _jumpTimeoutDelta <= 0.0f && !jumpOnCooldown)
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+					jumpSound.Post(this.gameObject);
+					jumpOnCooldown = true;
+					StartCoroutine(JumpCooldown());
 				}
 
 				// jump timeout
@@ -260,9 +313,20 @@ namespace StarterAssets
 
 			if (Grounded) Gizmos.color = transparentGreen;
 			else Gizmos.color = transparentRed;
-
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
+		}
+
+		IEnumerator FootstepCooldown(float secondsToWait)
+		{
+			yield return new WaitForSeconds(secondsToWait);
+			footstepOnCooldown = false;
+		}
+
+		IEnumerator JumpCooldown()
+		{
+			yield return new WaitForSeconds(0.5f);
+			jumpOnCooldown = false;
 		}
 	}
 }

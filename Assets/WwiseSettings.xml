@@ -11,7 +11,7 @@
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac />
-  <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise2024.1.0.8669</WwiseInstallationPathWindows>
+  <WwiseInstallationPathWindows>E:\Wwise\Wwise2024.1.0.8669</WwiseInstallationPathWindows>
   <WwiseProjectPath>../Gearsby_WwiseProject/Gearsby_WwiseProject.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
