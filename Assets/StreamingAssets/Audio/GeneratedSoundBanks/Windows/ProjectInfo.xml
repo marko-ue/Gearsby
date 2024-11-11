@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="Gearsby_WwiseProject" GUID="{3883D588-9901-480B-A7E4-27898C1D795C}" Generator="2024.1.0.8669"/>
+	<CacheRoot>../../../../../Gearsby_WwiseProject/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Mac" GUID="{D7BB2C93-8AFC-42C4-BF99-4DF985F3A43B}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="."/>
+		<Platform Name="Windows" GUID="{5FDC0D8E-16D4-4AA3-B9FD-A32661277556}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="."/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{A9C5D157-6480-43F4-9124-8ECB23BEE883}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{4D2F1A56-24D9-7A9E-A134-31B8E7116550}</FileHash>
+</ProjectInfo>

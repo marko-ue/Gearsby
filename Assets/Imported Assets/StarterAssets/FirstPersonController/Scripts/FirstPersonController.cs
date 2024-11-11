@@ -38,12 +38,15 @@ namespace StarterAssets
 
 		[Header("Player Sounds")]
 		public AK.Wwise.Event footstepSound;
+		public AK.Wwise.Event jumpSound;
 
 		[Header("Player Sound Variables")]
 		bool footstepOnCooldown = false;
 		float walkFootstepCooldown = 0.35f;
 		float sprintFootstepCooldown = 0.25f; // making this any lower will make sounds overlap
 		float crouchFootstepCooldown = 0.70f; 
+
+		bool jumpOnCooldown = false;
 
 		[Header("Player Grounded")]
 		[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
@@ -259,10 +262,13 @@ namespace StarterAssets
 				}
 
 				// Jump
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+				if (_input.jump && _jumpTimeoutDelta <= 0.0f && !jumpOnCooldown)
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+					jumpSound.Post(this.gameObject);
+					jumpOnCooldown = true;
+					StartCoroutine(JumpCooldown());
 				}
 
 				// jump timeout
@@ -315,6 +321,12 @@ namespace StarterAssets
 		{
 			yield return new WaitForSeconds(secondsToWait);
 			footstepOnCooldown = false;
+		}
+
+		IEnumerator JumpCooldown()
+		{
+			yield return new WaitForSeconds(0.5f);
+			jumpOnCooldown = false;
 		}
 	}
 }

@@ -22,6 +22,9 @@ public class Crouch : MonoBehaviour
     private float checkRange = 1f;
 
     private float crouchSpeed = 10f;
+    private bool crouchOnCooldown = false;
+
+    public AK.Wwise.Event crouchSound;
 
     void Awake()
     {
@@ -48,8 +51,9 @@ public class Crouch : MonoBehaviour
         RaycastHit hit;
         bool checkCeilingRayHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.up, out hit, checkRange);
         
-        if (starterAssetsInputs.crouch)
+        if (starterAssetsInputs.crouch && !crouchOnCooldown)
         {
+            crouchOnCooldown = true;
             climbing.climbingAllowed = false;
             starterAssetsInputs.jump = false;
             starterAssetsInputs.sprint = false;
@@ -66,7 +70,7 @@ public class Crouch : MonoBehaviour
             PlayerCameraRoot.localPosition = Vector3.Lerp(PlayerCameraRoot.localPosition, cameraRootCrouchPos, Time.deltaTime * crouchSpeed);
         }
         else
-        {
+        {   
             if (checkCeilingRayHit)
             {
                 starterAssetsInputs.crouch = true;

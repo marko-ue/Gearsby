@@ -9,7 +9,7 @@
    "SourceFilesRoot": "../../../../Gearsby_WwiseProject/.cache",
    "SoundBanksRoot": ".",
    "ExternalSourcesInputFile": "",
-   "ExternalSourcesOutputRoot": "."
+   "ExternalSourcesOutputRoot": "A:/gearsby/Gearsby/Assets/StreamingAssets/Audio/GeneratedSoundBanks"
   },
   "DialogueEvents": [],
   "SoundBanks": [
@@ -18,6 +18,7 @@
     "Type": "User",
     "Language": "SFX",
     "Hash": "{05CFD9D6-1CB6-5BAE-60E6-40C4C58D3DF9}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\mainsoundbank",
     "ShortName": "mainsoundbank",
     "Path": "mainsoundbank.bnk"
    },
@@ -26,6 +27,7 @@
     "Type": "User",
     "Language": "SFX",
     "Hash": "{547EA011-A81D-C515-A029-6F3433EF8BC0}",
+    "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
@@ -33,12 +35,14 @@
       {
        "Id": "2317455096",
        "Name": "No_Output",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\No_Output",
        "LibName": "No Output",
        "LibId": "11862023"
       },
       {
        "Id": "3859886410",
        "Name": "System",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\System",
        "LibName": "System",
        "LibId": "11403271"
       }
@@ -47,25 +51,30 @@
     "Busses": [
      {
       "Id": "3803692087",
-      "Name": "Master Audio Bus"
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus"
      }
     ],
     "StateGroups": [
      {
       "Id": "232210557",
       "Name": "in_out_side",
+      "ObjectPath": "\\States\\Default Work Unit\\in_out_side",
       "States": [
        {
         "Id": "748895195",
-        "Name": "None"
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\in_out_side\\None"
        },
        {
         "Id": "1319799452",
-        "Name": "inside_house"
+        "Name": "inside_house",
+        "ObjectPath": "\\States\\Default Work Unit\\in_out_side\\inside_house"
        },
        {
         "Id": "4145910067",
-        "Name": "outside_house"
+        "Name": "outside_house",
+        "ObjectPath": "\\States\\Default Work Unit\\in_out_side\\outside_house"
        }
       ]
      }
@@ -74,22 +83,27 @@
      {
       "Id": "2385628198",
       "Name": "Footsteps",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps",
       "Switches": [
        {
         "Id": "841620460",
-        "Name": "Concrete"
+        "Name": "Concrete",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps\\Concrete"
        },
        {
         "Id": "2058049674",
-        "Name": "wood"
+        "Name": "wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps\\wood"
        },
        {
         "Id": "2473969246",
-        "Name": "metal"
+        "Name": "metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps\\metal"
        },
        {
         "Id": "4248645337",
-        "Name": "grass"
+        "Name": "grass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps\\grass"
        }
       ]
      }
@@ -100,6 +114,7 @@
     "Type": "User",
     "Language": "SFX",
     "Hash": "{4833B1EB-581D-8BE9-6325-222402150F9A}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\fs",
     "ShortName": "fs",
     "Path": "fs.bnk"
    },
@@ -108,6 +123,7 @@
     "Type": "User",
     "Language": "SFX",
     "Hash": "{8CF47D41-4DA1-6FD6-C280-45297765C453}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
     "Media": [
@@ -484,6 +500,7 @@
      {
       "Id": "1117531639",
       "Name": "amb",
+      "ObjectPath": "\\Events\\Default Work Unit\\Ambience\\amb",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -500,6 +517,7 @@
      {
       "Id": "729984210",
       "Name": "amb_stop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Ambience\\amb_stop",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -508,6 +526,7 @@
      {
       "Id": "3989731860",
       "Name": "Play_crouch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_crouch",
       "DurationType": "OneShot",
       "DurationMin": "0.8100911",
       "DurationMax": "0.8100911",
@@ -520,6 +539,7 @@
      {
       "Id": "3854155799",
       "Name": "Play_Footsteps",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Footsteps",
       "DurationType": "OneShot",
       "DurationMin": "0.3125",
       "DurationMax": "0.4375",
@@ -614,6 +634,7 @@
      {
       "Id": "3379724016",
       "Name": "Play_gearwheel_big1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Play_gearwheel_big1",
       "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -625,6 +646,7 @@
      {
       "Id": "3379724019",
       "Name": "Play_gearwheel_big2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Play_gearwheel_big2",
       "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -636,6 +658,7 @@
      {
       "Id": "3379724018",
       "Name": "Play_gearwheel_big3",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Play_gearwheel_big3",
       "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -647,6 +670,7 @@
      {
       "Id": "3880120448",
       "Name": "Play_gearwheel_small_1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Play_gearwheel_small_1",
       "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -658,6 +682,7 @@
      {
       "Id": "3880120451",
       "Name": "Play_gearwheel_small_2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Play_gearwheel_small_2",
       "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -669,6 +694,7 @@
      {
       "Id": "2395824906",
       "Name": "Play_player_crafting",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_player_crafting",
       "DurationType": "OneShot",
       "DurationMin": "0.9672489",
       "DurationMax": "0.9672489",
@@ -681,6 +707,7 @@
      {
       "Id": "562256996",
       "Name": "Play_player_jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_player_jump",
       "DurationType": "OneShot",
       "DurationMin": "0.52500814",
       "DurationMax": "0.718912",
@@ -699,6 +726,7 @@
      {
       "Id": "4249207015",
       "Name": "Play_player_land",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_player_land",
       "DurationType": "OneShot",
       "DurationMin": "0.38119328",
       "DurationMax": "0.6529689",
@@ -745,6 +773,7 @@
      {
       "Id": "3652445300",
       "Name": "Play_player_pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_player_pickup",
       "DurationType": "OneShot",
       "DurationMin": "0.59375",
       "DurationMax": "0.59375",
@@ -757,6 +786,7 @@
      {
       "Id": "2003218848",
       "Name": "Play_sfx_explosion_big",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_sfx_explosion_big",
       "MaxAttenuation": "50",
       "DurationType": "OneShot",
       "DurationMin": "3.3973124",
@@ -770,6 +800,7 @@
      {
       "Id": "3077863823",
       "Name": "Play_sfx_explosion_small",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_sfx_explosion_small",
       "MaxAttenuation": "50",
       "DurationType": "OneShot",
       "DurationMin": "2.6607084",
@@ -783,6 +814,7 @@
      {
       "Id": "1206242149",
       "Name": "Play_sfx_spark",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_sfx_spark",
       "MaxAttenuation": "50",
       "DurationType": "OneShot",
       "DurationMin": "1.3928542",
@@ -796,6 +828,7 @@
      {
       "Id": "1976423929",
       "Name": "Play_uncrouch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_uncrouch",
       "DurationType": "OneShot",
       "DurationMin": "0.62106776",
       "DurationMax": "0.62106776",
@@ -808,6 +841,7 @@
      {
       "Id": "869605302",
       "Name": "Stop_gearwheel_big1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Stop_gearwheel_big1",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -816,6 +850,7 @@
      {
       "Id": "869605301",
       "Name": "Stop_gearwheel_big2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Stop_gearwheel_big2",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -824,6 +859,7 @@
      {
       "Id": "869605300",
       "Name": "Stop_gearwheel_big3",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Stop_gearwheel_big3",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -832,6 +868,7 @@
      {
       "Id": "1066065250",
       "Name": "Stop_gearwheel_small_1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Stop_gearwheel_small_1",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -840,6 +877,7 @@
      {
       "Id": "1066065249",
       "Name": "Stop_gearwheel_small_2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Stop_gearwheel_small_2",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -850,28 +888,33 @@
      {
       "Id": "2385628198",
       "Name": "Footsteps",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps",
       "Switches": [
        {
         "Id": "841620460",
-        "Name": "Concrete"
+        "Name": "Concrete",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps\\Concrete"
        },
        {
         "Id": "2058049674",
-        "Name": "wood"
+        "Name": "wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps\\wood"
        },
        {
         "Id": "2473969246",
-        "Name": "metal"
+        "Name": "metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps\\metal"
        },
        {
         "Id": "4248645337",
-        "Name": "grass"
+        "Name": "grass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footsteps\\grass"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{451E4131-C069-229E-E46A-66559B742ADC}"
+  "FileHash": "{915E5591-FCCF-D63A-38D2-7B8C82070B78}"
  }
 }

@@ -5,51 +5,55 @@
 		<SourceFilesRoot>../../../../Gearsby_WwiseProject/.cache</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>A:/gearsby/Gearsby/Assets/StreamingAssets/Audio/GeneratedSoundBanks</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
 		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{05CFD9D6-1CB6-5BAE-60E6-40C4C58D3DF9}">
+			<ObjectPath>\SoundBanks\Default Work Unit\mainsoundbank</ObjectPath>
 			<ShortName>mainsoundbank</ShortName>
 			<Path>mainsoundbank.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{547EA011-A81D-C515-A029-6F3433EF8BC0}">
+			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<AudioDevices>
-					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
-					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+					<Plugin Id="2317455096" Name="No_Output" ObjectPath="\Audio Devices\Default Work Unit\No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" ObjectPath="\Audio Devices\Default Work Unit\System" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus"/>
 			</Busses>
 			<StateGroups>
-				<StateGroup Id="232210557" Name="in_out_side">
+				<StateGroup Id="232210557" Name="in_out_side" ObjectPath="\States\Default Work Unit\in_out_side">
 					<States>
-						<State Id="748895195" Name="None"/>
-						<State Id="1319799452" Name="inside_house"/>
-						<State Id="4145910067" Name="outside_house"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\in_out_side\None"/>
+						<State Id="1319799452" Name="inside_house" ObjectPath="\States\Default Work Unit\in_out_side\inside_house"/>
+						<State Id="4145910067" Name="outside_house" ObjectPath="\States\Default Work Unit\in_out_side\outside_house"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
-				<SwitchGroup Id="2385628198" Name="Footsteps">
+				<SwitchGroup Id="2385628198" Name="Footsteps" ObjectPath="\Switches\Default Work Unit\Footsteps">
 					<Switches>
-						<Switch Id="841620460" Name="Concrete"/>
-						<Switch Id="2058049674" Name="wood"/>
-						<Switch Id="2473969246" Name="metal"/>
-						<Switch Id="4248645337" Name="grass"/>
+						<Switch Id="841620460" Name="Concrete" ObjectPath="\Switches\Default Work Unit\Footsteps\Concrete"/>
+						<Switch Id="2058049674" Name="wood" ObjectPath="\Switches\Default Work Unit\Footsteps\wood"/>
+						<Switch Id="2473969246" Name="metal" ObjectPath="\Switches\Default Work Unit\Footsteps\metal"/>
+						<Switch Id="4248645337" Name="grass" ObjectPath="\Switches\Default Work Unit\Footsteps\grass"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="1802970376" Type="User" Language="SFX" Hash="{4833B1EB-581D-8BE9-6325-222402150F9A}">
+			<ObjectPath>\SoundBanks\Default Work Unit\fs</ObjectPath>
 			<ShortName>fs</ShortName>
 			<Path>fs.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8CF47D41-4DA1-6FD6-C280-45297765C453}">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -239,20 +243,20 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1117531639" Name="amb" DurationType="Infinite">
+				<Event Id="1117531639" Name="amb" ObjectPath="\Events\Default Work Unit\Ambience\amb" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="432449031"/>
 						<MediaRef Id="514253887"/>
 						<MediaRef Id="912769731"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="729984210" Name="amb_stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3989731860" Name="Play_crouch" DurationType="OneShot" DurationMin="0.8100911" DurationMax="0.8100911">
+				<Event Id="729984210" Name="amb_stop" ObjectPath="\Events\Default Work Unit\Ambience\amb_stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3989731860" Name="Play_crouch" ObjectPath="\Events\Default Work Unit\Player\Play_crouch" DurationType="OneShot" DurationMin="0.8100911" DurationMax="0.8100911">
 					<MediaRefs>
 						<MediaRef Id="593250279"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3854155799" Name="Play_Footsteps" DurationType="OneShot" DurationMin="0.3125" DurationMax="0.4375">
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Play_Footsteps" DurationType="OneShot" DurationMin="0.3125" DurationMax="0.4375">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="841620460"/>
@@ -288,44 +292,44 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3379724016" Name="Play_gearwheel_big1" MaxAttenuation="20" DurationType="Infinite">
+				<Event Id="3379724016" Name="Play_gearwheel_big1" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_big1" MaxAttenuation="20" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="892688682"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3379724019" Name="Play_gearwheel_big2" MaxAttenuation="20" DurationType="Infinite">
+				<Event Id="3379724019" Name="Play_gearwheel_big2" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_big2" MaxAttenuation="20" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="673616570"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3379724018" Name="Play_gearwheel_big3" MaxAttenuation="20" DurationType="Infinite">
+				<Event Id="3379724018" Name="Play_gearwheel_big3" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_big3" MaxAttenuation="20" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="325965509"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3880120448" Name="Play_gearwheel_small_1" MaxAttenuation="20" DurationType="Infinite">
+				<Event Id="3880120448" Name="Play_gearwheel_small_1" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_small_1" MaxAttenuation="20" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="239899283"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3880120451" Name="Play_gearwheel_small_2" MaxAttenuation="20" DurationType="Infinite">
+				<Event Id="3880120451" Name="Play_gearwheel_small_2" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_small_2" MaxAttenuation="20" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="981518875"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2395824906" Name="Play_player_crafting" DurationType="OneShot" DurationMin="0.9672489" DurationMax="0.9672489">
+				<Event Id="2395824906" Name="Play_player_crafting" ObjectPath="\Events\Default Work Unit\Player\Play_player_crafting" DurationType="OneShot" DurationMin="0.9672489" DurationMax="0.9672489">
 					<MediaRefs>
 						<MediaRef Id="826279942"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="562256996" Name="Play_player_jump" DurationType="OneShot" DurationMin="0.52500814" DurationMax="0.718912">
+				<Event Id="562256996" Name="Play_player_jump" ObjectPath="\Events\Default Work Unit\Player\Play_player_jump" DurationType="OneShot" DurationMin="0.52500814" DurationMax="0.718912">
 					<MediaRefs>
 						<MediaRef Id="191270774"/>
 						<MediaRef Id="294139425"/>
 						<MediaRef Id="413944778"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4249207015" Name="Play_player_land" DurationType="OneShot" DurationMin="0.38119328" DurationMax="0.6529689">
+				<Event Id="4249207015" Name="Play_player_land" ObjectPath="\Events\Default Work Unit\Player\Play_player_land" DurationType="OneShot" DurationMin="0.38119328" DurationMax="0.6529689">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="841620460"/>
@@ -345,48 +349,48 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3652445300" Name="Play_player_pickup" DurationType="OneShot" DurationMin="0.59375" DurationMax="0.59375">
+				<Event Id="3652445300" Name="Play_player_pickup" ObjectPath="\Events\Default Work Unit\Player\Play_player_pickup" DurationType="OneShot" DurationMin="0.59375" DurationMax="0.59375">
 					<MediaRefs>
 						<MediaRef Id="863935299"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2003218848" Name="Play_sfx_explosion_big" MaxAttenuation="50" DurationType="OneShot" DurationMin="3.3973124" DurationMax="3.3973124">
+				<Event Id="2003218848" Name="Play_sfx_explosion_big" ObjectPath="\Events\Default Work Unit\SFX\Play_sfx_explosion_big" MaxAttenuation="50" DurationType="OneShot" DurationMin="3.3973124" DurationMax="3.3973124">
 					<MediaRefs>
 						<MediaRef Id="562187170"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3077863823" Name="Play_sfx_explosion_small" MaxAttenuation="50" DurationType="OneShot" DurationMin="2.6607084" DurationMax="2.6607084">
+				<Event Id="3077863823" Name="Play_sfx_explosion_small" ObjectPath="\Events\Default Work Unit\SFX\Play_sfx_explosion_small" MaxAttenuation="50" DurationType="OneShot" DurationMin="2.6607084" DurationMax="2.6607084">
 					<MediaRefs>
 						<MediaRef Id="256062630"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1206242149" Name="Play_sfx_spark" MaxAttenuation="50" DurationType="OneShot" DurationMin="1.3928542" DurationMax="1.3928542">
+				<Event Id="1206242149" Name="Play_sfx_spark" ObjectPath="\Events\Default Work Unit\SFX\Play_sfx_spark" MaxAttenuation="50" DurationType="OneShot" DurationMin="1.3928542" DurationMax="1.3928542">
 					<MediaRefs>
 						<MediaRef Id="1000058938"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1976423929" Name="Play_uncrouch" DurationType="OneShot" DurationMin="0.62106776" DurationMax="0.62106776">
+				<Event Id="1976423929" Name="Play_uncrouch" ObjectPath="\Events\Default Work Unit\Player\Play_uncrouch" DurationType="OneShot" DurationMin="0.62106776" DurationMax="0.62106776">
 					<MediaRefs>
 						<MediaRef Id="425838404"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="869605302" Name="Stop_gearwheel_big1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="869605301" Name="Stop_gearwheel_big2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="869605300" Name="Stop_gearwheel_big3" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1066065250" Name="Stop_gearwheel_small_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1066065249" Name="Stop_gearwheel_small_2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="869605302" Name="Stop_gearwheel_big1" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="869605301" Name="Stop_gearwheel_big2" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="869605300" Name="Stop_gearwheel_big3" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big3" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1066065250" Name="Stop_gearwheel_small_1" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_small_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1066065249" Name="Stop_gearwheel_small_2" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_small_2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<SwitchGroups>
-				<SwitchGroup Id="2385628198" Name="Footsteps">
+				<SwitchGroup Id="2385628198" Name="Footsteps" ObjectPath="\Switches\Default Work Unit\Footsteps">
 					<Switches>
-						<Switch Id="841620460" Name="Concrete"/>
-						<Switch Id="2058049674" Name="wood"/>
-						<Switch Id="2473969246" Name="metal"/>
-						<Switch Id="4248645337" Name="grass"/>
+						<Switch Id="841620460" Name="Concrete" ObjectPath="\Switches\Default Work Unit\Footsteps\Concrete"/>
+						<Switch Id="2058049674" Name="wood" ObjectPath="\Switches\Default Work Unit\Footsteps\wood"/>
+						<Switch Id="2473969246" Name="metal" ObjectPath="\Switches\Default Work Unit\Footsteps\metal"/>
+						<Switch Id="4248645337" Name="grass" ObjectPath="\Switches\Default Work Unit\Footsteps\grass"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{77DFA84A-62EE-EA55-5083-F9BA84A21867}</FileHash>
+	<FileHash>{2AAAD710-3253-3568-B069-25B3CF5CD263}</FileHash>
 </SoundBanksInfo>
