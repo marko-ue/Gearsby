@@ -38,12 +38,12 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_player_crafting" ID="{491120A4-6361-4480-B353-86405D435535}">
+						<Event Name="Play_player_craft_normal" ID="{491120A4-6361-4480-B353-86405D435535}">
 							<ChildrenList>
 								<Action Name="" ID="{6633B28B-A078-4FA4-BCFB-4A66068492FA}" ShortID="516859276">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="player_crafting" ID="{29B7535F-76EE-4C1C-ABCC-6095D06C705A}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+											<ObjectRef Name="craft_normal" ID="{2F0CD041-439A-4D11-9D98-AD336F5AAE7F}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -82,6 +82,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_player_craft_fail" ID="{F1767D2E-D769-41B6-AB6E-E9E9B8B236F5}">
+							<ChildrenList>
+								<Action Name="" ID="{CD254DBA-84FF-4DE0-B033-D8A9D7EE4466}" ShortID="681716284">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="craft_fail" ID="{D795C992-4EA9-45AB-A606-944E63FCA789}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_player_craft_liquid" ID="{B1F970D4-0ECE-4F87-939F-1BDC107F8368}">
+							<ChildrenList>
+								<Action Name="" ID="{2394267B-CE24-43C8-84B6-0D87D8D06506}" ShortID="809588836">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="craft_liquid" ID="{1684C1D6-1D7D-4D80-8241-1E502DF5CE00}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambience" ID="{7119D57A-6674-43FA-BBB2-EA4E283DA39D}" ShortID="811956567">
@@ -90,8 +112,13 @@
 							<ChildrenList>
 								<Action Name="" ID="{882D07C1-B10C-4DE4-9088-3AD820D94068}" ShortID="173765292">
 									<PropertyList>
-										<Property Name="FadeInCurve" Type="int16" Value="0"/>
-										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+										<Property Name="FadeTime" Type="Real64" Value="4">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{15C08D15-D52D-47C4-B8BF-E9F0B19E1B91}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -110,6 +137,28 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="outside_sounddesign" ID="{AD476882-BE37-48BE-B524-25D48C12922B}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E2C8B1C3-C5FB-42ED-AA5A-0B50D65B1DAA}" ShortID="373997685">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="9.5">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2F27CB1A-873B-4455-A7D1-BFB997256645}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="10"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rain" ID="{CCD16429-AD71-499D-8584-4FA07F8D9DA4}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -312,6 +361,58 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="gearwheel_big2" ID="{87A22852-79B2-4F3A-BDEC-903A5275DDDF}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="doors" ID="{EA2451EC-1FDA-4675-9E66-2DCD074A32B9}" ShortID="905233266">
+							<ChildrenList>
+								<Event Name="Play_door_close" ID="{2408345D-E676-4AA2-BB46-54E68D316EEF}">
+									<ChildrenList>
+										<Action Name="" ID="{4BD7D627-4950-45B9-81DE-ACEA4B0E8DD0}" ShortID="298388822">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="door_close" ID="{204C71B8-7AB3-4EBC-81B9-BDF9AC89689A}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_door_open" ID="{A3B514A7-D3E0-445F-AF05-3DAA3A8A559A}">
+									<ChildrenList>
+										<Action Name="" ID="{6049B58E-9B47-4282-B1BF-3D27FF475F19}" ShortID="417116530">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="door_open" ID="{85353176-0DEA-471E-8C94-BD2B7C35FED4}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="drawers" ID="{724EEBEB-E109-4471-A796-1A84DAA850E5}" ShortID="698667590">
+							<ChildrenList>
+								<Event Name="Play_drawer_close" ID="{47BEFEE9-30BD-4164-8F4B-43736C333EEF}">
+									<ChildrenList>
+										<Action Name="" ID="{04C797AD-26EF-4798-A561-AC322A34010F}" ShortID="957882391">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="drawer_close" ID="{9BA7E003-45C4-4F6F-8484-C48B4322DA2C}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_drawer_open" ID="{B32C889D-1401-419B-B8C3-842B9F39EDDB}">
+									<ChildrenList>
+										<Action Name="" ID="{53350649-A43A-4E64-A523-483DCD4C000C}" ShortID="1022453305">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="drawer_open" ID="{5E1E5A1D-919F-46EE-B6FF-8CAEB9C48136}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

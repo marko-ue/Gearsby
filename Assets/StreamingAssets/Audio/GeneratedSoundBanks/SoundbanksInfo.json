@@ -18,6 +18,7 @@
     "Type": "User",
     "Language": "SFX",
     "Hash": "{05CFD9D6-1CB6-5BAE-60E6-40C4C58D3DF9}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\mainsoundbank",
     "ShortName": "mainsoundbank",
     "Path": "mainsoundbank.bnk"
    },
@@ -25,7 +26,8 @@
     "Id": "1355168291",
     "Type": "User",
     "Language": "SFX",
-    "Hash": "{547EA011-A81D-C515-A029-6F3433EF8BC0}",
+    "Hash": "{DF3E89CC-0D93-83A8-A04C-61FB37F1D875}",
+    "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
@@ -33,12 +35,14 @@
       {
        "Id": "2317455096",
        "Name": "No_Output",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\No_Output",
        "LibName": "No Output",
        "LibId": "11862023"
       },
       {
        "Id": "3859886410",
        "Name": "System",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\System",
        "LibName": "System",
        "LibId": "11403271"
       }
@@ -47,49 +51,103 @@
     "Busses": [
      {
       "Id": "3803692087",
-      "Name": "Master Audio Bus"
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus"
      }
     ],
     "StateGroups": [
      {
       "Id": "232210557",
       "Name": "in_out_side",
+      "ObjectPath": "\\States\\Default Work Unit\\in_out_side",
       "States": [
        {
         "Id": "748895195",
-        "Name": "None"
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\in_out_side\\None"
        },
        {
         "Id": "1319799452",
-        "Name": "inside_house"
+        "Name": "inside_house",
+        "ObjectPath": "\\States\\Default Work Unit\\in_out_side\\inside_house"
        },
        {
         "Id": "4145910067",
-        "Name": "outside_house"
+        "Name": "outside_house",
+        "ObjectPath": "\\States\\Default Work Unit\\in_out_side\\outside_house"
+       }
+      ]
+     },
+     {
+      "Id": "2043403999",
+      "Name": "rain",
+      "ObjectPath": "\\States\\Default Work Unit\\rain",
+      "States": [
+       {
+        "Id": "126481933",
+        "Name": "no_rain",
+        "ObjectPath": "\\States\\Default Work Unit\\rain\\no_rain"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\rain\\None"
+       },
+       {
+        "Id": "2043403999",
+        "Name": "rain",
+        "ObjectPath": "\\States\\Default Work Unit\\rain\\rain"
        }
       ]
      }
     ],
     "SwitchGroups": [
      {
-      "Id": "2385628198",
-      "Name": "Footsteps",
+      "Id": "1039744521",
+      "Name": "landing_materials",
+      "ObjectPath": "\\Switches\\Default Work Unit\\landing_materials",
       "Switches": [
        {
         "Id": "841620460",
-        "Name": "Concrete"
+        "Name": "concrete",
+        "ObjectPath": "\\Switches\\Default Work Unit\\landing_materials\\concrete"
        },
        {
         "Id": "2058049674",
-        "Name": "wood"
+        "Name": "wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\landing_materials\\wood"
        },
        {
         "Id": "2473969246",
-        "Name": "metal"
+        "Name": "metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\landing_materials\\metal"
+       }
+      ]
+     },
+     {
+      "Id": "1682461626",
+      "Name": "footsteps_material",
+      "ObjectPath": "\\Switches\\Default Work Unit\\footsteps_material",
+      "Switches": [
+       {
+        "Id": "841620460",
+        "Name": "Concrete",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footsteps_material\\Concrete"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footsteps_material\\wood"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footsteps_material\\metal"
        },
        {
         "Id": "4248645337",
-        "Name": "grass"
+        "Name": "grass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footsteps_material\\grass"
        }
       ]
      }
@@ -100,6 +158,7 @@
     "Type": "User",
     "Language": "SFX",
     "Hash": "{4833B1EB-581D-8BE9-6325-222402150F9A}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\fs",
     "ShortName": "fs",
     "Path": "fs.bnk"
    },
@@ -107,7 +166,8 @@
     "Id": "3161908922",
     "Type": "User",
     "Language": "SFX",
-    "Hash": "{8CF47D41-4DA1-6FD6-C280-45297765C453}",
+    "Hash": "{68D0B8C0-C9E2-B88B-5D1A-E06EA04600A6}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
     "Media": [
@@ -120,12 +180,36 @@
       "CachePath": "C2/{C292C0D1-6FA1-FE68-D546-8F817E308AF5}.wem"
      },
      {
+      "Id": "35489005",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "land_metal1.wav",
+      "CachePath": "64/{641AA5EB-1AA4-399E-711B-49605F28B9FC}.wem"
+     },
+     {
+      "Id": "99767601",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fs_metal_4.wav",
+      "CachePath": "98/{98FD8B2A-F6C0-88AC-FC5E-B61765C9919E}.wem"
+     },
+     {
       "Id": "120599801",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "fs_concrete_5.wav",
       "CachePath": "06/{06148722-EA50-3AF5-8586-7306C8844749}.wem"
+     },
+     {
+      "Id": "155764107",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fs_metal_6.wav",
+      "CachePath": "D5/{D5A82DC8-19EC-8AE2-E74E-99B4CE227C23}.wem"
      },
      {
       "Id": "160416403",
@@ -142,6 +226,14 @@
       "Location": "Memory",
       "ShortName": "fs_wood_9.wav",
       "CachePath": "42/{42C3150D-2777-5D7E-4345-CD0EBCB2E52A}.wem"
+     },
+     {
+      "Id": "187785395",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "door_close.wav",
+      "CachePath": "2B/{2B78E884-922E-0024-F496-A01DC3C4FA10}.wem"
      },
      {
       "Id": "191270774",
@@ -200,6 +292,14 @@
       "CachePath": "47/{4736A9D3-FDBC-BC35-7D69-9FA8096F603A}.wem"
      },
      {
+      "Id": "280975269",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "craft_fail.wav",
+      "CachePath": "29/{29B97DB8-DFD9-2E8F-2386-5A725DB9FB73}.wem"
+     },
+     {
       "Id": "294139425",
       "Language": "SFX",
       "Streaming": "false",
@@ -240,12 +340,20 @@
       "CachePath": "7E/{7E57B66A-BB7F-1839-CA05-314F368793D8}.wem"
      },
      {
+      "Id": "425533229",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "drawer_open.wav",
+      "CachePath": "DA/{DA7FAC5F-1EB6-CBB5-3218-A57FAC1E33EA}.wem"
+     },
+     {
       "Id": "425838404",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "uncrouch.wav",
-      "CachePath": "F4/{F47A4358-AF7D-EE6A-1EE9-96C85F803118}.wem"
+      "CachePath": "EA/{EA7A353E-37F6-A3A2-EBD9-8A3697D09AC9}.wem"
      },
      {
       "Id": "432449031",
@@ -288,12 +396,28 @@
       "CachePath": "47/{47A46127-D9EB-A885-C9EC-137390E69437}.wem"
      },
      {
+      "Id": "480571856",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "craft_liquid.wav",
+      "CachePath": "FF/{FF355E3E-2A67-C14F-C9D6-AFBDB7ECB5DE}.wem"
+     },
+     {
       "Id": "499614530",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "fs_concrete_9.wav",
       "CachePath": "C4/{C44DB310-2680-2D43-9C3C-8E2EBD27791F}.wem"
+     },
+     {
+      "Id": "507336409",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fs_metal_5.wav",
+      "CachePath": "A3/{A389EA7B-ECD1-760C-7DE5-7C4EF0FE3C5B}.wem"
      },
      {
       "Id": "514253887",
@@ -304,6 +428,14 @@
       "CachePath": "DE/{DE2E82DA-970C-08A6-E815-4F5CFD7B5949}.wem"
      },
      {
+      "Id": "530464956",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fs_metal_2.wav",
+      "CachePath": "17/{171E0807-BDA3-3ADD-532C-0F1E1DC84704}.wem"
+     },
+     {
       "Id": "562187170",
       "Language": "SFX",
       "Streaming": "false",
@@ -312,12 +444,44 @@
       "CachePath": "F9/{F95D29A6-E1FA-7721-151F-0005E74F69CF}.wem"
      },
      {
+      "Id": "578800110",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fs_metal_8.wav",
+      "CachePath": "F9/{F9C82916-7B18-1B90-A0DF-D4B26D658BE6}.wem"
+     },
+     {
       "Id": "593250279",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "crouch.wav",
       "CachePath": "38/{3830A06A-5957-4971-495B-00CB15790BB1}.wem"
+     },
+     {
+      "Id": "596273736",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fs_metal_1.wav",
+      "CachePath": "7E/{7E705C1F-2D52-EF6B-CF02-274EA051698C}.wem"
+     },
+     {
+      "Id": "600729798",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fs_metal_7.wav",
+      "CachePath": "5E/{5E352A99-6191-C992-0C0D-FCFD085063E3}.wem"
+     },
+     {
+      "Id": "631054936",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "door_open2.wav",
+      "CachePath": "45/{4573E9CF-7917-1F68-4146-E29CA8BDB5DB}.wem"
      },
      {
       "Id": "634952087",
@@ -344,12 +508,44 @@
       "CachePath": "FF/{FF6826D1-262B-03A7-D85B-BB6C44705970}.wem"
      },
      {
+      "Id": "677888498",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "land_metal2.wav",
+      "CachePath": "F2/{F27AE926-9E3C-464A-41F3-1E2F88ECB58B}.wem"
+     },
+     {
+      "Id": "694643057",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "rain.wav",
+      "CachePath": "CC/{CC1E81FD-9F67-2C04-6D38-4BDC24B2B741}.wem"
+     },
+     {
+      "Id": "717855672",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fs_metal_3.wav",
+      "CachePath": "C7/{C7E5B74C-8326-3FA7-18A2-AB9DB73829DC}.wem"
+     },
+     {
       "Id": "719774501",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "fs_wood_5.wav",
       "CachePath": "63/{63CC4906-B45B-F302-BF27-25F7484BA9CC}.wem"
+     },
+     {
+      "Id": "729782160",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "land_metal3.wav",
+      "CachePath": "2F/{2F2BA719-5D19-2427-68AE-779A032F83B3}.wem"
      },
      {
       "Id": "759287006",
@@ -360,12 +556,28 @@
       "CachePath": "9B/{9B99BF8E-7F48-FB3E-54B1-A79104B12D01}.wem"
      },
      {
+      "Id": "775143460",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "door_open1.wav",
+      "CachePath": "46/{46333E94-2215-DC94-615F-3F1314FB08CF}.wem"
+     },
+     {
       "Id": "776067418",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "fs_concrete_11.wav",
       "CachePath": "4E/{4E5A09D9-A56F-F86F-0C72-60155895C6D1}.wem"
+     },
+     {
+      "Id": "787799995",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "craft_normal.wav",
+      "CachePath": "F6/{F6A1E8B6-685B-1D40-6668-F281944F242F}.wem"
      },
      {
       "Id": "810323791",
@@ -392,14 +604,6 @@
       "CachePath": "67/{67D4E62C-4C59-B81D-91CE-327608095B4E}.wem"
      },
      {
-      "Id": "826279942",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "player_crafting.wav",
-      "CachePath": "E4/{E4B10685-0C6F-A1AC-DEDF-ACE3B26C005A}.wem"
-     },
-     {
       "Id": "842749808",
       "Language": "SFX",
       "Streaming": "false",
@@ -421,7 +625,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "player_pickup.wav",
-      "CachePath": "BD/{BDBF90A8-F935-1C9D-DB12-28964650ABF6}.wem"
+      "CachePath": "BB/{BB88FC94-8077-C9DD-9B55-AD797611E390}.wem"
      },
      {
       "Id": "892688682",
@@ -438,6 +642,14 @@
       "Location": "Memory",
       "ShortName": "outside.wav",
       "CachePath": "F1/{F188CBB6-74B3-0634-E052-D3AFCE571BD8}.wem"
+     },
+     {
+      "Id": "965195177",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "drawer_close.wav",
+      "CachePath": "E4/{E4536199-5B44-25DC-36D6-B3301837CD8B}.wem"
      },
      {
       "Id": "981518875",
@@ -484,6 +696,7 @@
      {
       "Id": "1117531639",
       "Name": "amb",
+      "ObjectPath": "\\Events\\Default Work Unit\\Ambience\\amb",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -493,6 +706,9 @@
         "Id": "514253887"
        },
        {
+        "Id": "694643057"
+       },
+       {
         "Id": "912769731"
        }
       ]
@@ -500,6 +716,7 @@
      {
       "Id": "729984210",
       "Name": "amb_stop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Ambience\\amb_stop",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -508,9 +725,10 @@
      {
       "Id": "3989731860",
       "Name": "Play_crouch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_crouch",
       "DurationType": "OneShot",
       "DurationMin": "0.8100911",
-      "DurationMax": "0.8100911",
+      "DurationMax": "0.8459568",
       "MediaRefs": [
        {
         "Id": "593250279"
@@ -518,16 +736,76 @@
       ]
      },
      {
+      "Id": "2292458263",
+      "Name": "Play_door_close",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\doors\\Play_door_close",
+      "MaxAttenuation": "20",
+      "DurationType": "OneShot",
+      "DurationMin": "1.0649407",
+      "DurationMax": "1.178218",
+      "MediaRefs": [
+       {
+        "Id": "187785395"
+       }
+      ]
+     },
+     {
+      "Id": "1660008929",
+      "Name": "Play_door_open",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\doors\\Play_door_open",
+      "MaxAttenuation": "20",
+      "DurationType": "OneShot",
+      "DurationMin": "0.78474534",
+      "DurationMax": "1.2053457",
+      "MediaRefs": [
+       {
+        "Id": "631054936"
+       },
+       {
+        "Id": "775143460"
+       }
+      ]
+     },
+     {
+      "Id": "2315829540",
+      "Name": "Play_drawer_close",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\drawers\\Play_drawer_close",
+      "MaxAttenuation": "10",
+      "DurationType": "OneShot",
+      "DurationMin": "0.7615099",
+      "DurationMax": "0.8798125",
+      "MediaRefs": [
+       {
+        "Id": "965195177"
+       }
+      ]
+     },
+     {
+      "Id": "1958703520",
+      "Name": "Play_drawer_open",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\drawers\\Play_drawer_open",
+      "MaxAttenuation": "15",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8328028",
+      "DurationMax": "0.990375",
+      "MediaRefs": [
+       {
+        "Id": "425533229"
+       }
+      ]
+     },
+     {
       "Id": "3854155799",
       "Name": "Play_Footsteps",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Footsteps",
       "DurationType": "OneShot",
       "DurationMin": "0.3125",
-      "DurationMax": "0.4375",
+      "DurationMax": "0.4870014",
       "SwitchContainers": [
        {
         "SwitchValue": {
          "GroupType": "Switch",
-         "GroupId": "2385628198",
+         "GroupId": "1682461626",
          "Id": "841620460"
         },
         "MediaRefs": [
@@ -569,7 +847,7 @@
        {
         "SwitchValue": {
          "GroupType": "Switch",
-         "GroupId": "2385628198",
+         "GroupId": "1682461626",
          "Id": "2058049674",
          "Default": "true"
         },
@@ -608,12 +886,46 @@
           "Id": "1057856872"
          }
         ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1682461626",
+         "Id": "2473969246"
+        },
+        "MediaRefs": [
+         {
+          "Id": "99767601"
+         },
+         {
+          "Id": "155764107"
+         },
+         {
+          "Id": "507336409"
+         },
+         {
+          "Id": "530464956"
+         },
+         {
+          "Id": "578800110"
+         },
+         {
+          "Id": "596273736"
+         },
+         {
+          "Id": "600729798"
+         },
+         {
+          "Id": "717855672"
+         }
+        ]
        }
       ]
      },
      {
       "Id": "3379724016",
       "Name": "Play_gearwheel_big1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Play_gearwheel_big1",
       "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -625,6 +937,7 @@
      {
       "Id": "3379724019",
       "Name": "Play_gearwheel_big2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Play_gearwheel_big2",
       "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -636,6 +949,7 @@
      {
       "Id": "3379724018",
       "Name": "Play_gearwheel_big3",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Play_gearwheel_big3",
       "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -647,6 +961,7 @@
      {
       "Id": "3880120448",
       "Name": "Play_gearwheel_small_1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Play_gearwheel_small_1",
       "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -658,6 +973,7 @@
      {
       "Id": "3880120451",
       "Name": "Play_gearwheel_small_2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Play_gearwheel_small_2",
       "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -667,20 +983,48 @@
       ]
      },
      {
-      "Id": "2395824906",
-      "Name": "Play_player_crafting",
+      "Id": "902684097",
+      "Name": "Play_player_craft_fail",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_player_craft_fail",
       "DurationType": "OneShot",
-      "DurationMin": "0.9672489",
-      "DurationMax": "0.9672489",
+      "DurationMin": "0.302875",
+      "DurationMax": "0.302875",
       "MediaRefs": [
        {
-        "Id": "826279942"
+        "Id": "280975269"
+       }
+      ]
+     },
+     {
+      "Id": "2230999485",
+      "Name": "Play_player_craft_liquid",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_player_craft_liquid",
+      "DurationType": "OneShot",
+      "DurationMin": "2.8269167",
+      "DurationMax": "2.8269167",
+      "MediaRefs": [
+       {
+        "Id": "480571856"
+       }
+      ]
+     },
+     {
+      "Id": "1971662352",
+      "Name": "Play_player_craft_normal",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_player_craft_normal",
+      "DurationType": "OneShot",
+      "DurationMin": "2.2211459",
+      "DurationMax": "2.2211459",
+      "MediaRefs": [
+       {
+        "Id": "787799995"
        }
       ]
      },
      {
       "Id": "562256996",
       "Name": "Play_player_jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_player_jump",
       "DurationType": "OneShot",
       "DurationMin": "0.52500814",
       "DurationMax": "0.718912",
@@ -699,6 +1043,7 @@
      {
       "Id": "4249207015",
       "Name": "Play_player_land",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_player_land",
       "DurationType": "OneShot",
       "DurationMin": "0.38119328",
       "DurationMax": "0.6529689",
@@ -706,7 +1051,25 @@
        {
         "SwitchValue": {
          "GroupType": "Switch",
-         "GroupId": "2385628198",
+         "GroupId": "1039744521",
+         "Id": "2473969246"
+        },
+        "MediaRefs": [
+         {
+          "Id": "35489005"
+         },
+         {
+          "Id": "677888498"
+         },
+         {
+          "Id": "729782160"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1039744521",
          "Id": "841620460"
         },
         "MediaRefs": [
@@ -724,9 +1087,8 @@
        {
         "SwitchValue": {
          "GroupType": "Switch",
-         "GroupId": "2385628198",
-         "Id": "2058049674",
-         "Default": "true"
+         "GroupId": "1039744521",
+         "Id": "2058049674"
         },
         "MediaRefs": [
          {
@@ -745,6 +1107,7 @@
      {
       "Id": "3652445300",
       "Name": "Play_player_pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_player_pickup",
       "DurationType": "OneShot",
       "DurationMin": "0.59375",
       "DurationMax": "0.59375",
@@ -757,6 +1120,7 @@
      {
       "Id": "2003218848",
       "Name": "Play_sfx_explosion_big",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_sfx_explosion_big",
       "MaxAttenuation": "50",
       "DurationType": "OneShot",
       "DurationMin": "3.3973124",
@@ -770,6 +1134,7 @@
      {
       "Id": "3077863823",
       "Name": "Play_sfx_explosion_small",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_sfx_explosion_small",
       "MaxAttenuation": "50",
       "DurationType": "OneShot",
       "DurationMin": "2.6607084",
@@ -783,6 +1148,7 @@
      {
       "Id": "1206242149",
       "Name": "Play_sfx_spark",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_sfx_spark",
       "MaxAttenuation": "50",
       "DurationType": "OneShot",
       "DurationMin": "1.3928542",
@@ -796,6 +1162,7 @@
      {
       "Id": "1976423929",
       "Name": "Play_uncrouch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_uncrouch",
       "DurationType": "OneShot",
       "DurationMin": "0.62106776",
       "DurationMax": "0.62106776",
@@ -808,6 +1175,7 @@
      {
       "Id": "869605302",
       "Name": "Stop_gearwheel_big1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Stop_gearwheel_big1",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -816,6 +1184,7 @@
      {
       "Id": "869605301",
       "Name": "Stop_gearwheel_big2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Stop_gearwheel_big2",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -824,6 +1193,7 @@
      {
       "Id": "869605300",
       "Name": "Stop_gearwheel_big3",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Stop_gearwheel_big3",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -832,6 +1202,7 @@
      {
       "Id": "1066065250",
       "Name": "Stop_gearwheel_small_1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Stop_gearwheel_small_1",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -840,6 +1211,7 @@
      {
       "Id": "1066065249",
       "Name": "Stop_gearwheel_small_2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Objects\\gearwheels\\Stop_gearwheel_small_2",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -848,30 +1220,57 @@
     ],
     "SwitchGroups": [
      {
-      "Id": "2385628198",
-      "Name": "Footsteps",
+      "Id": "1039744521",
+      "Name": "landing_materials",
+      "ObjectPath": "\\Switches\\Default Work Unit\\landing_materials",
       "Switches": [
        {
         "Id": "841620460",
-        "Name": "Concrete"
+        "Name": "concrete",
+        "ObjectPath": "\\Switches\\Default Work Unit\\landing_materials\\concrete"
        },
        {
         "Id": "2058049674",
-        "Name": "wood"
+        "Name": "wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\landing_materials\\wood"
        },
        {
         "Id": "2473969246",
-        "Name": "metal"
+        "Name": "metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\landing_materials\\metal"
+       }
+      ]
+     },
+     {
+      "Id": "1682461626",
+      "Name": "footsteps_material",
+      "ObjectPath": "\\Switches\\Default Work Unit\\footsteps_material",
+      "Switches": [
+       {
+        "Id": "841620460",
+        "Name": "Concrete",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footsteps_material\\Concrete"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footsteps_material\\wood"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footsteps_material\\metal"
        },
        {
         "Id": "4248645337",
-        "Name": "grass"
+        "Name": "grass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footsteps_material\\grass"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{451E4131-C069-229E-E46A-66559B742ADC}"
+  "FileHash": "{06935894-F829-B76B-CCEE-7BCCC81E75C1}"
  }
 }

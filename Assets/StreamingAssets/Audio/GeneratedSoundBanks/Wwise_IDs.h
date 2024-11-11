@@ -16,13 +16,19 @@ namespace AK
         static const AkUniqueID AMB = 1117531639U;
         static const AkUniqueID AMB_STOP = 729984210U;
         static const AkUniqueID PLAY_CROUCH = 3989731860U;
+        static const AkUniqueID PLAY_DOOR_CLOSE = 2292458263U;
+        static const AkUniqueID PLAY_DOOR_OPEN = 1660008929U;
+        static const AkUniqueID PLAY_DRAWER_CLOSE = 2315829540U;
+        static const AkUniqueID PLAY_DRAWER_OPEN = 1958703520U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_GEARWHEEL_BIG1 = 3379724016U;
         static const AkUniqueID PLAY_GEARWHEEL_BIG2 = 3379724019U;
         static const AkUniqueID PLAY_GEARWHEEL_BIG3 = 3379724018U;
         static const AkUniqueID PLAY_GEARWHEEL_SMALL_1 = 3880120448U;
         static const AkUniqueID PLAY_GEARWHEEL_SMALL_2 = 3880120451U;
-        static const AkUniqueID PLAY_PLAYER_CRAFTING = 2395824906U;
+        static const AkUniqueID PLAY_PLAYER_CRAFT_FAIL = 902684097U;
+        static const AkUniqueID PLAY_PLAYER_CRAFT_LIQUID = 2230999485U;
+        static const AkUniqueID PLAY_PLAYER_CRAFT_NORMAL = 1971662352U;
         static const AkUniqueID PLAY_PLAYER_JUMP = 562256996U;
         static const AkUniqueID PLAY_PLAYER_LAND = 4249207015U;
         static const AkUniqueID PLAY_PLAYER_PICKUP = 3652445300U;
@@ -51,13 +57,25 @@ namespace AK
             } // namespace STATE
         } // namespace IN_OUT_SIDE
 
+        namespace RAIN
+        {
+            static const AkUniqueID GROUP = 2043403999U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NO_RAIN = 126481933U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID RAIN = 2043403999U;
+            } // namespace STATE
+        } // namespace RAIN
+
     } // namespace STATES
 
     namespace SWITCHES
     {
-        namespace FOOTSTEPS
+        namespace FOOTSTEPS_MATERIAL
         {
-            static const AkUniqueID GROUP = 2385628198U;
+            static const AkUniqueID GROUP = 1682461626U;
 
             namespace SWITCH
             {
@@ -66,7 +84,19 @@ namespace AK
                 static const AkUniqueID METAL = 2473969246U;
                 static const AkUniqueID WOOD = 2058049674U;
             } // namespace SWITCH
-        } // namespace FOOTSTEPS
+        } // namespace FOOTSTEPS_MATERIAL
+
+        namespace LANDING_MATERIALS
+        {
+            static const AkUniqueID GROUP = 1039744521U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID CONCRETE = 841620460U;
+                static const AkUniqueID METAL = 2473969246U;
+                static const AkUniqueID WOOD = 2058049674U;
+            } // namespace SWITCH
+        } // namespace LANDING_MATERIALS
 
     } // namespace SWITCHES
 

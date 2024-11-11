@@ -30,8 +30,8 @@
    "MaxAttenuationInfo": "true",
    "EstimatedDurationInfo": "true",
    "PrintObjectGuid": "false",
-   "PrintObjectPath": "false"
+   "PrintObjectPath": "true"
   },
-  "FileHash": "{8BB3D949-856C-EB03-15FA-4097C95BC184}"
+  "FileHash": "{F4E5AB83-38DE-BB5C-939F-CDBCE3ABC9E5}"
  }
 }

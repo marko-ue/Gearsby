@@ -34,16 +34,20 @@
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_player_crafting" ID="{491120A4-6361-4480-B353-86405D435535}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<ObjectRef Name="Play_player_craft_normal" ID="{491120A4-6361-4480-B353-86405D435535}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_crouch" ID="{0D594692-C8B8-4488-AE6E-A8590A87785E}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<ObjectRef Name="Play_player_craft_fail" ID="{F1767D2E-D769-41B6-AB6E-E9E9B8B236F5}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
 							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_gearwheel_big1" ID="{1040413C-908C-4DE0-BE20-7DD01B357582}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
 							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_player_craft_liquid" ID="{B1F970D4-0ECE-4F87-939F-1BDC107F8368}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="amb" ID="{44186391-7428-4330-840C-B24BF3FBCD77}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
@@ -56,10 +60,12 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="inside_house" ID="{436EEC45-078F-4F9F-90B7-2BB6FF36D421}"/>
+						<CurrentStateRef Name="outside_house" ID="{4A5A18A4-9616-472C-8780-8EA6E93AB824}"/>
+						<CurrentStateRef Name="no_rain" ID="{7F2AB29B-F769-4115-B185-8ACA05965919}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="wood" ID="{CA972D6A-ECF8-4B4D-90E5-01FE9D6D0F6F}"/>
+						<CurrentSwitchRef Name="concrete" ID="{AD67E13D-8A7B-467C-8394-C26DABC5012F}"/>
+						<CurrentSwitchRef Name="Concrete" ID="{D1AEEF25-803B-459A-87BB-AEC0F1710065}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
