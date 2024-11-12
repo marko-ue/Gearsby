@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18867c60b6ad334bb83c56b268bfc2b, type: 3}
+  m_Name: B32C889D-1401-419B-B8C3-842B9F39EDDB
+  m_EditorClassIdentifier: 
+  objectName: Play_drawer_open
+  id: 1958703520
+  guid: B32C889D-1401-419B-B8C3-842B9F39EDDB
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

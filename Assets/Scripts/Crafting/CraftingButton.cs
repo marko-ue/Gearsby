@@ -10,7 +10,9 @@ public class CraftingButton : MonoBehaviour
     private CraftingManager craftingManager;
     private Image buttonImage;
 
-    public AK.Wwise.Event solidCraftSound; // there will be a liquid craft sound added later
+    public AK.Wwise.Event solidCraftSound;
+    public AK.Wwise.Event liquidCraftSound;
+    public AK.Wwise.Event insufficientMaterialsSound;
 
     void Start()
     {
@@ -29,14 +31,14 @@ public class CraftingButton : MonoBehaviour
             {
                 solidCraftSound.Post(this.gameObject);
             }
-            else
+            else if (craftingRecipe.recipeType == "Liquid")
             {
-                // play liquid crafting sound, if there end up being more types of recipes add else if
+                liquidCraftSound.Post(this.gameObject);
             }
         }
         else
         {
-            // play sound for not enough materials
+            insufficientMaterialsSound.Post(this.gameObject);
         }     
     }
 }

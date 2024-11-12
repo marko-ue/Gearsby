@@ -4,6 +4,7 @@ using StarterAssets;
 public class Crouch : MonoBehaviour
 {
     StarterAssetsInputs starterAssetsInputs;
+    FirstPersonController firstPersonController;
     CharacterController characterController;
     Climbing climbing;
     public Transform PlayerCameraRoot;
@@ -30,6 +31,7 @@ public class Crouch : MonoBehaviour
     void Awake()
     {
         starterAssetsInputs = GetComponentInChildren<StarterAssetsInputs>();
+        firstPersonController = GetComponent<FirstPersonController>();
         characterController = GetComponent<CharacterController>();
         climbing = GetComponent<Climbing>();
 
@@ -77,7 +79,7 @@ public class Crouch : MonoBehaviour
         }
         else
         {   
-            if (checkCeilingRayHit)
+            if (checkCeilingRayHit && firstPersonController.Grounded && !hit.collider.isTrigger)
             {
                 starterAssetsInputs.crouch = true;
             }

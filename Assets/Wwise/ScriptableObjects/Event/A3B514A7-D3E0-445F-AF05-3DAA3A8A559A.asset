@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18867c60b6ad334bb83c56b268bfc2b, type: 3}
+  m_Name: A3B514A7-D3E0-445F-AF05-3DAA3A8A559A
+  m_EditorClassIdentifier: 
+  objectName: Play_door_open
+  id: 1660008929
+  guid: A3B514A7-D3E0-445F-AF05-3DAA3A8A559A
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

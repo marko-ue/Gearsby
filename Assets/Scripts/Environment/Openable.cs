@@ -16,6 +16,11 @@ public class Openable : MonoBehaviour, IOpenable
     private Quaternion openRotation;   // Rotation when the door is open
     private bool isOpen = false;
 
+    public AK.Wwise.Event doorOpenSound;
+    public AK.Wwise.Event doorCloseSound;
+    public AK.Wwise.Event drawerOpenSound;
+    public AK.Wwise.Event drawerCloseSound;
+
     void Start()
     {
         // Initialize positions and rotations
@@ -45,10 +50,12 @@ public class Openable : MonoBehaviour, IOpenable
     {
         if (objectType == ObjectType.Drawer)
         {
+            drawerOpenSound.Post(this.gameObject);
             StartCoroutine(MoveDrawer(openPosition)); // Move drawer to open position
         }
         else if (objectType == ObjectType.Door)
         {
+            doorOpenSound.Post(this.gameObject);
             StartCoroutine(RotateDoor(openRotation)); // Rotate door to open position
         }
     }
@@ -58,10 +65,12 @@ public class Openable : MonoBehaviour, IOpenable
     {
         if (objectType == ObjectType.Drawer)
         {
+            drawerCloseSound.Post(this.gameObject);
             StartCoroutine(MoveDrawer(closedPosition)); // Move drawer to closed position
         }
         else if (objectType == ObjectType.Door)
         {
+            doorCloseSound.Post(this.gameObject);
             StartCoroutine(RotateDoor(closedRotation)); // Rotate door to closed position
         }
     }

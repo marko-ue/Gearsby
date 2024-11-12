@@ -13,6 +13,7 @@ TagManager:
   - target
   - Cloth
   - Weapon
+  - House
   layers:
   - Default
   - TransparentFX

@@ -342,6 +342,22 @@ MonoBehaviour:
   openDistance: 0.45
   openAngle: 90
   speed: 2
+  doorOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 38b2a8bacf84b884ca8c7df80301d398, type: 2}
+  doorCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 311843aa8c7183b42acf53ea31d747b8, type: 2}
+  drawerOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6e588d4f79129d344b34856cbb2b5bac, type: 2}
+  drawerCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 09c475accf16bca489079fc9080c2db5, type: 2}
 --- !u!65 &1595418100812211888
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -469,6 +485,22 @@ MonoBehaviour:
   openDistance: 0.45
   openAngle: 90
   speed: 2
+  doorOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 38b2a8bacf84b884ca8c7df80301d398, type: 2}
+  doorCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 311843aa8c7183b42acf53ea31d747b8, type: 2}
+  drawerOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6e588d4f79129d344b34856cbb2b5bac, type: 2}
+  drawerCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 09c475accf16bca489079fc9080c2db5, type: 2}
 --- !u!65 &7698538993306427862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -595,6 +627,22 @@ MonoBehaviour:
   openDistance: 0.45
   openAngle: 90
   speed: 2
+  doorOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 38b2a8bacf84b884ca8c7df80301d398, type: 2}
+  doorCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 311843aa8c7183b42acf53ea31d747b8, type: 2}
+  drawerOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6e588d4f79129d344b34856cbb2b5bac, type: 2}
+  drawerCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 09c475accf16bca489079fc9080c2db5, type: 2}
 --- !u!65 &5016990335488223732
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -721,6 +769,22 @@ MonoBehaviour:
   openDistance: 0.45
   openAngle: 90
   speed: 2
+  doorOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 38b2a8bacf84b884ca8c7df80301d398, type: 2}
+  doorCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 311843aa8c7183b42acf53ea31d747b8, type: 2}
+  drawerOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6e588d4f79129d344b34856cbb2b5bac, type: 2}
+  drawerCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 09c475accf16bca489079fc9080c2db5, type: 2}
 --- !u!65 &250662757317173675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -847,6 +911,22 @@ MonoBehaviour:
   openDistance: 0.45
   openAngle: 90
   speed: 2
+  doorOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 38b2a8bacf84b884ca8c7df80301d398, type: 2}
+  doorCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 311843aa8c7183b42acf53ea31d747b8, type: 2}
+  drawerOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6e588d4f79129d344b34856cbb2b5bac, type: 2}
+  drawerCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 09c475accf16bca489079fc9080c2db5, type: 2}
 --- !u!65 &3305737538311699926
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1059,6 +1139,22 @@ MonoBehaviour:
   openDistance: 0.45
   openAngle: 90
   speed: 2
+  doorOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 38b2a8bacf84b884ca8c7df80301d398, type: 2}
+  doorCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 311843aa8c7183b42acf53ea31d747b8, type: 2}
+  drawerOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6e588d4f79129d344b34856cbb2b5bac, type: 2}
+  drawerCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 09c475accf16bca489079fc9080c2db5, type: 2}
 --- !u!65 &5015341748290663880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1272,6 +1368,22 @@ MonoBehaviour:
   openDistance: 0.45
   openAngle: 90
   speed: 2
+  doorOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 38b2a8bacf84b884ca8c7df80301d398, type: 2}
+  doorCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 311843aa8c7183b42acf53ea31d747b8, type: 2}
+  drawerOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6e588d4f79129d344b34856cbb2b5bac, type: 2}
+  drawerCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 09c475accf16bca489079fc9080c2db5, type: 2}
 --- !u!65 &7734252796132616484
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1399,6 +1511,22 @@ MonoBehaviour:
   openDistance: 0.45
   openAngle: 90
   speed: 2
+  doorOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 38b2a8bacf84b884ca8c7df80301d398, type: 2}
+  doorCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 311843aa8c7183b42acf53ea31d747b8, type: 2}
+  drawerOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6e588d4f79129d344b34856cbb2b5bac, type: 2}
+  drawerCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 09c475accf16bca489079fc9080c2db5, type: 2}
 --- !u!65 &5959273480000332508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1698,6 +1826,22 @@ MonoBehaviour:
   openDistance: 0.45
   openAngle: 90
   speed: 2
+  doorOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 38b2a8bacf84b884ca8c7df80301d398, type: 2}
+  doorCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 311843aa8c7183b42acf53ea31d747b8, type: 2}
+  drawerOpenSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6e588d4f79129d344b34856cbb2b5bac, type: 2}
+  drawerCloseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 09c475accf16bca489079fc9080c2db5, type: 2}
 --- !u!65 &6525361582846724531
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
     void OpenDoor()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward); // Raycast from camera's position
             RaycastHit hit;

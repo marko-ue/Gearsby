@@ -286,3 +286,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   craftingRecipe: {fileID: 0}
   button: {fileID: 0}
+  solidCraftSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3cffcdb2c520bb9469bbde95ff992c86, type: 2}
+  liquidCraftSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 41fc7099e749ce44797bcba1babd9114, type: 2}
+  insufficientMaterialsSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: adbdc761e99f3c249a7a5a7967ada642, type: 2}
