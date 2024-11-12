@@ -18,17 +18,23 @@ public class PlayerController : MonoBehaviour
 
     [Header("Collectible Amount")]
     StarterAssetsInputs starterAssetsInputs;
-    private CharacterController characterController;
+    CharacterController characterController;
+    RainManager rainManager;
 
     [Header("Door")]
     public float interactRange = 3f; // Range within which the player can interact
     public LayerMask openableLayer; // LayerMask for interactable objects
+
+    public AK.Wwise.Event playRainSound;
+    public AK.Wwise.Event stopRainSound;
+    private bool isCurrentlyRaining = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         starterAssetsInputs = GetComponentInChildren<StarterAssetsInputs>();
         characterController = GetComponent<CharacterController>();
+        rainManager = GameObject.Find("Rain Manager").GetComponent<RainManager>();
     }
 
     void Update()
@@ -39,6 +45,7 @@ public class PlayerController : MonoBehaviour
         PickupRay();
         Stamina();
         OpenDoor();
+        CheckRainState();
     }
 
     private void MovePlayer()
@@ -112,6 +119,20 @@ public class PlayerController : MonoBehaviour
                     openable.ToggleOpen(); // Toggle the door open/close
                 }
             }
+        }
+    }
+
+    private void CheckRainState()
+    {
+        if (rainManager.isRaining && !isCurrentlyRaining)
+        {
+            playRainSound.Post(this.gameObject);
+            isCurrentlyRaining = true;
+        }
+        else if (!rainManager.isRaining && isCurrentlyRaining)
+        {
+            stopRainSound.Post(this.gameObject);
+            isCurrentlyRaining = false;
         }
     }
 }
