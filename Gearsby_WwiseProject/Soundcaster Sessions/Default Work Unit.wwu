@@ -50,18 +50,21 @@
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="amb" ID="{44186391-7428-4330-840C-B24BF3FBCD77}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<ObjectRef Name="Play_amb" ID="{7924C61C-AFC5-4152-8459-F66D3FA8D7A2}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
 							<Position X="4" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="amb_stop" ID="{D742EA32-B01B-4AE8-8648-112950A4CEEE}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<ObjectRef Name="Play_rain" ID="{41EE9CDB-1FE4-4C70-B782-2D603D237711}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
 							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_rain" ID="{12ED2A51-DD96-44C3-A31B-370B148E4476}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<Position X="4" Y="2"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="outside_house" ID="{4A5A18A4-9616-472C-8780-8EA6E93AB824}"/>
-						<CurrentStateRef Name="no_rain" ID="{7F2AB29B-F769-4115-B185-8ACA05965919}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="concrete" ID="{AD67E13D-8A7B-467C-8394-C26DABC5012F}"/>

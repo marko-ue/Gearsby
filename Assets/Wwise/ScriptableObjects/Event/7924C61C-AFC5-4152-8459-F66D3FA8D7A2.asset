@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b18867c60b6ad334bb83c56b268bfc2b, type: 3}
-  m_Name: 44186391-7428-4330-840C-B24BF3FBCD77
+  m_Name: 7924C61C-AFC5-4152-8459-F66D3FA8D7A2
   m_EditorClassIdentifier: 
-  objectName: amb
-  id: 1117531639
-  guid: 44186391-7428-4330-840C-B24BF3FBCD77
-  IsInUserDefinedSoundBank: 1
+  objectName: Play_amb
+  id: 2959533290
+  guid: 7924C61C-AFC5-4152-8459-F66D3FA8D7A2
+  IsInUserDefinedSoundBank: 0
   IsAutoBankLoaded: 0

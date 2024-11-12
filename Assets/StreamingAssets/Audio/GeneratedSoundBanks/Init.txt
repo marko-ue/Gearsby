@@ -1,14 +1,10 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	232210557	in_out_side			\Default Work Unit\in_out_side	
-	2043403999	rain			\Default Work Unit\rain	
 
 State	ID	Name	State Group			Notes
 	748895195	None	in_out_side			
 	1319799452	inside_house	in_out_side			
 	4145910067	outside_house	in_out_side			
-	126481933	no_rain	rain			
-	748895195	None	rain			
-	2043403999	rain	rain			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	

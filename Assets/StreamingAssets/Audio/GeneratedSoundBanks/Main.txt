@@ -1,13 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
+	435770000	Stop_amb			\Default Work Unit\Ambience\Stop_amb	
 	562256996	Play_player_jump			\Default Work Unit\Player\Play_player_jump	
-	729984210	amb_stop			\Default Work Unit\Ambience\amb_stop	
 	869605300	Stop_gearwheel_big3			\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big3	
 	869605301	Stop_gearwheel_big2			\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big2	
 	869605302	Stop_gearwheel_big1			\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big1	
 	902684097	Play_player_craft_fail			\Default Work Unit\Player\Play_player_craft_fail	
 	1066065249	Stop_gearwheel_small_2			\Default Work Unit\Objects\gearwheels\Stop_gearwheel_small_2	
 	1066065250	Stop_gearwheel_small_1			\Default Work Unit\Objects\gearwheels\Stop_gearwheel_small_1	
-	1117531639	amb			\Default Work Unit\Ambience\amb	
 	1206242149	Play_sfx_spark			\Default Work Unit\SFX\Play_sfx_spark	
 	1660008929	Play_door_open			\Default Work Unit\Objects\doors\Play_door_open	
 	1958703520	Play_drawer_open			\Default Work Unit\Objects\drawers\Play_drawer_open	
@@ -17,7 +16,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	2230999485	Play_player_craft_liquid			\Default Work Unit\Player\Play_player_craft_liquid	
 	2292458263	Play_door_close			\Default Work Unit\Objects\doors\Play_door_close	
 	2315829540	Play_drawer_close			\Default Work Unit\Objects\drawers\Play_drawer_close	
+	2838936948	Play_rain			\Default Work Unit\Ambience\Play_rain	
+	2959533290	Play_amb			\Default Work Unit\Ambience\Play_amb	
 	3077863823	Play_sfx_explosion_small			\Default Work Unit\SFX\Play_sfx_explosion_small	
+	3206237490	Stop_rain			\Default Work Unit\Ambience\Stop_rain	
 	3379724016	Play_gearwheel_big1			\Default Work Unit\Objects\gearwheels\Play_gearwheel_big1	
 	3379724018	Play_gearwheel_big3			\Default Work Unit\Objects\gearwheels\Play_gearwheel_big3	
 	3379724019	Play_gearwheel_big2			\Default Work Unit\Objects\gearwheels\Play_gearwheel_big2	
@@ -43,15 +45,11 @@ Switch	ID	Name	Switch Group			Notes
 
 State Group	ID	Name			Wwise Object Path	Notes
 	232210557	in_out_side			\Default Work Unit\in_out_side	
-	2043403999	rain			\Default Work Unit\rain	
 
 State	ID	Name	State Group			Notes
 	748895195	None	in_out_side			
 	1319799452	inside_house	in_out_side			
 	4145910067	outside_house	in_out_side			
-	126481933	no_rain	rain			
-	748895195	None	rain			
-	2043403999	rain	rain			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	30616111	fs_wood_2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\C2\{C292C0D1-6FA1-FE68-D546-8F817E308AF5}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_2		84144
@@ -61,7 +59,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	155764107	fs_metal_6	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\D5\{D5A82DC8-19EC-8AE2-E74E-99B4CE227C23}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_metal\fs_metal_6		89684
 	160416403	fs_wood_7	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\15\{15F7DE9A-C451-434C-2BBD-65E27C15D2FE}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_7		83288
 	178792215	fs_wood_9	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\42\{42C3150D-2777-5D7E-4345-CD0EBCB2E52A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_9		83288
-	187785395	door_close	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\2B\{2B78E884-922E-0024-F496-A01DC3C4FA10}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\doors\door_close		210604
+	187785395	door_close	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\63\{63675677-6FDC-66DE-F2CC-274FD8139A46}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\doors\door_close		210604
 	191270774	jump1	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\A0\{A04A11C4-3EBB-FB4B-EFDB-F16301C3134C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\jump\player_jump\jump1		130428
 	215534549	fs_concrete_2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\62\{62673B66-D899-0C16-69C0-B7CD72FED046}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_2		61068
 	239899283	gearwheel_small_1	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\26\{264160EC-4905-739D-FA6D-274A211EA108}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\gearweels\gearwheel_small_1		1058912
@@ -75,45 +73,45 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	339971893	fs_wood_8	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\76\{7677F380-9FE6-3CF6-910E-E7FEA8A81E7F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_8		83288
 	344323858	fs_concrete_4	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\B2\{B2232C69-6622-310E-F489-19C59D735B6A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_4		60144
 	413944778	jump3	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\7E\{7E57B66A-BB7F-1839-CA05-314F368793D8}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\jump\player_jump\jump3		95288
-	425533229	drawer_open	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\DA\{DA7FAC5F-1EB6-CBB5-3218-A57FAC1E33EA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\drawers\drawer_open		190296
-	425838404	uncrouch	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\EA\{EA7A353E-37F6-A3A2-EBD9-8A3697D09AC9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\crouch\uncrouch		133992
-	432449031	roomtone	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\28\{288A8565-1008-73AF-2DB9-FFE23C549587}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Env\Ambience\roomtone		3689684
+	425533229	drawer_open	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\5F\{5FF4E92D-58C3-47A0-A8E4-7FD9AB6A3A29}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\drawers\drawer_open		190296
+	425838404	uncrouch	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\F8\{F8950543-9391-9C8D-119F-881C052CA842}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\crouch\uncrouch		133992
+	432449031	roomtone	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\28\{288A8565-1008-73AF-2DB9-FFE23C549587}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Env\Ambience\amb\roomtone		3689684
 	448393177	land_wood	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\44\{443DE048-D948-0B3E-BCEB-C2722C180586}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\land\player_land_wood\land_wood		85860
 	460880279	land_wood2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\AD\{AD67CE66-47C2-06F8-E9A5-14DEB729F41C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\land\player_land_wood\land_wood2		84144
 	464333412	fs_concrete_6	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\44\{448767DC-BDAF-8397-679D-41E4C0606408}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_6		61992
 	477806905	fs_concrete_3	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\47\{47A46127-D9EB-A885-C9EC-137390E69437}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_3		60144
-	480571856	craft_liquid	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\FF\{FF355E3E-2A67-C14F-C9D6-AFBDB7ECB5DE}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\action\crafting\craft_liquid		542912
+	480571856	craft_liquid	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\95\{95D22FE1-2EED-7F15-CB9F-C649A256B631}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\action\crafting\craft_liquid		542912
 	499614530	fs_concrete_9	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\C4\{C44DB310-2680-2D43-9C3C-8E2EBD27791F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_9		61992
 	507336409	fs_metal_5	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\A3\{A389EA7B-ECD1-760C-7DE5-7C4EF0FE3C5B}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_metal\fs_metal_5		89684
-	514253887	outside_sounddesign	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\DE\{DE2E82DA-970C-08A6-E815-4F5CFD7B5949}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Env\Ambience\outside_sounddesign		10775220
+	514253887	outside_sounddesign	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\DE\{DE2E82DA-970C-08A6-E815-4F5CFD7B5949}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Env\Ambience\amb\outside_sounddesign		10775220
 	530464956	fs_metal_2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\17\{171E0807-BDA3-3ADD-532C-0F1E1DC84704}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_metal\fs_metal_2		89684
 	562187170	sfx_explosion_big	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\F9\{F95D29A6-E1FA-7721-151F-0005E74F69CF}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_explosion_big		652428
 	578800110	fs_metal_8	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\F9\{F9C82916-7B18-1B90-A0DF-D4B26D658BE6}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_metal\fs_metal_8		89684
 	593250279	crouch	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\38\{3830A06A-5957-4971-495B-00CB15790BB1}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\crouch\crouch		133992
 	596273736	fs_metal_1	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\7E\{7E705C1F-2D52-EF6B-CF02-274EA051698C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_metal\fs_metal_1		89684
 	600729798	fs_metal_7	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\5E\{5E352A99-6191-C992-0C0D-FCFD085063E3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_metal\fs_metal_7		89684
-	631054936	door_open2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\45\{4573E9CF-7917-1F68-4146-E29CA8BDB5DB}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\doors\door_open\door_open2		200452
+	631054936	door_open2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\AE\{AE0D2BEA-3A66-6563-C71C-AF4EDC050FD0}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\doors\door_open\door_open2		200452
 	634952087	fs_wood_11	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\88\{8836A381-DACA-B505-D9F9-5608DDD704BC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_11		83288
 	651898324	fs_wood_3	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\33\{33302323-7A18-9AF4-8AE9-BD1C40BBDED3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_3		83288
 	673616570	gearwheel_big2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\FF\{FF6826D1-262B-03A7-D85B-BB6C44705970}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\gearweels\gearwheel_big2		1735528
 	677888498	land_metal2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\F2\{F27AE926-9E3C-464A-41F3-1E2F88ECB58B}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\land\player_land_metal\land_metal2		109992
-	694643057	rain	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\CC\{CC1E81FD-9F67-2C04-6D38-4BDC24B2B741}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Env\Ambience\rain		9436760
+	694643057	rain	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\19\{1938433F-A779-2597-055E-DE3327A4DF87}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Env\Ambience\rain		9436760
 	717855672	fs_metal_3	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\C7\{C7E5B74C-8326-3FA7-18A2-AB9DB73829DC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_metal\fs_metal_3		89684
 	719774501	fs_wood_5	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\63\{63CC4906-B45B-F302-BF27-25F7484BA9CC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_5		83288
 	729782160	land_metal3	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\2F\{2F2BA719-5D19-2427-68AE-779A032F83B3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\land\player_land_metal\land_metal3		113684
 	759287006	fs_concrete_8	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\9B\{9B99BF8E-7F48-FB3E-54B1-A79104B12D01}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_8		61068
-	775143460	door_open1	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\46\{46333E94-2215-DC94-615F-3F1314FB08CF}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\doors\door_open\door_open1		164452
+	775143460	door_open1	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\B8\{B823D230-6FAF-2B25-CD4C-391711D06212}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\doors\door_open\door_open1		164452
 	776067418	fs_concrete_11	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\4E\{4E5A09D9-A56F-F86F-0C72-60155895C6D1}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_11		61068
-	787799995	craft_normal	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\F6\{F6A1E8B6-685B-1D40-6668-F281944F242F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\action\crafting\craft_normal		426604
+	787799995	craft_normal	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\29\{2911AA29-594A-349C-6CA7-BEF64813A407}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\action\crafting\craft_normal		426604
 	810323791	fs_concrete_1	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\77\{77847868-CF30-856C-7406-C80BBCE48497}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_1		61068
 	815742297	fs_concrete_7	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\A2\{A228EAAC-AA05-9905-425A-09EEB5CCBFA8}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_7		61992
 	817431570	land3	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\67\{67D4E62C-4C59-B81D-91CE-327608095B4E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\land\player_land_concrete\land3		97068
 	842749808	land_wood3	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\7A\{7A876785-34CE-4798-D5EA-0C6CFEEC751F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\land\player_land_wood\land_wood3		82428
 	858740261	fs_concrete_10	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\08\{0863AFF8-BB61-5688-2A29-F5D6E289CC07}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_concrete\fs_concrete_10		60144
-	863935299	player_pickup	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\BB\{BB88FC94-8077-C9DD-9B55-AD797611E390}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\action\player_pickup		114144
+	863935299	player_pickup	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\8D\{8DFCC8B1-31EC-A945-B95B-AC0FA4F28CAA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\action\player_pickup		114144
 	892688682	gearwheel_big1	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\41\{41222E42-A640-5013-3389-203DED200ABB}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\gearweels\gearwheel_big1		2057684
-	912769731	outside	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\F1\{F188CBB6-74B3-0634-E052-D3AFCE571BD8}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Env\Ambience\outside		12113684
-	965195177	drawer_close	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\E4\{E4536199-5B44-25DC-36D6-B3301837CD8B}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\drawers\drawer_close		169068
+	912769731	outside	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\F1\{F188CBB6-74B3-0634-E052-D3AFCE571BD8}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Env\Ambience\amb\outside		12113684
+	965195177	drawer_close	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\E4\{E4767DD9-C9B0-8BCB-CFA9-FA216E0486B0}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\drawers\drawer_close		169068
 	981518875	gearwheel_small_2	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\9D\{9D164067-7965-9120-D94F-9A5510BFF8AB}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Obj\gearweels\gearwheel_small_2		2201684
 	993634849	fs_wood_6	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\F1\{F1CD3345-C1A3-2DC3-43F2-516D299B0EDB}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\FS_wood\fs_wood_6		83288
 	1000058938	sfx_spark	A:\gearsby\Gearsby\Gearsby_WwiseProject\.cache\3F\{3F46E13A-CDF5-5544-7B03-174A225A6D74}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\sfx_spark		267572

@@ -108,77 +108,20 @@
 				</Folder>
 				<Folder Name="Ambience" ID="{7119D57A-6674-43FA-BBB2-EA4E283DA39D}" ShortID="811956567">
 					<ChildrenList>
-						<Event Name="amb" ID="{44186391-7428-4330-840C-B24BF3FBCD77}">
+						<Event Name="Play_amb" ID="{7924C61C-AFC5-4152-8459-F66D3FA8D7A2}">
 							<ChildrenList>
-								<Action Name="" ID="{882D07C1-B10C-4DE4-9088-3AD820D94068}" ShortID="173765292">
-									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="4">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{15C08D15-D52D-47C4-B8BF-E9F0B19E1B91}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
+								<Action Name="" ID="{7A1E1792-71F1-4A3E-9510-7216FBFE9A97}" ShortID="179673515">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="outside" ID="{093A65F3-23E4-43A8-9F23-7839E59497CC}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{B5141CA9-F496-41F2-A697-412D1D63AD95}" ShortID="241542042">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="roomtone" ID="{0810920B-1745-4866-B02E-9F5C7B1B37C0}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{BD71EF5A-AC62-400B-847F-A466A3C90960}" ShortID="601174229">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="outside_sounddesign" ID="{AD476882-BE37-48BE-B524-25D48C12922B}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+											<ObjectRef Name="amb" ID="{F133DE3E-0773-4030-9B3B-454F3892ABB0}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="amb_stop" ID="{D742EA32-B01B-4AE8-8648-112950A4CEEE}">
+						<Event Name="Play_rain" ID="{41EE9CDB-1FE4-4C70-B782-2D603D237711}">
 							<ChildrenList>
-								<Action Name="" ID="{7DBC8774-F5CB-4053-BA5B-B76ED2566159}" ShortID="633300339">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="outside" ID="{093A65F3-23E4-43A8-9F23-7839E59497CC}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{CF2A0E39-7762-4B61-AC9D-54876A720108}" ShortID="67268865">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="outside_sounddesign" ID="{AD476882-BE37-48BE-B524-25D48C12922B}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{699F35C9-985C-4B4F-A916-D47D297891CC}" ShortID="537015015">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="roomtone" ID="{0810920B-1745-4866-B02E-9F5C7B1B37C0}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_rain" ID="{26997953-B126-44F3-82E8-770CA3F94E86}">
-							<ChildrenList>
-								<Action Name="" ID="{25092C04-22F4-4A7D-AA20-4C7E3A580E8D}" ShortID="868252268">
+								<Action Name="" ID="{E2CD6F24-DDA6-4578-BBA1-6539E31528B7}" ShortID="133539558">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="rain" ID="{CCD16429-AD71-499D-8584-4FA07F8D9DA4}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
@@ -187,15 +130,30 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Stop_rain" ID="{02C46AB0-EA55-4ACA-9CEA-C69420FA7D17}">
+						<Event Name="Stop_rain" ID="{12ED2A51-DD96-44C3-A31B-370B148E4476}">
 							<ChildrenList>
-								<Action Name="" ID="{9FA2717B-C58D-4520-9A5D-F4F34E4A9A62}" ShortID="511773960">
+								<Action Name="" ID="{7CE6128F-CE5D-4F0E-9DA8-F4C77648B9AA}" ShortID="710738158">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="5.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rain" ID="{CCD16429-AD71-499D-8584-4FA07F8D9DA4}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_amb" ID="{CEBEB2DB-CE49-41B1-A28E-E04D857BFE54}">
+							<ChildrenList>
+								<Action Name="" ID="{99050D59-0F14-4AEA-AF78-A648B0BFF563}" ShortID="581039230">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="rain" ID="{CCD16429-AD71-499D-8584-4FA07F8D9DA4}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+											<ObjectRef Name="amb" ID="{F133DE3E-0773-4030-9B3B-454F3892ABB0}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

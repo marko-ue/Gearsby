@@ -1509,187 +1509,260 @@
 					<ChildrenList>
 						<Folder Name="Ambience" ID="{5D83BD88-CE20-4CFE-AA6E-E7730E806EFD}" ShortID="774153380">
 							<ChildrenList>
-								<Sound Name="outside" ID="{093A65F3-23E4-43A8-9F23-7839E59497CC}" ShortID="1017199124">
+								<SwitchContainer Name="amb" ID="{F133DE3E-0773-4030-9B3B-454F3892ABB0}" ShortID="333170607">
 									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="SwitchBehavior" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{54CA47CF-AB3C-4F1C-9162-7A93ABE33C2B}"/>
 										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{949908F5-0810-46C1-A27E-03DA9364096F}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="outside" ID="{3E4D7F2D-857A-43E7-999D-3455E7C2128C}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.385257383537585"/>
-												<Property Name="LoopEnd" Type="Real64" Value="62.7642881563727"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>outside.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="912769731"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<StateInfo>
-										<StateGroupList>
-											<StateGroupInfo>
-												<StateGroupRef Name="in_out_side" ID="{F30847DB-7D1C-41C0-AFBB-E1C952B346DE}"/>
-											</StateGroupInfo>
-										</StateGroupList>
-										<CustomStateList>
-											<CustomState>
-												<StateRef Name="outside_house" ID="{4A5A18A4-9616-472C-8780-8EA6E93AB824}"/>
-												<CustomState Name="" ID="{3DA779B7-90E1-4723-A7C1-DBC998E11BD7}" ShortID="754287839"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="inside_house" ID="{436EEC45-078F-4F9F-90B7-2BB6FF36D421}"/>
-												<CustomState Name="" ID="{A0B53809-CA9C-4900-A045-8250607B5156}" ShortID="951577426">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-										</CustomStateList>
-									</StateInfo>
-									<ActiveSourceList>
-										<ActiveSource Name="outside" ID="{3E4D7F2D-857A-43E7-999D-3455E7C2128C}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="roomtone" ID="{0810920B-1745-4866-B02E-9F5C7B1B37C0}" ShortID="450114475">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-13</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{54CA47CF-AB3C-4F1C-9162-7A93ABE33C2B}"/>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="outside_house" ID="{4A5A18A4-9616-472C-8780-8EA6E93AB824}" WorkUnitID="{8E21B837-E046-4F16-B6CC-EF0338B932D3}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{949908F5-0810-46C1-A27E-03DA9364096F}"/>
 										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="roomtone" ID="{A340565A-ED70-4817-9255-A3EC2A879C28}">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="1.28109027777778"/>
-												<Property Name="LoopEnd" Type="Real64" Value="19.1971041666667"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>roomtone.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="432449031"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<StateInfo>
-										<StateGroupList>
-											<StateGroupInfo>
-												<StateGroupRef Name="in_out_side" ID="{F30847DB-7D1C-41C0-AFBB-E1C952B346DE}"/>
-											</StateGroupInfo>
-										</StateGroupList>
-										<CustomStateList>
-											<CustomState>
-												<StateRef Name="outside_house" ID="{4A5A18A4-9616-472C-8780-8EA6E93AB824}"/>
-												<CustomState Name="" ID="{58083F24-C979-4792-AE0E-26A0798E7055}" ShortID="1064829327">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="inside_house" ID="{436EEC45-078F-4F9F-90B7-2BB6FF36D421}"/>
-												<CustomState Name="" ID="{604850AD-59FF-49B6-AB5A-F061ED53078D}" ShortID="473785470"/>
-											</CustomState>
-										</CustomStateList>
-									</StateInfo>
-									<ActiveSourceList>
-										<ActiveSource Name="roomtone" ID="{A340565A-ED70-4817-9255-A3EC2A879C28}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="outside_sounddesign" ID="{AD476882-BE37-48BE-B524-25D48C12922B}" ShortID="905624622">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{C74D0FFC-92C6-4AFD-87EB-E1800A50DAE3}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="51"/>
-															<Property Name="Min" Type="Real64" Value="-1086"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>1</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{54CA47CF-AB3C-4F1C-9162-7A93ABE33C2B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{949908F5-0810-46C1-A27E-03DA9364096F}"/>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="in_out_side" ID="{F30847DB-7D1C-41C0-AFBB-E1C952B346DE}" WorkUnitID="{8E21B837-E046-4F16-B6CC-EF0338B932D3}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="amb sd2" ID="{CBC3DA17-AC95-4FA4-BC95-768320EB9BD0}">
+										<Sound Name="outside" ID="{093A65F3-23E4-43A8-9F23-7839E59497CC}" ShortID="1017199124">
 											<PropertyList>
-												<Property Name="LoopEnd" Type="Real64" Value="50.3303602497256"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>amb sd2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="514253887"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<StateInfo>
-										<StateGroupList>
-											<StateGroupInfo>
-												<StateGroupRef Name="in_out_side" ID="{F30847DB-7D1C-41C0-AFBB-E1C952B346DE}"/>
-											</StateGroupInfo>
-										</StateGroupList>
-										<CustomStateList>
-											<CustomState>
-												<StateRef Name="outside_house" ID="{4A5A18A4-9616-472C-8780-8EA6E93AB824}"/>
-												<CustomState Name="" ID="{DDB2E95A-2BA2-40B6-9565-371C230F49D8}" ShortID="726654582"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="inside_house" ID="{436EEC45-078F-4F9F-90B7-2BB6FF36D421}"/>
-												<CustomState Name="" ID="{1A4EE3FA-E6A3-4548-BE3D-2F9C64E4C206}" ShortID="563358496">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{54CA47CF-AB3C-4F1C-9162-7A93ABE33C2B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{949908F5-0810-46C1-A27E-03DA9364096F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="outside" ID="{3E4D7F2D-857A-43E7-999D-3455E7C2128C}">
 													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.385257383537585"/>
+														<Property Name="LoopEnd" Type="Real64" Value="62.7642881563727"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 													</PropertyList>
-												</CustomState>
-											</CustomState>
-										</CustomStateList>
-									</StateInfo>
-									<ActiveSourceList>
-										<ActiveSource Name="amb sd2" ID="{CBC3DA17-AC95-4FA4-BC95-768320EB9BD0}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+													<Language>SFX</Language>
+													<AudioFile>outside.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="912769731"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="in_out_side" ID="{F30847DB-7D1C-41C0-AFBB-E1C952B346DE}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="outside_house" ID="{4A5A18A4-9616-472C-8780-8EA6E93AB824}"/>
+														<CustomState Name="" ID="{3DA779B7-90E1-4723-A7C1-DBC998E11BD7}" ShortID="754287839"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="inside_house" ID="{436EEC45-078F-4F9F-90B7-2BB6FF36D421}"/>
+														<CustomState Name="" ID="{A0B53809-CA9C-4900-A045-8250607B5156}" ShortID="951577426"/>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+											<ActiveSourceList>
+												<ActiveSource Name="outside" ID="{3E4D7F2D-857A-43E7-999D-3455E7C2128C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="outside_sounddesign" ID="{AD476882-BE37-48BE-B524-25D48C12922B}" ShortID="905624622">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{C74D0FFC-92C6-4AFD-87EB-E1800A50DAE3}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="51"/>
+																	<Property Name="Min" Type="Real64" Value="-1086"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{54CA47CF-AB3C-4F1C-9162-7A93ABE33C2B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{949908F5-0810-46C1-A27E-03DA9364096F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="amb sd2" ID="{CBC3DA17-AC95-4FA4-BC95-768320EB9BD0}">
+													<PropertyList>
+														<Property Name="LoopEnd" Type="Real64" Value="50.3303602497256"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>amb sd2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="514253887"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="in_out_side" ID="{F30847DB-7D1C-41C0-AFBB-E1C952B346DE}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="outside_house" ID="{4A5A18A4-9616-472C-8780-8EA6E93AB824}"/>
+														<CustomState Name="" ID="{DDB2E95A-2BA2-40B6-9565-371C230F49D8}" ShortID="726654582"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="inside_house" ID="{436EEC45-078F-4F9F-90B7-2BB6FF36D421}"/>
+														<CustomState Name="" ID="{1A4EE3FA-E6A3-4548-BE3D-2F9C64E4C206}" ShortID="563358496"/>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+											<ActiveSourceList>
+												<ActiveSource Name="amb sd2" ID="{CBC3DA17-AC95-4FA4-BC95-768320EB9BD0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="roomtone" ID="{0810920B-1745-4866-B02E-9F5C7B1B37C0}" ShortID="450114475">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-13</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{54CA47CF-AB3C-4F1C-9162-7A93ABE33C2B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{949908F5-0810-46C1-A27E-03DA9364096F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="roomtone" ID="{A340565A-ED70-4817-9255-A3EC2A879C28}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="1.28109027777778"/>
+														<Property Name="LoopEnd" Type="Real64" Value="19.1971041666667"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>roomtone.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="432449031"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="in_out_side" ID="{F30847DB-7D1C-41C0-AFBB-E1C952B346DE}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="outside_house" ID="{4A5A18A4-9616-472C-8780-8EA6E93AB824}"/>
+														<CustomState Name="" ID="{58083F24-C979-4792-AE0E-26A0798E7055}" ShortID="1064829327"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="inside_house" ID="{436EEC45-078F-4F9F-90B7-2BB6FF36D421}"/>
+														<CustomState Name="" ID="{604850AD-59FF-49B6-AB5A-F061ED53078D}" ShortID="473785470"/>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+											<ActiveSourceList>
+												<ActiveSource Name="roomtone" ID="{A340565A-ED70-4817-9255-A3EC2A879C28}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="roomtone" ID="{0810920B-1745-4866-B02E-9F5C7B1B37C0}"/>
+												<PropertyList>
+													<Property Name="FadeInTime" Type="Real64">
+														<ValueList>
+															<Value>0.5</Value>
+														</ValueList>
+													</Property>
+													<Property Name="FadeOutTime" Type="Real64">
+														<ValueList>
+															<Value>0.5</Value>
+														</ValueList>
+													</Property>
+												</PropertyList>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="outside_sounddesign" ID="{AD476882-BE37-48BE-B524-25D48C12922B}"/>
+												<PropertyList>
+													<Property Name="FadeInTime" Type="Real64">
+														<ValueList>
+															<Value>0.5</Value>
+														</ValueList>
+													</Property>
+													<Property Name="FadeOutTime" Type="Real64">
+														<ValueList>
+															<Value>0.5</Value>
+														</ValueList>
+													</Property>
+												</PropertyList>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="outside" ID="{093A65F3-23E4-43A8-9F23-7839E59497CC}"/>
+												<PropertyList>
+													<Property Name="FadeInTime" Type="Real64">
+														<ValueList>
+															<Value>0.5</Value>
+														</ValueList>
+													</Property>
+													<Property Name="FadeOutTime" Type="Real64">
+														<ValueList>
+															<Value>0.5</Value>
+														</ValueList>
+													</Property>
+												</PropertyList>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="inside_house" ID="{436EEC45-078F-4F9F-90B7-2BB6FF36D421}"/>
+												<ItemList>
+													<ItemRef Name="roomtone" ID="{0810920B-1745-4866-B02E-9F5C7B1B37C0}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="outside_house" ID="{4A5A18A4-9616-472C-8780-8EA6E93AB824}"/>
+												<ItemList>
+													<ItemRef Name="outside_sounddesign" ID="{AD476882-BE37-48BE-B524-25D48C12922B}"/>
+													<ItemRef Name="outside" ID="{093A65F3-23E4-43A8-9F23-7839E59497CC}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
 								<Sound Name="rain" ID="{CCD16429-AD71-499D-8584-4FA07F8D9DA4}" ShortID="995548472">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-13</Value>
+												<Value>-17</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1704,6 +1777,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="rain" ID="{C5E0F3F9-6946-4C95-8C38-E39C8773F0AA}">
 											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.15779703871495"/>
 												<Property Name="LoopBegin" Type="Real64" Value="6.26404758855723"/>
 												<Property Name="LoopEnd" Type="Real64" Value="26.3785797434497"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
@@ -1715,27 +1789,6 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
-									<StateInfo>
-										<StateGroupList>
-											<StateGroupInfo>
-												<StateGroupRef Name="rain" ID="{B95203A5-E86F-4B9B-A04E-26989DED132A}"/>
-											</StateGroupInfo>
-										</StateGroupList>
-										<CustomStateList>
-											<CustomState>
-												<StateRef Name="no_rain" ID="{7F2AB29B-F769-4115-B185-8ACA05965919}"/>
-												<CustomState Name="" ID="{8B7E7C5E-8BBB-491F-8FC6-4798081BA418}" ShortID="966576828">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="rain" ID="{4DBD80B1-5E84-4DAF-95BE-BCAF8D36146D}"/>
-												<CustomState Name="" ID="{8E284CAB-E36F-4566-9746-10D6472C413C}" ShortID="88203898"/>
-											</CustomState>
-										</CustomStateList>
-									</StateInfo>
 									<ActiveSourceList>
 										<ActiveSource Name="rain" ID="{C5E0F3F9-6946-4C95-8C38-E39C8773F0AA}" Platform="Linked"/>
 									</ActiveSourceList>

@@ -13,8 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID AMB = 1117531639U;
-        static const AkUniqueID AMB_STOP = 729984210U;
+        static const AkUniqueID PLAY_AMB = 2959533290U;
         static const AkUniqueID PLAY_CROUCH = 3989731860U;
         static const AkUniqueID PLAY_DOOR_CLOSE = 2292458263U;
         static const AkUniqueID PLAY_DOOR_OPEN = 1660008929U;
@@ -32,15 +31,18 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_JUMP = 562256996U;
         static const AkUniqueID PLAY_PLAYER_LAND = 4249207015U;
         static const AkUniqueID PLAY_PLAYER_PICKUP = 3652445300U;
+        static const AkUniqueID PLAY_RAIN = 2838936948U;
         static const AkUniqueID PLAY_SFX_EXPLOSION_BIG = 2003218848U;
         static const AkUniqueID PLAY_SFX_EXPLOSION_SMALL = 3077863823U;
         static const AkUniqueID PLAY_SFX_SPARK = 1206242149U;
         static const AkUniqueID PLAY_UNCROUCH = 1976423929U;
+        static const AkUniqueID STOP_AMB = 435770000U;
         static const AkUniqueID STOP_GEARWHEEL_BIG1 = 869605302U;
         static const AkUniqueID STOP_GEARWHEEL_BIG2 = 869605301U;
         static const AkUniqueID STOP_GEARWHEEL_BIG3 = 869605300U;
         static const AkUniqueID STOP_GEARWHEEL_SMALL_1 = 1066065250U;
         static const AkUniqueID STOP_GEARWHEEL_SMALL_2 = 1066065249U;
+        static const AkUniqueID STOP_RAIN = 3206237490U;
     } // namespace EVENTS
 
     namespace STATES
@@ -56,18 +58,6 @@ namespace AK
                 static const AkUniqueID OUTSIDE_HOUSE = 4145910067U;
             } // namespace STATE
         } // namespace IN_OUT_SIDE
-
-        namespace RAIN
-        {
-            static const AkUniqueID GROUP = 2043403999U;
-
-            namespace STATE
-            {
-                static const AkUniqueID NO_RAIN = 126481933U;
-                static const AkUniqueID NONE = 748895195U;
-                static const AkUniqueID RAIN = 2043403999U;
-            } // namespace STATE
-        } // namespace RAIN
 
     } // namespace STATES
 

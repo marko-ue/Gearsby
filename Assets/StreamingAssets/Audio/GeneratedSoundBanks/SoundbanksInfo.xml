@@ -5,7 +5,7 @@
 		<SourceFilesRoot>../../../../Gearsby_WwiseProject/.cache</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>A:/gearsby/Gearsby/Assets/StreamingAssets/Audio/GeneratedSoundBanks</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
@@ -14,7 +14,7 @@
 			<ShortName>mainsoundbank</ShortName>
 			<Path>mainsoundbank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{DF3E89CC-0D93-83A8-A04C-61FB37F1D875}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{547EA011-A81D-C515-A029-6F3433EF8BC0}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -33,13 +33,6 @@
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\in_out_side\None"/>
 						<State Id="1319799452" Name="inside_house" ObjectPath="\States\Default Work Unit\in_out_side\inside_house"/>
 						<State Id="4145910067" Name="outside_house" ObjectPath="\States\Default Work Unit\in_out_side\outside_house"/>
-					</States>
-				</StateGroup>
-				<StateGroup Id="2043403999" Name="rain" ObjectPath="\States\Default Work Unit\rain">
-					<States>
-						<State Id="126481933" Name="no_rain" ObjectPath="\States\Default Work Unit\rain\no_rain"/>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\rain\None"/>
-						<State Id="2043403999" Name="rain" ObjectPath="\States\Default Work Unit\rain\rain"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -66,7 +59,7 @@
 			<ShortName>fs</ShortName>
 			<Path>fs.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{68D0B8C0-C9E2-B88B-5D1A-E06EA04600A6}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{03C70999-763C-3406-4B04-134F21BC2824}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -101,7 +94,7 @@
 				</File>
 				<File Id="187785395" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>door_close.wav</ShortName>
-					<CachePath>2B/{2B78E884-922E-0024-F496-A01DC3C4FA10}.wem</CachePath>
+					<CachePath>63/{63675677-6FDC-66DE-F2CC-274FD8139A46}.wem</CachePath>
 				</File>
 				<File Id="191270774" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump1.wav</ShortName>
@@ -157,11 +150,11 @@
 				</File>
 				<File Id="425533229" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>drawer_open.wav</ShortName>
-					<CachePath>DA/{DA7FAC5F-1EB6-CBB5-3218-A57FAC1E33EA}.wem</CachePath>
+					<CachePath>5F/{5FF4E92D-58C3-47A0-A8E4-7FD9AB6A3A29}.wem</CachePath>
 				</File>
 				<File Id="425838404" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>uncrouch.wav</ShortName>
-					<CachePath>EA/{EA7A353E-37F6-A3A2-EBD9-8A3697D09AC9}.wem</CachePath>
+					<CachePath>F8/{F8950543-9391-9C8D-119F-881C052CA842}.wem</CachePath>
 				</File>
 				<File Id="432449031" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>roomtone.wav</ShortName>
@@ -185,7 +178,7 @@
 				</File>
 				<File Id="480571856" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>craft_liquid.wav</ShortName>
-					<CachePath>FF/{FF355E3E-2A67-C14F-C9D6-AFBDB7ECB5DE}.wem</CachePath>
+					<CachePath>95/{95D22FE1-2EED-7F15-CB9F-C649A256B631}.wem</CachePath>
 				</File>
 				<File Id="499614530" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fs_concrete_9.wav</ShortName>
@@ -225,7 +218,7 @@
 				</File>
 				<File Id="631054936" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>door_open2.wav</ShortName>
-					<CachePath>45/{4573E9CF-7917-1F68-4146-E29CA8BDB5DB}.wem</CachePath>
+					<CachePath>AE/{AE0D2BEA-3A66-6563-C71C-AF4EDC050FD0}.wem</CachePath>
 				</File>
 				<File Id="634952087" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fs_wood_11.wav</ShortName>
@@ -245,7 +238,7 @@
 				</File>
 				<File Id="694643057" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rain.wav</ShortName>
-					<CachePath>CC/{CC1E81FD-9F67-2C04-6D38-4BDC24B2B741}.wem</CachePath>
+					<CachePath>19/{1938433F-A779-2597-055E-DE3327A4DF87}.wem</CachePath>
 				</File>
 				<File Id="717855672" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fs_metal_3.wav</ShortName>
@@ -265,7 +258,7 @@
 				</File>
 				<File Id="775143460" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>door_open1.wav</ShortName>
-					<CachePath>46/{46333E94-2215-DC94-615F-3F1314FB08CF}.wem</CachePath>
+					<CachePath>B8/{B823D230-6FAF-2B25-CD4C-391711D06212}.wem</CachePath>
 				</File>
 				<File Id="776067418" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fs_concrete_11.wav</ShortName>
@@ -273,7 +266,7 @@
 				</File>
 				<File Id="787799995" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>craft_normal.wav</ShortName>
-					<CachePath>F6/{F6A1E8B6-685B-1D40-6668-F281944F242F}.wem</CachePath>
+					<CachePath>29/{2911AA29-594A-349C-6CA7-BEF64813A407}.wem</CachePath>
 				</File>
 				<File Id="810323791" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fs_concrete_1.wav</ShortName>
@@ -297,7 +290,7 @@
 				</File>
 				<File Id="863935299" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>player_pickup.wav</ShortName>
-					<CachePath>BB/{BB88FC94-8077-C9DD-9B55-AD797611E390}.wem</CachePath>
+					<CachePath>8D/{8DFCC8B1-31EC-A945-B95B-AC0FA4F28CAA}.wem</CachePath>
 				</File>
 				<File Id="892688682" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>gearwheel_big1.wav</ShortName>
@@ -309,7 +302,7 @@
 				</File>
 				<File Id="965195177" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>drawer_close.wav</ShortName>
-					<CachePath>E4/{E4536199-5B44-25DC-36D6-B3301837CD8B}.wem</CachePath>
+					<CachePath>E4/{E4767DD9-C9B0-8BCB-CFA9-FA216E0486B0}.wem</CachePath>
 				</File>
 				<File Id="981518875" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>gearwheel_medium_1.wav</ShortName>
@@ -333,15 +326,23 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1117531639" Name="amb" ObjectPath="\Events\Default Work Unit\Ambience\amb" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="432449031"/>
-						<MediaRef Id="514253887"/>
-						<MediaRef Id="694643057"/>
-						<MediaRef Id="912769731"/>
-					</MediaRefs>
+				<Event Id="2959533290" Name="Play_amb" ObjectPath="\Events\Default Work Unit\Ambience\Play_amb" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="232210557" Id="1319799452"/>
+							<MediaRefs>
+								<MediaRef Id="432449031"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="232210557" Id="4145910067" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="514253887"/>
+								<MediaRef Id="912769731"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
-				<Event Id="729984210" Name="amb_stop" ObjectPath="\Events\Default Work Unit\Ambience\amb_stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3989731860" Name="Play_crouch" ObjectPath="\Events\Default Work Unit\Player\Play_crouch" DurationType="OneShot" DurationMin="0.8100911" DurationMax="0.8459568">
 					<MediaRefs>
 						<MediaRef Id="593250279"/>
@@ -497,6 +498,11 @@
 						<MediaRef Id="863935299"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2838936948" Name="Play_rain" ObjectPath="\Events\Default Work Unit\Ambience\Play_rain" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="694643057"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2003218848" Name="Play_sfx_explosion_big" ObjectPath="\Events\Default Work Unit\SFX\Play_sfx_explosion_big" MaxAttenuation="50" DurationType="OneShot" DurationMin="3.3973124" DurationMax="3.3973124">
 					<MediaRefs>
 						<MediaRef Id="562187170"/>
@@ -517,12 +523,23 @@
 						<MediaRef Id="425838404"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="435770000" Name="Stop_amb" ObjectPath="\Events\Default Work Unit\Ambience\Stop_amb" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="869605302" Name="Stop_gearwheel_big1" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="869605301" Name="Stop_gearwheel_big2" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="869605300" Name="Stop_gearwheel_big3" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_big3" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1066065250" Name="Stop_gearwheel_small_1" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_small_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1066065249" Name="Stop_gearwheel_small_2" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Stop_gearwheel_small_2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3206237490" Name="Stop_rain" ObjectPath="\Events\Default Work Unit\Ambience\Stop_rain" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="232210557" Name="in_out_side" ObjectPath="\States\Default Work Unit\in_out_side">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\in_out_side\None"/>
+						<State Id="1319799452" Name="inside_house" ObjectPath="\States\Default Work Unit\in_out_side\inside_house"/>
+						<State Id="4145910067" Name="outside_house" ObjectPath="\States\Default Work Unit\in_out_side\outside_house"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="1039744521" Name="landing_materials" ObjectPath="\Switches\Default Work Unit\landing_materials">
 					<Switches>
@@ -542,5 +559,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D2280A9D-9151-7008-6669-17CB5D103F73}</FileHash>
+	<FileHash>{46EEA396-F454-C5DD-92C4-908BA9D6ED9B}</FileHash>
 </SoundBanksInfo>

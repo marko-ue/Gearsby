@@ -10,13 +10,6 @@
 						<State Name="outside_house" ID="{4A5A18A4-9616-472C-8780-8EA6E93AB824}"/>
 					</ChildrenList>
 				</StateGroup>
-				<StateGroup Name="rain" ID="{B95203A5-E86F-4B9B-A04E-26989DED132A}">
-					<ChildrenList>
-						<State Name="None" ID="{C3282580-EF11-43AB-A5A6-7E4FDFC88503}"/>
-						<State Name="rain" ID="{4DBD80B1-5E84-4DAF-95BE-BCAF8D36146D}"/>
-						<State Name="no_rain" ID="{7F2AB29B-F769-4115-B185-8ACA05965919}"/>
-					</ChildrenList>
-				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>
