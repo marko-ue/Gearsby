@@ -37,19 +37,12 @@
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
-				<SwitchGroup Id="1039744521" Name="landing_materials" ObjectPath="\Switches\Default Work Unit\landing_materials">
+				<SwitchGroup Id="3964766495" Name="floor_material" ObjectPath="\Switches\Default Work Unit\floor_material">
 					<Switches>
-						<Switch Id="841620460" Name="concrete" ObjectPath="\Switches\Default Work Unit\landing_materials\concrete"/>
-						<Switch Id="2058049674" Name="wood" ObjectPath="\Switches\Default Work Unit\landing_materials\wood"/>
-						<Switch Id="2473969246" Name="metal" ObjectPath="\Switches\Default Work Unit\landing_materials\metal"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="1682461626" Name="footsteps_material" ObjectPath="\Switches\Default Work Unit\footsteps_material">
-					<Switches>
-						<Switch Id="841620460" Name="Concrete" ObjectPath="\Switches\Default Work Unit\footsteps_material\Concrete"/>
-						<Switch Id="2058049674" Name="wood" ObjectPath="\Switches\Default Work Unit\footsteps_material\wood"/>
-						<Switch Id="2473969246" Name="metal" ObjectPath="\Switches\Default Work Unit\footsteps_material\metal"/>
-						<Switch Id="4248645337" Name="grass" ObjectPath="\Switches\Default Work Unit\footsteps_material\grass"/>
+						<Switch Id="841620460" Name="Concrete" ObjectPath="\Switches\Default Work Unit\floor_material\Concrete"/>
+						<Switch Id="2058049674" Name="wood" ObjectPath="\Switches\Default Work Unit\floor_material\wood"/>
+						<Switch Id="2473969246" Name="metal" ObjectPath="\Switches\Default Work Unit\floor_material\metal"/>
+						<Switch Id="4248645337" Name="grass" ObjectPath="\Switches\Default Work Unit\floor_material\grass"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
@@ -59,7 +52,7 @@
 			<ShortName>fs</ShortName>
 			<Path>fs.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{03C70999-763C-3406-4B04-134F21BC2824}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{88C5EB14-E60F-A41C-552E-83AB4E97A480}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -372,7 +365,7 @@
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Play_Footsteps" DurationType="OneShot" DurationMin="0.3125" DurationMax="0.4870014">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1682461626" Id="841620460"/>
+							<SwitchValue GroupType="Switch" GroupId="3964766495" Id="841620460"/>
 							<MediaRefs>
 								<MediaRef Id="120599801"/>
 								<MediaRef Id="215534549"/>
@@ -388,7 +381,7 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1682461626" Id="2058049674" Default="true"/>
+							<SwitchValue GroupType="Switch" GroupId="3964766495" Id="2058049674" Default="true"/>
 							<MediaRefs>
 								<MediaRef Id="30616111"/>
 								<MediaRef Id="160416403"/>
@@ -404,7 +397,7 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1682461626" Id="2473969246"/>
+							<SwitchValue GroupType="Switch" GroupId="3964766495" Id="2473969246"/>
 							<MediaRefs>
 								<MediaRef Id="99767601"/>
 								<MediaRef Id="155764107"/>
@@ -468,15 +461,7 @@
 				<Event Id="4249207015" Name="Play_player_land" ObjectPath="\Events\Default Work Unit\Player\Play_player_land" DurationType="OneShot" DurationMin="0.38119328" DurationMax="0.6529689">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1039744521" Id="2473969246"/>
-							<MediaRefs>
-								<MediaRef Id="35489005"/>
-								<MediaRef Id="677888498"/>
-								<MediaRef Id="729782160"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1039744521" Id="841620460"/>
+							<SwitchValue GroupType="Switch" GroupId="3964766495" Id="841620460"/>
 							<MediaRefs>
 								<MediaRef Id="271938364"/>
 								<MediaRef Id="817431570"/>
@@ -484,11 +469,19 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1039744521" Id="2058049674"/>
+							<SwitchValue GroupType="Switch" GroupId="3964766495" Id="2058049674"/>
 							<MediaRefs>
 								<MediaRef Id="448393177"/>
 								<MediaRef Id="460880279"/>
 								<MediaRef Id="842749808"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3964766495" Id="2473969246"/>
+							<MediaRefs>
+								<MediaRef Id="35489005"/>
+								<MediaRef Id="677888498"/>
+								<MediaRef Id="729782160"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -541,23 +534,16 @@
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
-				<SwitchGroup Id="1039744521" Name="landing_materials" ObjectPath="\Switches\Default Work Unit\landing_materials">
+				<SwitchGroup Id="3964766495" Name="floor_material" ObjectPath="\Switches\Default Work Unit\floor_material">
 					<Switches>
-						<Switch Id="841620460" Name="concrete" ObjectPath="\Switches\Default Work Unit\landing_materials\concrete"/>
-						<Switch Id="2058049674" Name="wood" ObjectPath="\Switches\Default Work Unit\landing_materials\wood"/>
-						<Switch Id="2473969246" Name="metal" ObjectPath="\Switches\Default Work Unit\landing_materials\metal"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="1682461626" Name="footsteps_material" ObjectPath="\Switches\Default Work Unit\footsteps_material">
-					<Switches>
-						<Switch Id="841620460" Name="Concrete" ObjectPath="\Switches\Default Work Unit\footsteps_material\Concrete"/>
-						<Switch Id="2058049674" Name="wood" ObjectPath="\Switches\Default Work Unit\footsteps_material\wood"/>
-						<Switch Id="2473969246" Name="metal" ObjectPath="\Switches\Default Work Unit\footsteps_material\metal"/>
-						<Switch Id="4248645337" Name="grass" ObjectPath="\Switches\Default Work Unit\footsteps_material\grass"/>
+						<Switch Id="841620460" Name="Concrete" ObjectPath="\Switches\Default Work Unit\floor_material\Concrete"/>
+						<Switch Id="2058049674" Name="wood" ObjectPath="\Switches\Default Work Unit\floor_material\wood"/>
+						<Switch Id="2473969246" Name="metal" ObjectPath="\Switches\Default Work Unit\floor_material\metal"/>
+						<Switch Id="4248645337" Name="grass" ObjectPath="\Switches\Default Work Unit\floor_material\grass"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{46EEA396-F454-C5DD-92C4-908BA9D6ED9B}</FileHash>
+	<FileHash>{BD119386-3D21-2EF8-94F1-FEFCB88A8F5A}</FileHash>
 </SoundBanksInfo>

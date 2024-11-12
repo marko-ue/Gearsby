@@ -63,9 +63,9 @@ namespace AK
 
     namespace SWITCHES
     {
-        namespace FOOTSTEPS_MATERIAL
+        namespace FLOOR_MATERIAL
         {
-            static const AkUniqueID GROUP = 1682461626U;
+            static const AkUniqueID GROUP = 3964766495U;
 
             namespace SWITCH
             {
@@ -74,19 +74,7 @@ namespace AK
                 static const AkUniqueID METAL = 2473969246U;
                 static const AkUniqueID WOOD = 2058049674U;
             } // namespace SWITCH
-        } // namespace FOOTSTEPS_MATERIAL
-
-        namespace LANDING_MATERIALS
-        {
-            static const AkUniqueID GROUP = 1039744521U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID CONCRETE = 841620460U;
-                static const AkUniqueID METAL = 2473969246U;
-                static const AkUniqueID WOOD = 2058049674U;
-            } // namespace SWITCH
-        } // namespace LANDING_MATERIALS
+        } // namespace FLOOR_MATERIAL
 
     } // namespace SWITCHES
 

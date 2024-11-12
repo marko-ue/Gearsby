@@ -31,17 +31,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	4249207015	Play_player_land			\Default Work Unit\Player\Play_player_land	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
-	1039744521	landing_materials			\Default Work Unit\landing_materials	
-	1682461626	footsteps_material			\Default Work Unit\footsteps_material	
+	3964766495	floor_material			\Default Work Unit\floor_material	
 
 Switch	ID	Name	Switch Group			Notes
-	841620460	concrete	landing_materials			
-	2058049674	wood	landing_materials			
-	2473969246	metal	landing_materials			
-	841620460	Concrete	footsteps_material			
-	2058049674	wood	footsteps_material			
-	2473969246	metal	footsteps_material			
-	4248645337	grass	footsteps_material			
+	841620460	Concrete	floor_material			
+	2058049674	wood	floor_material			
+	2473969246	metal	floor_material			
+	4248645337	grass	floor_material			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	232210557	in_out_side			\Default Work Unit\in_out_side	

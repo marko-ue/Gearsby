@@ -64,11 +64,10 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="outside_house" ID="{4A5A18A4-9616-472C-8780-8EA6E93AB824}"/>
+						<CurrentStateRef Name="inside_house" ID="{436EEC45-078F-4F9F-90B7-2BB6FF36D421}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="concrete" ID="{AD67E13D-8A7B-467C-8394-C26DABC5012F}"/>
-						<CurrentSwitchRef Name="Concrete" ID="{D1AEEF25-803B-459A-87BB-AEC0F1710065}"/>
+						<CurrentSwitchRef Name="wood" ID="{CA972D6A-ECF8-4B4D-90E5-01FE9D6D0F6F}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

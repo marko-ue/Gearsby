@@ -25,7 +25,7 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{949908F5-0810-46C1-A27E-03DA9364096F}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="footsteps_material" ID="{780C335B-F761-47A6-AFA2-26629DEDD882}" WorkUnitID="{B6E40E37-264F-4239-AFAF-3090BB665BFB}"/>
+									<ObjectRef Name="floor_material" ID="{780C335B-F761-47A6-AFA2-26629DEDD882}" WorkUnitID="{B6E40E37-264F-4239-AFAF-3090BB665BFB}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1172,7 +1172,7 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{949908F5-0810-46C1-A27E-03DA9364096F}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="landing_materials" ID="{14F25256-B6B4-46DE-8DB3-6B2ACD9B78EA}" WorkUnitID="{B6E40E37-264F-4239-AFAF-3090BB665BFB}"/>
+									<ObjectRef Name="floor_material" ID="{780C335B-F761-47A6-AFA2-26629DEDD882}" WorkUnitID="{B6E40E37-264F-4239-AFAF-3090BB665BFB}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1483,21 +1483,21 @@
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
-										<SwitchRef Name="metal" ID="{93378934-86C6-40A4-A6FE-4995F6B795CB}"/>
-										<ItemList>
-											<ItemRef Name="player_land_metal" ID="{DB921BBC-AAC0-4BDF-911E-45B08F9CC549}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="concrete" ID="{AD67E13D-8A7B-467C-8394-C26DABC5012F}"/>
+										<SwitchRef Name="Concrete" ID="{D1AEEF25-803B-459A-87BB-AEC0F1710065}"/>
 										<ItemList>
 											<ItemRef Name="player_land_concrete" ID="{FA4C35CE-5EE0-44C0-B7FB-C6A919095654}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
-										<SwitchRef Name="wood" ID="{3C6FA7B7-F951-46CB-912D-1815032DAF58}"/>
+										<SwitchRef Name="wood" ID="{CA972D6A-ECF8-4B4D-90E5-01FE9D6D0F6F}"/>
 										<ItemList>
 											<ItemRef Name="player_land_wood" ID="{59A01F5B-FFF0-4A4F-93C4-73B0F1A1B53C}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="metal" ID="{08E62DFF-8E0B-4085-8661-082282F73EDC}"/>
+										<ItemList>
+											<ItemRef Name="player_land_metal" ID="{DB921BBC-AAC0-4BDF-911E-45B08F9CC549}"/>
 										</ItemList>
 									</Grouping>
 								</GroupingList>
@@ -1531,6 +1531,11 @@
 										<Sound Name="outside" ID="{093A65F3-23E4-43A8-9F23-7839E59497CC}" ShortID="1017199124">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1593,7 +1598,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>1</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1644,7 +1649,7 @@
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-13</Value>
+														<Value>-24</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
