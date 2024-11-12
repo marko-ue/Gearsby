@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18867c60b6ad334bb83c56b268bfc2b, type: 3}
+  m_Name: 12ED2A51-DD96-44C3-A31B-370B148E4476
+  m_EditorClassIdentifier: 
+  objectName: Stop_rain
+  id: 3206237490
+  guid: 12ED2A51-DD96-44C3-A31B-370B148E4476
+  IsInUserDefinedSoundBank: 0
+  IsAutoBankLoaded: 0
