@@ -140,28 +140,6 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{E2C8B1C3-C5FB-42ED-AA5A-0B50D65B1DAA}" ShortID="373997685">
-									<PropertyList>
-										<Property Name="FadeInCurve" Type="int16" Value="6"/>
-										<Property Name="FadeTime" Type="Real64" Value="9.5">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{2F27CB1A-873B-4455-A7D1-BFB997256645}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="10"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="rain" ID="{CCD16429-AD71-499D-8584-4FA07F8D9DA4}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="amb_stop" ID="{D742EA32-B01B-4AE8-8648-112950A4CEEE}">
@@ -193,6 +171,31 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="roomtone" ID="{0810920B-1745-4866-B02E-9F5C7B1B37C0}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_rain" ID="{26997953-B126-44F3-82E8-770CA3F94E86}">
+							<ChildrenList>
+								<Action Name="" ID="{25092C04-22F4-4A7D-AA20-4C7E3A580E8D}" ShortID="868252268">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rain" ID="{CCD16429-AD71-499D-8584-4FA07F8D9DA4}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_rain" ID="{02C46AB0-EA55-4ACA-9CEA-C69420FA7D17}">
+							<ChildrenList>
+								<Action Name="" ID="{9FA2717B-C58D-4520-9A5D-F4F34E4A9A62}" ShortID="511773960">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rain" ID="{CCD16429-AD71-499D-8584-4FA07F8D9DA4}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

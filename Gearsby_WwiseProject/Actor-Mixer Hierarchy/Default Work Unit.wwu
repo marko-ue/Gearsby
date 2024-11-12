@@ -2471,7 +2471,7 @@
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>7</Value>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2501,6 +2501,35 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="sfx_spark" ID="{DB4428C4-9BD3-40CB-AE91-A1EE69F5F486}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="glass_shattering" ID="{381A6CCF-283A-4E69-B534-94020BA8B81D}" ShortID="435444527">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{54CA47CF-AB3C-4F1C-9162-7A93ABE33C2B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{949908F5-0810-46C1-A27E-03DA9364096F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="glass_shattering" ID="{1692C90F-DE13-4B70-81FB-084AB0339462}">
+									<Language>SFX</Language>
+									<AudioFile>glass_shattering.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="475731033"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="glass_shattering" ID="{1692C90F-DE13-4B70-81FB-084AB0339462}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
