@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 424e8b5bafead734ea01b29635249a8d, type: 3}
-  m_Name: 14F25256-B6B4-46DE-8DB3-6B2ACD9B78EA
+  m_Script: {fileID: 11500000, guid: b18867c60b6ad334bb83c56b268bfc2b, type: 3}
+  m_Name: 1658014B-6F87-43B0-85CD-6BC439E1617E
   m_EditorClassIdentifier: 
-  objectName: landing_materials
-  id: 1039744521
-  guid: 14F25256-B6B4-46DE-8DB3-6B2ACD9B78EA
+  objectName: Play_player_land
+  id: 4249207015
+  guid: 1658014B-6F87-43B0-85CD-6BC439E1617E
+  IsInUserDefinedSoundBank: 0
+  IsAutoBankLoaded: 0

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424e8b5bafead734ea01b29635249a8d, type: 3}
   m_Name: 780C335B-F761-47A6-AFA2-26629DEDD882
   m_EditorClassIdentifier: 
-  objectName: footsteps_material
-  id: 1682461626
+  objectName: floor_material
+  id: 3964766495
   guid: 780C335B-F761-47A6-AFA2-26629DEDD882

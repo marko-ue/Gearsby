@@ -1315,7 +1315,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: af302132d1ac3974f8e2b7b9445b8950, type: 2}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.44
+      value: 11.38
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1763,6 +1763,8 @@ GameObject:
   - component: {fileID: 1301881099}
   - component: {fileID: 1301881101}
   - component: {fileID: 1301881100}
+  - component: {fileID: 1301881102}
+  - component: {fileID: 1301881103}
   m_Layer: 0
   m_Name: Wood Switch
   m_TagString: Untagged
@@ -1813,8 +1815,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 3.2367687, z: 1}
-  m_Center: {x: 0, y: 1.1183848, z: 0}
+  m_Size: {x: 1, y: 1.2684882, z: 1}
+  m_Center: {x: 0, y: 0.13424481, z: 0}
 --- !u!23 &1301881094
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1877,7 +1879,7 @@ Transform:
   m_GameObject: {fileID: 1301881091}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.63, y: -0.05, z: -1.24}
+  m_LocalPosition: {x: 2.63, y: -0.05, z: 10.07}
   m_LocalScale: {x: 10.400093, y: 1.1746, z: 5.4376}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1974,6 +1976,59 @@ MonoBehaviour:
     groupIdInternal: 0
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 8d423b4fc6fcfae4d97e243071905f36, type: 2}
+  valueIdInternal: 0
+  groupIdInternal: 0
+  valueGuidInternal: 
+  groupGuidInternal: 
+--- !u!114 &1301881102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301881091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0095cf694275b8946a07b37df5bcb15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7f422d6
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ee554d8ca314ad14ab4538f9656bbbee, type: 2}
+  useCallbacks: 0
+  stopSoundOnDestroy: 1
+  Callbacks: []
+  soundEmitterObject: {fileID: 1301881091}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+--- !u!114 &1301881103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301881091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577fe16be1523e4d80981385a4cf83d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7f422d6
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 09e3d70f6a1af0048b72634e6aab2f37, type: 2}
   valueIdInternal: 0
   groupIdInternal: 0
   valueGuidInternal: 
@@ -2431,7 +2486,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.44
+      value: 11.38
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2881,7 +2936,7 @@ Transform:
   m_GameObject: {fileID: 1930030888}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.82, y: -0.061, z: 4.369}
+  m_LocalPosition: {x: 13.82, y: -0.061, z: 5.952}
   m_LocalScale: {x: 0.0006872109, y: 0.5879406, z: -0.0015395635}
   m_ConstrainProportionsScale: 0
   m_Children: []
