@@ -884,7 +884,6 @@
 								<Value>256</Value>
 							</ValueList>
 						</Property>
-						<Property Name="LicenseKey" Type="string">
 							<ValueList>
 								<Value></Value>
 							</ValueList>
