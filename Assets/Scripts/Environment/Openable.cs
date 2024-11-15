@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections; // Needed for coroutines
+using System.Linq;
 
 public class Openable : MonoBehaviour, IOpenable
 {
@@ -20,9 +21,24 @@ public class Openable : MonoBehaviour, IOpenable
     public AK.Wwise.Event doorCloseSound;
     public AK.Wwise.Event drawerOpenSound;
     public AK.Wwise.Event drawerCloseSound;
+    public AK.Wwise.Event failedOpenSound;
+
+    InventoryManager inventory;
+
+    [System.Serializable]
+    public class KeyRequirement
+    {
+        public bool isKeyRequired;
+        public Item requiredKey;
+    }
+
+    [SerializeField]
+    public KeyRequirement keyRequirement; // Ensure this field is serialized
 
     void Start()
     {
+        inventory = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
+
         // Initialize positions and rotations
         closedPosition = transform.position;
         openPosition = closedPosition + new Vector3(openDistance, 0f, 0f); // Drawer opens along the X-axis
@@ -33,21 +49,48 @@ public class Openable : MonoBehaviour, IOpenable
 
     // Implement the ToggleOpen method from IOpenable
     public void ToggleOpen()
-    {
-        isOpen = !isOpen;
+    { 
         if (isOpen)
         {
-            Open();
+            Close();
+            isOpen = false;
         }
         else
         {
-            Close();
+            CheckKeyRequirement();
         }
     }
 
     // Open the object (drawer or door)
+    public void CheckKeyRequirement()
+    {
+        if (keyRequirement.isKeyRequired)
+        {
+            int requiredKeyId = keyRequirement.requiredKey.id;
+
+            if (inventory.Items.Any(item => item.id == keyRequirement.requiredKey.id))
+            {
+                Open();
+                isOpen = true;
+                Debug.Log("has key open");
+            }
+            else
+            {
+                failedOpenSound.Post(this.gameObject);
+                Debug.Log("doesn't have key stay closed");
+            }
+        }
+        else if (!keyRequirement.isKeyRequired)
+        {
+            Open();
+            isOpen = true;
+            Debug.Log("key is not required open");
+        }  
+    }
+
     public void Open()
     {
+
         if (objectType == ObjectType.Drawer)
         {
             drawerOpenSound.Post(this.gameObject);

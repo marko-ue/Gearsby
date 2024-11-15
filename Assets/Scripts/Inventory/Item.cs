@@ -20,6 +20,7 @@ public class Item : ScriptableObject
         Health_Pack,
         Cog_Wheel,
         Metal_Scrap,
-        Crowbar
+        Crowbar,
+        Key
     }
 }

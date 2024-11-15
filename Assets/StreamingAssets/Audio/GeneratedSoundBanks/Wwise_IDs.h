@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_AMB = 2959533290U;
+        static const AkUniqueID PLAY_CAN_DROP = 2395758368U;
         static const AkUniqueID PLAY_CROUCH = 3989731860U;
         static const AkUniqueID PLAY_DOOR_CLOSE = 2292458263U;
         static const AkUniqueID PLAY_DOOR_OPEN = 1660008929U;
@@ -25,12 +26,16 @@ namespace AK
         static const AkUniqueID PLAY_GEARWHEEL_BIG3 = 3379724018U;
         static const AkUniqueID PLAY_GEARWHEEL_SMALL_1 = 3880120448U;
         static const AkUniqueID PLAY_GEARWHEEL_SMALL_2 = 3880120451U;
+        static const AkUniqueID PLAY_GLASS_SHATTERING = 3300264692U;
+        static const AkUniqueID PLAY_OPEN_FAIL = 2468136189U;
+        static const AkUniqueID PLAY_PICKUP_KEYS = 3306603117U;
         static const AkUniqueID PLAY_PLAYER_CRAFT_FAIL = 902684097U;
         static const AkUniqueID PLAY_PLAYER_CRAFT_LIQUID = 2230999485U;
         static const AkUniqueID PLAY_PLAYER_CRAFT_NORMAL = 1971662352U;
         static const AkUniqueID PLAY_PLAYER_JUMP = 562256996U;
         static const AkUniqueID PLAY_PLAYER_LAND = 4249207015U;
         static const AkUniqueID PLAY_PLAYER_PICKUP = 3652445300U;
+        static const AkUniqueID PLAY_PLAYER_THROW = 2641657768U;
         static const AkUniqueID PLAY_RAIN = 2838936948U;
         static const AkUniqueID PLAY_SFX_EXPLOSION_BIG = 2003218848U;
         static const AkUniqueID PLAY_SFX_EXPLOSION_SMALL = 3077863823U;
@@ -90,6 +95,11 @@ namespace AK
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID REV_HOUSE = 1941853281U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

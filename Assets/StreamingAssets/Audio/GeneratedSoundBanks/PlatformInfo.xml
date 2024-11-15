@@ -6,7 +6,7 @@
 		<SourceFilesRoot>../../../../Gearsby_WwiseProject/.cache</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>A:/gearsby/Gearsby/Assets/StreamingAssets/Audio/GeneratedSoundBanks</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DefaultAlign>16</DefaultAlign>
 	<Settings>
@@ -28,5 +28,5 @@
 		<PrintObjectGuid>false</PrintObjectGuid>
 		<PrintObjectPath>true</PrintObjectPath>
 	</Settings>
-	<FileHash>{31311151-B81B-DBCA-A0DB-6DBAAB3C3FDE}</FileHash>
+	<FileHash>{5D101AE3-425A-234C-8A20-6C21837CCDF1}</FileHash>
 </PlatformInfo>

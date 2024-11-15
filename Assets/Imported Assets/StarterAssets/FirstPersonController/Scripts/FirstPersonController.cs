@@ -181,21 +181,18 @@ namespace StarterAssets
 					footstepSound.Post(this.gameObject);
 					footstepOnCooldown = true;
 					StartCoroutine(FootstepCooldown(sprintFootstepCooldown));
-					Debug.Log("sprint playing");
 				}
 				else if (inputs.crouch)
 				{
 					footstepSound.Post(this.gameObject);
 					footstepOnCooldown = true;
 					StartCoroutine(FootstepCooldown(crouchFootstepCooldown));
-					Debug.Log("crouch playing");
 				}
 				else
 				{
 					footstepSound.Post(this.gameObject);
 					footstepOnCooldown = true;
 					StartCoroutine(FootstepCooldown(walkFootstepCooldown));
-					Debug.Log("move playing");
 				}
 			}
 

@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: f50899941008c146a27e03da9364096f
     GuidInternal: 
-    m_lastTime: -8584701519058613869
+    m_lastTime: -8584699127578531413
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,6 +54,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: rev_house
+      guid: d4870a2d19735046a574d0fdec3c7334
+      id: 1941853281
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f50899941008c146a27e03da9364096f
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: rev_house
+        ObjectType: 1
+        guid: d4870a2d19735046a574d0fdec3c7334
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\rev_house
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -122,7 +139,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 07bf8baa218fcf4293d9192c9e718494
     GuidInternal: 
-    m_lastTime: -8584701519060416896
+    m_lastTime: -8584699127578586521
     List:
     - name: Ambience
       guid: 7ad519717466fa43bbb2ea4e283da39d
@@ -138,6 +155,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: 7ad519717466fa43bbb2ea4e283da39d
       Path: Events\Default Work Unit\Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: can
+      guid: caff4fc9829ccd4f9f04dbd71ce37289
+      id: 983016353
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: can
+        ObjectType: 4
+        guid: caff4fc9829ccd4f9f04dbd71ce37289
+      Path: Events\Default Work Unit\Objects\can
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -201,6 +238,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: keys
+      guid: 91c4b03dacd83a4d8f623444580b8305
+      id: 2215982805
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: keys
+        ObjectType: 4
+        guid: 91c4b03dacd83a4d8f623444580b8305
+      Path: Events\Default Work Unit\Objects\keys
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Objects
       guid: 140a671a62334c45ad3e6c78b3f77c45
       id: 1695690031
@@ -235,6 +292,29 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1cc62479c5af52418459f66d3fa8d7a2
       Path: Events\Default Work Unit\Ambience\Play_amb
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_can_drop
+      guid: aafa1fe38982704081f0bad0ec82ee94
+      id: 2395758368
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: can
+        ObjectType: 4
+        guid: caff4fc9829ccd4f9f04dbd71ce37289
+      - ElementName: Play_can_drop
+        ObjectType: 3
+        guid: aafa1fe38982704081f0bad0ec82ee94
+      Path: Events\Default Work Unit\Objects\can\Play_can_drop
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -485,6 +565,69 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_glass_shattering
+      guid: 5221afcbbf0c894f8d86f45e7a16b05b
+      id: 3300264692
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: SFX
+        ObjectType: 4
+        guid: a3b21990ad85334e818a76d44e6ec095
+      - ElementName: Play_glass_shattering
+        ObjectType: 3
+        guid: 5221afcbbf0c894f8d86f45e7a16b05b
+      Path: Events\Default Work Unit\SFX\Play_glass_shattering
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_open_fail
+      guid: 430997f66369a441bfc2e3d0ac95bf00
+      id: 2468136189
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Player
+        ObjectType: 4
+        guid: 186405ca89c5fc48bbb2b78ef6c1770b
+      - ElementName: Play_open_fail
+        ObjectType: 3
+        guid: 430997f66369a441bfc2e3d0ac95bf00
+      Path: Events\Default Work Unit\Player\Play_open_fail
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_pickup_keys
+      guid: dfc7536ae1537a4baf13f4658bbc1bbe
+      id: 3306603117
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Objects
+        ObjectType: 4
+        guid: 140a671a62334c45ad3e6c78b3f77c45
+      - ElementName: keys
+        ObjectType: 4
+        guid: 91c4b03dacd83a4d8f623444580b8305
+      - ElementName: Play_pickup_keys
+        ObjectType: 3
+        guid: dfc7536ae1537a4baf13f4658bbc1bbe
+      Path: Events\Default Work Unit\Objects\keys\Play_pickup_keys
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_player_craft_fail
       guid: 2e7d76f169d7b641ab6ee9e9b8b236f5
       id: 902684097
@@ -602,6 +745,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 3a316b09bf88f244812763e5d47d71b8
       Path: Events\Default Work Unit\Player\Play_player_pickup
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_player_throw
+      guid: 78e3f4cdd654684f9d45b6cc3d8ff7da
+      id: 2641657768
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 07bf8baa218fcf4293d9192c9e718494
+      - ElementName: Player
+        ObjectType: 4
+        guid: 186405ca89c5fc48bbb2b78ef6c1770b
+      - ElementName: Play_player_throw
+        ObjectType: 3
+        guid: 78e3f4cdd654684f9d45b6cc3d8ff7da
+      Path: Events\Default Work Unit\Player\Play_player_throw
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1099,7 +1262,7 @@ MonoBehaviour:
     m_lastTime: -8584701519048474210
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 06000000070000000a000000140000001500000016000000
+  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000a0000000b00000014000000150000001600000021000000220000002300000024000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -5,20 +5,23 @@
 		<SourceFilesRoot>../../../../Gearsby_WwiseProject/.cache</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>A:/gearsby/Gearsby/Assets/StreamingAssets/Audio/GeneratedSoundBanks</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{05CFD9D6-1CB6-5BAE-60E6-40C4C58D3DF9}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{E0967E2A-5083-F037-EB52-303E97C6A5E4}">
 			<ObjectPath>\SoundBanks\Default Work Unit\mainsoundbank</ObjectPath>
 			<ShortName>mainsoundbank</ShortName>
 			<Path>mainsoundbank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{547EA011-A81D-C515-A029-6F3433EF8BC0}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B0D6621F-410E-1899-7475-CF477A67B0F6}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<ShareSets>
+					<Plugin Id="2995775460" Name="Room_Small" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Small" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" ObjectPath="\Audio Devices\Default Work Unit\No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" ObjectPath="\Audio Devices\Default Work Unit\System" LibName="System" LibId="11403271"/>
@@ -27,6 +30,15 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="1941853281" Name="rev_house" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\rev_house">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 			<StateGroups>
 				<StateGroup Id="232210557" Name="in_out_side" ObjectPath="\States\Default Work Unit\in_out_side">
 					<States>
@@ -47,12 +59,12 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1802970376" Type="User" Language="SFX" Hash="{4833B1EB-581D-8BE9-6325-222402150F9A}">
+		<SoundBank Id="1802970376" Type="User" Language="SFX" Hash="{12B45ACE-D007-1A52-DFBC-7586040BA4A7}">
 			<ObjectPath>\SoundBanks\Default Work Unit\fs</ObjectPath>
 			<ShortName>fs</ShortName>
 			<Path>fs.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{88C5EB14-E60F-A41C-552E-83AB4E97A480}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A21837AE-782F-B4D1-1441-103B1E50B769}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -105,6 +117,10 @@
 					<ShortName>fs_wood_1.wav</ShortName>
 					<CachePath>17/{17DBE0F2-F21E-3425-EC99-805D720DA148}.wem</CachePath>
 				</File>
+				<File Id="255983724" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>can_drop1.wav</ShortName>
+					<CachePath>17/{17BBBAB8-8A48-10B5-18AD-3455E4C9C15A}.wem</CachePath>
+				</File>
 				<File Id="256062630" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_explosion_small.wav</ShortName>
 					<CachePath>20/{20BBA7FD-E722-5968-330D-C43D83B3DA2C}.wem</CachePath>
@@ -120,6 +136,10 @@
 				<File Id="280975269" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>craft_fail.wav</ShortName>
 					<CachePath>29/{29B97DB8-DFD9-2E8F-2386-5A725DB9FB73}.wem</CachePath>
+				</File>
+				<File Id="286155253" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>can_drop3.wav</ShortName>
+					<CachePath>42/{4281D120-CFDC-8469-DAE8-6379B491D687}.wem</CachePath>
 				</File>
 				<File Id="294139425" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump2.wav</ShortName>
@@ -165,6 +185,10 @@
 					<ShortName>fs_concrete_6.wav</ShortName>
 					<CachePath>44/{448767DC-BDAF-8397-679D-41E4C0606408}.wem</CachePath>
 				</File>
+				<File Id="475731033" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>glass_shattering.wav</ShortName>
+					<CachePath>9C/{9CA1E941-1A9E-6238-64E8-54792F4C64A5}.wem</CachePath>
+				</File>
 				<File Id="477806905" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fs_concrete_3.wav</ShortName>
 					<CachePath>47/{47A46127-D9EB-A885-C9EC-137390E69437}.wem</CachePath>
@@ -172,6 +196,14 @@
 				<File Id="480571856" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>craft_liquid.wav</ShortName>
 					<CachePath>95/{95D22FE1-2EED-7F15-CB9F-C649A256B631}.wem</CachePath>
+				</File>
+				<File Id="493662447" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>can_drop4.wav</ShortName>
+					<CachePath>27/{2770AA65-5D70-6FA0-205B-7FF11B1D1337}.wem</CachePath>
+				</File>
+				<File Id="497157086" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>can_drop5.wav</ShortName>
+					<CachePath>42/{423ACCA9-50C4-318D-6DA3-D11DCD348D06}.wem</CachePath>
 				</File>
 				<File Id="499614530" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fs_concrete_9.wav</ShortName>
@@ -208,6 +240,10 @@
 				<File Id="600729798" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fs_metal_7.wav</ShortName>
 					<CachePath>5E/{5E352A99-6191-C992-0C0D-FCFD085063E3}.wem</CachePath>
+				</File>
+				<File Id="610510006" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>pickup_keys.wav</ShortName>
+					<CachePath>CF/{CFFB7386-E7E9-7A23-6C4F-FF934D4997AC}.wem</CachePath>
 				</File>
 				<File Id="631054936" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>door_open2.wav</ShortName>
@@ -257,6 +293,10 @@
 					<ShortName>fs_concrete_11.wav</ShortName>
 					<CachePath>4E/{4E5A09D9-A56F-F86F-0C72-60155895C6D1}.wem</CachePath>
 				</File>
+				<File Id="778301650" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>can_drop2.wav</ShortName>
+					<CachePath>C6/{C67AAB9D-3AD9-F5D6-00FC-8615058C21DC}.wem</CachePath>
+				</File>
 				<File Id="787799995" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>craft_normal.wav</ShortName>
 					<CachePath>29/{2911AA29-594A-349C-6CA7-BEF64813A407}.wem</CachePath>
@@ -297,6 +337,10 @@
 					<ShortName>drawer_close.wav</ShortName>
 					<CachePath>E4/{E4767DD9-C9B0-8BCB-CFA9-FA216E0486B0}.wem</CachePath>
 				</File>
+				<File Id="981142484" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_throw.wav</ShortName>
+					<CachePath>C1/{C1462FC4-52CA-EC51-1BA9-8C77120A5936}.wem</CachePath>
+				</File>
 				<File Id="981518875" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>gearwheel_medium_1.wav</ShortName>
 					<CachePath>9D/{9D164067-7965-9120-D94F-9A5510BFF8AB}.wem</CachePath>
@@ -317,7 +361,16 @@
 					<ShortName>fs_wood_10.wav</ShortName>
 					<CachePath>FF/{FF68C1A2-484C-7EA3-3BC2-6FF699995762}.wem</CachePath>
 				</File>
+				<File Id="1059525046" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>open_fail.wav</ShortName>
+					<CachePath>56/{563F3512-F862-267B-23B0-DC3E01D93241}.wem</CachePath>
+				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1008402193" Name="Low_Pass_20KHz" ObjectPath="\Effects\Factory Effects\Parametric EQ\Low Pass Filters\Low_Pass_20KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="2959533290" Name="Play_amb" ObjectPath="\Events\Default Work Unit\Ambience\Play_amb" DurationType="Infinite">
 					<SwitchContainers>
@@ -336,6 +389,18 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="2395758368" Name="Play_can_drop" ObjectPath="\Events\Default Work Unit\Objects\can\Play_can_drop" MaxAttenuation="15" DurationType="OneShot" DurationMin="1.0087401" DurationMax="1.8387866">
+					<MediaRefs>
+						<MediaRef Id="255983724"/>
+						<MediaRef Id="286155253"/>
+						<MediaRef Id="493662447"/>
+						<MediaRef Id="497157086"/>
+						<MediaRef Id="778301650"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1941853281" Name="rev_house" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\rev_house"/>
+					</AuxBusRefs>
+				</Event>
 				<Event Id="3989731860" Name="Play_crouch" ObjectPath="\Events\Default Work Unit\Player\Play_crouch" DurationType="OneShot" DurationMin="0.8100911" DurationMax="0.8459568">
 					<MediaRefs>
 						<MediaRef Id="593250279"/>
@@ -345,22 +410,34 @@
 					<MediaRefs>
 						<MediaRef Id="187785395"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1941853281" Name="rev_house" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\rev_house"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="1660008929" Name="Play_door_open" ObjectPath="\Events\Default Work Unit\Objects\doors\Play_door_open" MaxAttenuation="20" DurationType="OneShot" DurationMin="0.78474534" DurationMax="1.2053457">
 					<MediaRefs>
 						<MediaRef Id="631054936"/>
 						<MediaRef Id="775143460"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1941853281" Name="rev_house" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\rev_house"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="2315829540" Name="Play_drawer_close" ObjectPath="\Events\Default Work Unit\Objects\drawers\Play_drawer_close" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.7615099" DurationMax="0.8798125">
 					<MediaRefs>
 						<MediaRef Id="965195177"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1941853281" Name="rev_house" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\rev_house"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="1958703520" Name="Play_drawer_open" ObjectPath="\Events\Default Work Unit\Objects\drawers\Play_drawer_open" MaxAttenuation="15" DurationType="OneShot" DurationMin="0.8328028" DurationMax="0.990375">
 					<MediaRefs>
 						<MediaRef Id="425533229"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1941853281" Name="rev_house" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\rev_house"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Play_Footsteps" DurationType="OneShot" DurationMin="0.3125" DurationMax="0.4870014">
 					<SwitchContainers>
@@ -415,6 +492,11 @@
 					<MediaRefs>
 						<MediaRef Id="892688682"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1008402193"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="3379724019" Name="Play_gearwheel_big2" ObjectPath="\Events\Default Work Unit\Objects\gearwheels\Play_gearwheel_big2" MaxAttenuation="20" DurationType="Infinite">
 					<MediaRefs>
@@ -435,6 +517,30 @@
 					<MediaRefs>
 						<MediaRef Id="981518875"/>
 					</MediaRefs>
+				</Event>
+				<Event Id="3300264692" Name="Play_glass_shattering" ObjectPath="\Events\Default Work Unit\SFX\Play_glass_shattering" MaxAttenuation="20" DurationType="OneShot" DurationMin="1.8125" DurationMax="1.8125">
+					<MediaRefs>
+						<MediaRef Id="475731033"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1941853281" Name="rev_house" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\rev_house"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="2468136189" Name="Play_open_fail" ObjectPath="\Events\Default Work Unit\Player\Play_open_fail" DurationType="OneShot" DurationMin="0.46635416" DurationMax="0.46635416">
+					<MediaRefs>
+						<MediaRef Id="1059525046"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1941853281" Name="rev_house" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\rev_house"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3306603117" Name="Play_pickup_keys" ObjectPath="\Events\Default Work Unit\Objects\keys\Play_pickup_keys" DurationType="OneShot" DurationMin="0.5783787" DurationMax="0.5783787">
+					<MediaRefs>
+						<MediaRef Id="610510006"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1941853281" Name="rev_house" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\rev_house"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="902684097" Name="Play_player_craft_fail" ObjectPath="\Events\Default Work Unit\Player\Play_player_craft_fail" DurationType="OneShot" DurationMin="0.302875" DurationMax="0.302875">
 					<MediaRefs>
@@ -491,6 +597,11 @@
 						<MediaRef Id="863935299"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2641657768" Name="Play_player_throw" ObjectPath="\Events\Default Work Unit\Player\Play_player_throw" DurationType="OneShot" DurationMin="0.56367815" DurationMax="0.72051984">
+					<MediaRefs>
+						<MediaRef Id="981142484"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2838936948" Name="Play_rain" ObjectPath="\Events\Default Work Unit\Ambience\Play_rain" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="694643057"/>
@@ -545,5 +656,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BD119386-3D21-2EF8-94F1-FEFCB88A8F5A}</FileHash>
+	<FileHash>{611E745E-5940-82FC-01AC-A8D2A2D8ECF3}</FileHash>
 </SoundBanksInfo>

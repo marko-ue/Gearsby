@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -22,9 +23,9 @@ public class InventoryManager : MonoBehaviour
 
         playerController = FindAnyObjectByType<PlayerController>();
 
-        if (FindAnyObjectByType<ItemDrop>() == null) 
-        { 
-            gameObject.AddComponent<ItemDrop>(); 
+        if (FindAnyObjectByType<ItemDrop>() == null)
+        {
+            gameObject.AddComponent<ItemDrop>();
         }
     }
 
@@ -34,11 +35,11 @@ public class InventoryManager : MonoBehaviour
         {
             ToggleInventory();
         }
-        
-        if (inventoryOpen) 
-        { 
-            ListItems(); 
-        } 
+
+        if (inventoryOpen)
+        {
+            ListItems();
+        }
     }
 
     public void Add(Item item)
@@ -79,15 +80,15 @@ public class InventoryManager : MonoBehaviour
 
         SetInventoryItems();
     }
-    
-    public void ToggleInventory() 
-    { 
-        inventoryOpen = !inventoryOpen; 
-        inventoryUI.SetActive(inventoryOpen); 
-        Cursor.lockState = inventoryOpen ? CursorLockMode.None : CursorLockMode.Locked; 
-        Cursor.visible = inventoryOpen; 
-        playerController.EnableMovement(!inventoryOpen); 
-        
+
+    public void ToggleInventory()
+    {
+        inventoryOpen = !inventoryOpen;
+        inventoryUI.SetActive(inventoryOpen);
+        Cursor.lockState = inventoryOpen ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = inventoryOpen;
+        playerController.EnableMovement(!inventoryOpen);
+
     }
 
     public void EnableItemsRemove()
