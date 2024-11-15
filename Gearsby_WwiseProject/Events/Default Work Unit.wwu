@@ -104,6 +104,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_player_throw" ID="{CDF4E378-54D6-4F68-9D45-B6CC3D8FF7DA}">
+							<ChildrenList>
+								<Action Name="" ID="{AD525F67-35BB-4F4B-851F-7A0C7AF2F1A4}" ShortID="897898262">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="player_throw" ID="{86EA0A34-0F48-446C-BA55-D098FAAD6D33}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_open_fail" ID="{F6970943-6963-41A4-BFC2-E3D0AC95BF00}">
+							<ChildrenList>
+								<Action Name="" ID="{BD921C9E-37A9-4B87-9B0D-AD3C5DA10D55}" ShortID="848314238">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="open_fail" ID="{F70BE775-CDD9-4F54-A347-978E6715CBD4}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambience" ID="{7119D57A-6674-43FA-BBB2-EA4E283DA39D}" ShortID="811956567">
@@ -191,6 +213,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="sfx_explosion_big" ID="{BB8C6F22-D6B9-44DA-9030-334EAC5D435C}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_glass_shattering" ID="{CBAF2152-0CBF-4F89-8D86-F45E7A16B05B}">
+							<ChildrenList>
+								<Action Name="" ID="{D28F2984-5F39-4CE8-8110-5BF158BC0A19}" ShortID="302785087">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="glass_shattering" ID="{381A6CCF-283A-4E69-B534-94020BA8B81D}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -374,6 +407,36 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="drawer_open" ID="{5E1E5A1D-919F-46EE-B6FF-8CAEB9C48136}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="can" ID="{C94FFFCA-9C82-4FCD-9F04-DBD71CE37289}" ShortID="432728383">
+							<ChildrenList>
+								<Event Name="Play_can_drop" ID="{E31FFAAA-8289-4070-81F0-BAD0EC82EE94}">
+									<ChildrenList>
+										<Action Name="" ID="{4B3E0B8D-B4E8-43DE-8A6D-C56747C3ADF9}" ShortID="399076609">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="can_drop" ID="{77BC2DF3-F8CE-4D26-97F2-1093579AE6FB}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="keys" ID="{3DB0C491-D8AC-4D3A-8F62-3444580B8305}" ShortID="944855129">
+							<ChildrenList>
+								<Event Name="Play_pickup_keys" ID="{6A53C7DF-53E1-4B7A-AF13-F4658BBC1BBE}">
+									<ChildrenList>
+										<Action Name="" ID="{9B56E28E-101D-44D3-9D8A-70D82CBD5700}" ShortID="6454290">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="pickup_keys" ID="{D61D9412-9069-4C60-9D2B-F84A235BD4A3}" WorkUnitID="{FCBB19E8-18C8-4019-9EE0-7221A5E62C13}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

@@ -3,19 +3,11 @@
 	<SoundcasterSessions>
 		<WorkUnit Name="Default Work Unit" ID="{26E2C7B9-AC57-4446-A922-526E586095B2}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundcasterSession Name="debut" ID="{10CA5542-64BC-47F2-8F81-8FDFE48E80AD}">
+				<SoundcasterSession Name="house start" ID="{10CA5542-64BC-47F2-8F81-8FDFE48E80AD}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Play_sfx_explosion_big" ID="{F96632EC-57FD-4FC8-A39B-54ED8178B980}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<ObjectRef Name="Play_amb" ID="{7924C61C-AFC5-4152-8459-F66D3FA8D7A2}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
 							<Position X="0" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_sfx_explosion_small" ID="{EC052705-B3E0-4D32-A058-61729FAE2D7D}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
-							<Position X="0" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_sfx_spark" ID="{5EBBC129-8547-4439-A5E6-E9DC4328B236}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
-							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_Footsteps" ID="{710E7D9B-8209-4EF1-9C9D-AB8BAFF8B108}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
@@ -23,43 +15,39 @@
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_player_jump" ID="{C2C7167F-115D-4043-B773-31D6B7377DF5}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
-							<Position X="1" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_player_land" ID="{1658014B-6F87-43B0-85CD-6BC439E1617E}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
-							<Position X="1" Y="2"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_player_pickup" ID="{096B313A-88BF-44F2-8127-63E5D47D71B8}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_player_craft_normal" ID="{491120A4-6361-4480-B353-86405D435535}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<ObjectRef Name="Play_can_drop" ID="{E31FFAAA-8289-4070-81F0-BAD0EC82EE94}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_player_craft_fail" ID="{F1767D2E-D769-41B6-AB6E-E9E9B8B236F5}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
-							<Position X="2" Y="2"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_gearwheel_big1" ID="{1040413C-908C-4DE0-BE20-7DD01B357582}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<ObjectRef Name="Play_player_land" ID="{1658014B-6F87-43B0-85CD-6BC439E1617E}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
 							<Position X="3" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_player_craft_liquid" ID="{B1F970D4-0ECE-4F87-939F-1BDC107F8368}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<ObjectRef Name="Play_door_open" ID="{A3B514A7-D3E0-445F-AF05-3DAA3A8A559A}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_amb" ID="{7924C61C-AFC5-4152-8459-F66D3FA8D7A2}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<ObjectRef Name="Play_open_fail" ID="{F6970943-6963-41A4-BFC2-E3D0AC95BF00}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
 							<Position X="4" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_rain" ID="{41EE9CDB-1FE4-4C70-B782-2D603D237711}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<ObjectRef Name="Play_door_close" ID="{2408345D-E676-4AA2-BB46-54E68D316EEF}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
 							<Position X="4" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Stop_rain" ID="{12ED2A51-DD96-44C3-A31B-370B148E4476}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<ObjectRef Name="Play_pickup_keys" ID="{6A53C7DF-53E1-4B7A-AF13-F4658BBC1BBE}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
 							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_drawer_close" ID="{47BEFEE9-30BD-4164-8F4B-43736C333EEF}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<Position X="5" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_drawer_open" ID="{B32C889D-1401-419B-B8C3-842B9F39EDDB}" WorkUnitID="{AA8BBF07-8F21-42CF-93D9-192C9E718494}"/>
+							<Position X="5" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
@@ -67,7 +55,7 @@
 						<CurrentStateRef Name="inside_house" ID="{436EEC45-078F-4F9F-90B7-2BB6FF36D421}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="wood" ID="{CA972D6A-ECF8-4B4D-90E5-01FE9D6D0F6F}"/>
+						<CurrentSwitchRef Name="Concrete" ID="{D1AEEF25-803B-459A-87BB-AEC0F1710065}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

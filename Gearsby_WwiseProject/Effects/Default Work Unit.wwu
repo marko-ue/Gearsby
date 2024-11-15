@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{53D3089B-A812-4285-B8FD-E9B320275203}" SchemaVersion="123">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{53D3089B-A812-4285-B8FD-E9B320275203}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{53D3089B-A812-4285-B8FD-E9B320275203}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_RoomVerb" ID="{9AB83BED-E5F9-446D-A3CA-9131FEE542F1}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+					<PropertyList>
+						<Property Name="Density" Type="Real32" Value="39"/>
+						<Property Name="RoomShape" Type="Real32" Value="57"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="house" ID="{6520534B-58A8-4053-B238-6182CB2D99EB}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+					<PropertyList>
+						<Property Name="Density" Type="Real32" Value="65"/>
+						<Property Name="Diffusion" Type="Real32" Value="77"/>
+						<Property Name="RoomShape" Type="Real32" Value="77"/>
+						<Property Name="StereoWidth" Type="Real32" Value="127"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>
