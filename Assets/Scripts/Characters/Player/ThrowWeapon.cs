@@ -5,13 +5,13 @@ public class ThrowWeapon : MonoBehaviour
 {
     [SerializeField] private float standardWeaponThrowForce = 10;
     public bool isThrown = false;
-
     private int pickupRange = 2;
     private Vector3 offset = new Vector3(0.46f, 0.7f, 1.86f);
     GameObject activeWeapon;
     GameObject heldWeapon;
-
     RaycastHit hit;
+
+    public AK.Wwise.Event throwSound;
 
     // Start is called before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,7 +40,7 @@ public class ThrowWeapon : MonoBehaviour
     {
         bool pickupRayHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, pickupRange, ~0, QueryTriggerInteraction.Collide);
 
-        if (pickupRayHit && hit.collider.CompareTag("Throwable Pickup") && Input.GetKeyDown(KeyCode.E))
+        if (pickupRayHit && hit.collider.CompareTag("Throwable Pickup") && Input.GetKeyDown(KeyCode.E) && activeWeapon.transform.childCount == 0)
         {
             if (hit.collider.name.StartsWith("Rock"))
             {
@@ -51,11 +51,18 @@ public class ThrowWeapon : MonoBehaviour
             {
                 HoldWeapon();
             }
+
+            if (hit.collider.name.StartsWith("Can"))
+            {
+                HoldWeapon();
+            }
+
         }
     }
 
     public void ThrowHeldWeapon()
     {
+        throwSound.Post(this.gameObject);
         isThrown = true;
 
         heldWeapon.GetComponent<Collider>().enabled = true;

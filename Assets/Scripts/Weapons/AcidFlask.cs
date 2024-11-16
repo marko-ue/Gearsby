@@ -9,6 +9,8 @@ public class AcidFlask : MonoBehaviour
 
     [SerializeField] GameObject acidSpillGround;
     [SerializeField] GameObject acidSpillEnemy;
+
+    public AK.Wwise.Event glassShatteringSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,6 +29,7 @@ public class AcidFlask : MonoBehaviour
     private void OnCollisionEnter(Collision other) 
     {
         if (!throwWeaponScript.isThrown) return;
+        glassShatteringSound.Post(this.gameObject);
         throwWeaponScript.isThrown = false;
 
         enemyHealth = other.gameObject.GetComponent<EnemyHealth>();

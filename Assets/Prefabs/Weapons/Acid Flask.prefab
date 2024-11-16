@@ -191,6 +191,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardWeaponThrowForce: 10
   isThrown: 0
+  throwSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3c8046c4bef83ff40921479d406f789e, type: 2}
 --- !u!114 &-627903076343532255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +210,10 @@ MonoBehaviour:
   throwableWeaponSO: {fileID: 11400000, guid: 892d276a43682d14587fbb88763b4898, type: 2}
   acidSpillGround: {fileID: 8098787946658644410, guid: 5b9d4501a5d7c7948aedaea1599b7725, type: 3}
   acidSpillEnemy: {fileID: 2320332600568711239, guid: 3977b064f3a3f15498aa09e907606d13, type: 3}
+  glassShatteringSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2b5364eb848ad9446921adcd4dde352b, type: 2}
 --- !u!54 &2313447346408549367
 Rigidbody:
   m_ObjectHideFlags: 0
