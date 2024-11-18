@@ -45,44 +45,58 @@ public class Week6ManageNPC : MonoBehaviour
         {
             if (breadcrumb != null)
             {
+                Debug.Log("Following breadcrumb: " + breadcrumb.name);
                 FollowTarget(breadcrumb);
                 if (Vector3.Distance(transform.position, breadcrumb.transform.position) < 2.3)
                 {
                     anim.SetBool("closeToPlayer", true);
-                    breadcrumb = null; // Reset target after reaching a breadcrumb
+                    breadcrumb = null;
                 }
             }
-            else if (playerBreadcrumb != null && Vector3.Distance(transform.position, playerBreadcrumb.transform.position) < 5.0f) // Check if player breadcrumb is within range
+            else if (playerBreadcrumb != null && Vector3.Distance(transform.position, playerBreadcrumb.transform.position) < 5.0f)
             {
+                Debug.Log("Following player breadcrumb: " + playerBreadcrumb.name);
                 FollowTarget(playerBreadcrumb);
                 if (Vector3.Distance(transform.position, playerBreadcrumb.transform.position) < 2.3)
                 {
                     anim.SetBool("closeToPlayer", true);
-                    playerBreadcrumb = null; // Reset target after reaching a player breadcrumb
+                    playerBreadcrumb = null;
                 }
             }
             else
             {
-                FollowTarget(player);
-                if (Vector3.Distance(transform.position, player.transform.position) < 2.3)
-                {
-                    anim.SetBool("closeToPlayer", true);
-                }
+                anim.SetBool("closeToPlayer", false);
+                GetComponent<NavMeshAgent>().isStopped = true;
             }
         }
         else if (info.IsName("ATTACK_PLAYER"))
         {
-            GetComponent<NavMeshAgent>().isStopped = true;
-            if (info.normalizedTime % 1.0 >= .98)
+            // Ensure AI only attacks when close enough to the player and can see the player
+            if (anim.GetBool("canSeePlayer") && Vector3.Distance(transform.position, player.transform.position) <= 2.3)
             {
-                player.GetComponent<ManagePlayerHealth>().DecreaseHealth();
+                GetComponent<NavMeshAgent>().isStopped = true;
+                if (info.normalizedTime % 1.0 >= .98)
+                {
+                    player.GetComponent<ManagePlayerHealth>().DecreaseHealth();
+                }
+                if (Vector3.Distance(transform.position, player.transform.position) > 2.3)
+                {
+                    anim.SetBool("closeToPlayer", false);
+                }
             }
-            if (Vector3.Distance(transform.position, player.transform.position) > 2.3)
+            else
             {
                 anim.SetBool("closeToPlayer", false);
+                GetComponent<NavMeshAgent>().isStopped = true;
             }
         }
+        else
+        {
+            anim.SetBool("closeToPlayer", false);
+        }
     }
+
+
 
     void FollowTarget(GameObject target)
     {
@@ -103,8 +117,8 @@ public class Week6ManageNPC : MonoBehaviour
     void Smell()
     {
         GameObject[] allBCs = GameObject.FindGameObjectsWithTag("BC");
-        float minDistance = Mathf.Infinity;
-        float minPlayerBCDistance = Mathf.Infinity;
+        float minDistance = 5.0f; // Adjusted for larger detection range
+        float minPlayerBCDistance = 5.0f; // Adjusted for larger detection range
         breadcrumb = null;
         playerBreadcrumb = null;
 
@@ -116,59 +130,64 @@ public class Week6ManageNPC : MonoBehaviour
                 if (distanceToBC < minPlayerBCDistance)
                 {
                     minPlayerBCDistance = distanceToBC;
-                    playerBreadcrumb = allBCs[i]; // Set the closest player breadcrumb as the target
+                    playerBreadcrumb = allBCs[i];
                 }
             }
             else if (distanceToBC < minDistance)
             {
                 minDistance = distanceToBC;
-                breadcrumb = allBCs[i]; // Set the closest breadcrumb as the target
+                breadcrumb = allBCs[i];
             }
         }
 
         if (breadcrumb != null)
         {
+            Debug.Log("Detected breadcrumb: " + breadcrumb.name + " at distance: " + minDistance);
             anim.SetBool("canSmellPlayer", true);
-            anim.SetBool("isFollowingBreadcrumb", true); // Set the state to follow breadcrumb
         }
         else if (playerBreadcrumb != null && Vector3.Distance(transform.position, playerBreadcrumb.transform.position) < 5.0f)
         {
+            Debug.Log("Detected player breadcrumb: " + playerBreadcrumb.name + " at distance: " + minPlayerBCDistance);
             anim.SetBool("canSmellPlayer", true);
-            anim.SetBool("isFollowingBreadcrumb", true); // Set the state to follow player breadcrumb within range
         }
         else
         {
             anim.SetBool("canSmellPlayer", false);
-            anim.SetBool("isFollowingBreadcrumb", false); // Set the state to not follow breadcrumb
-            target = player; // Ensure the player is the target when no breadcrumbs are detected
+            target = null;
         }
     }
 
+
     void LookDotProduct()
     {
-        direction = (player.transform.position - transform.position).normalized;
-        isInTheFieldOfView = (Vector3.Dot(transform.forward.normalized, direction) > 0.5);
-        Debug.DrawRay(transform.position, direction * 100, Color.green);
-        Debug.DrawRay(transform.position, transform.forward * 100, Color.blue);
-        rightAngle = Quaternion.Euler(0, 60, 0) * transform.forward;
-        Debug.DrawRay(transform.position, rightAngle * 100, Color.red);
-        leftAngle = Quaternion.Euler(0, -60, 0) * transform.forward;
-        Debug.DrawRay(transform.position, leftAngle * 100, Color.red);
-        if (Physics.Raycast(transform.position, direction * 100, out hit))
+        if (player != null)
         {
-            if (hit.collider.gameObject.tag == "Player")
-                noObjectBetweenNPCAndPlayer = true;
+            direction = (player.transform.position - transform.position).normalized;
+            isInTheFieldOfView = (Vector3.Dot(transform.forward.normalized, direction) > 0.5);
+            Debug.DrawRay(transform.position, direction * 100, Color.green);
+            Debug.DrawRay(transform.position, transform.forward * 100, Color.blue);
+            rightAngle = Quaternion.Euler(0, 60, 0) * transform.forward;
+            Debug.DrawRay(transform.position, rightAngle * 100, Color.red);
+            leftAngle = Quaternion.Euler(0, -60, 0) * transform.forward;
+            Debug.DrawRay(transform.position, leftAngle * 100, Color.red);
+            if (Physics.Raycast(transform.position, direction * 100, out hit))
+            {
+                if (hit.collider.gameObject.tag == "Player")
+                    noObjectBetweenNPCAndPlayer = true;
+                else
+                    noObjectBetweenNPCAndPlayer = false;
+            }
+            if (isInTheFieldOfView && noObjectBetweenNPCAndPlayer)
+            {
+                anim.SetBool("canSeePlayer", true);
+                GetComponent<NavMeshAgent>().isStopped = false;
+            }
             else
-                noObjectBetweenNPCAndPlayer = false;
-        }
-        if (isInTheFieldOfView && noObjectBetweenNPCAndPlayer)
-        {
-            anim.SetBool("canSeePlayer", true);
-            GetComponent<NavMeshAgent>().isStopped = false;
-        }
-        else
-        {
-            anim.SetBool("canSeePlayer", false);
+            {
+                anim.SetBool("canSeePlayer", false);
+                GetComponent<NavMeshAgent>().isStopped = true;
+            }
         }
     }
+
 }

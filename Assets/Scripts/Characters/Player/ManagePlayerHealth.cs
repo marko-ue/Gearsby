@@ -24,7 +24,7 @@ public class ManagePlayerHealth : MonoBehaviour
     void Start()
     {
         alpha = 0;
-        GameObject.Find("screenFlash").GetComponent<Image>().color = new Color (1,0,0,alpha);
+        GameObject.Find("screenFlash").GetComponent<Image>().color = new Color(1, 0, 0, alpha);
         screenFlashBool = false;
         healthBar = GameObject.Find("greenHealthBar");
     }
@@ -35,8 +35,8 @@ public class ManagePlayerHealth : MonoBehaviour
         if (screenFlashBool)
         {
             alpha -= Time.deltaTime;
-            GameObject.Find("screenFlash").GetComponent<Image>().color = new Color (1,0,0,alpha);
-            if (alpha <=0)
+            GameObject.Find("screenFlash").GetComponent<Image>().color = new Color(1, 0, 0, alpha);
+            if (alpha <= 0)
             {
                 screenFlashBool = false;
                 alpha = 0;
@@ -51,9 +51,14 @@ public class ManagePlayerHealth : MonoBehaviour
         healthBar.GetComponent<ManageHealthBar>().SetHealth(health);
     }
 
-    public void AddHealth(int value)
+    public void AddHealth(int value, float delay)
     {
-        print("Adding Health: " + value);
+        StartCoroutine(AddHealthWithDelay(value, delay));
+    }
+
+    private IEnumerator AddHealthWithDelay(int value, float delay)
+    {
+        yield return new WaitForSeconds(delay); // Wait for the specified delay time
         health += value;
         healthBar.GetComponent<ManageHealthBar>().SetHealth(health);
         print("Current Health: " + health);
@@ -61,35 +66,35 @@ public class ManagePlayerHealth : MonoBehaviour
 
     public void DecreaseHealth()
     {
-            screenFlash();
-            health -= healthIncrement;
+        screenFlash();
+        health -= healthIncrement;
 
-            //Updating Health Bar
-            healthBar.GetComponent<ManageHealthBar>().SetHealth(health);
+        // Updating Health Bar
+        healthBar.GetComponent<ManageHealthBar>().SetHealth(health);
 
-            //Checking health to restart level
-            if (health < 0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // Checking health to restart level
+        if (health < 0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
-            // counting nbMLives
-            if (health < 0)
-			{
-				//print("NB Lives:" + PlayerPrefs.GetInt("nbLives"));
-				if (PlayerPrefs.GetInt("nbLives") >0)
-				{
-						PlayerPrefs.SetInt("nbLives",PlayerPrefs.GetInt("nbLives") - 1);
-						//GameObject.Find("nbLives").GetComponent<TextMeshProUGUI>().text = "" + PlayerPrefs.GetInt("nbLives");
-						SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-						
-				}
-				else SceneManager.LoadScene("splashScreen");
-				
-			}
+        // counting nbMLives
+        if (health < 0)
+        {
+            // print("NB Lives:" + PlayerPrefs.GetInt("nbLives"));
+            if (PlayerPrefs.GetInt("nbLives") > 0)
+            {
+                PlayerPrefs.SetInt("nbLives", PlayerPrefs.GetInt("nbLives") - 1);
+                // GameObject.Find("nbLives").GetComponent<TextMeshProUGUI>().text = "" + PlayerPrefs.GetInt("nbLives");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            }
+            else SceneManager.LoadScene("splashScreen");
+
+        }
     }
 
     void screenFlash()
     {
         screenFlashBool = true;
         alpha = 1.0f;
-        print ("Screen Flash");
+        print("Screen Flash");
     }
 }
