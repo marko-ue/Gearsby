@@ -19,6 +19,8 @@ public class Crouch : MonoBehaviour
     private Vector3 itemCrouchPos;
     private Vector3 cameraRootNormalPos;
     private Vector3 cameraRootCrouchPos;
+    private Vector3 cameraStartPos;
+    private Vector3 cameraUpPos;
 
     private float checkRange = 1f;
 
@@ -52,7 +54,7 @@ public class Crouch : MonoBehaviour
     void Crouching()
     {
         RaycastHit hit;
-        bool checkCeilingRayHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.up, out hit, checkRange);
+        bool checkCeilingRayHit = Physics.Raycast(Camera.main.transform.position, Vector3.up, out hit, checkRange);
         
         if (starterAssetsInputs.crouch)
         {   
