@@ -19,7 +19,7 @@ public class BreadCrumb : MonoBehaviour
     {
         Vector3 currentLocation = gameObject.transform.position;
         float distance = Vector3.Distance (previousPosition, currentLocation);
-        if (distance > 1.0f)
+        if (distance > 0.5f)
         {
             previousPosition = currentLocation;
             GameObject g = Instantiate (BC, currentLocation, Quaternion.identity);
