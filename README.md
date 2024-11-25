@@ -1,6 +1,6 @@
 ## Gearsby
 
-A psychological horror/exploration game made by a team of 5 for GitHub's Game Off 2024.
+A psychological horror/exploration game made by a team of 4 for GitHub's Game Off 2024.
 
 Currently in the pre-development phase but a demo is planned to release during Steam's upcoming February Next Fest!
 
